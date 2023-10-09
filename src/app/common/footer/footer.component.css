@@ -1,0 +1,31 @@
+.container{
+  margin: 0;
+}
+.objects_footer{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: normal;
+  padding: 48px 99px 50px;
+}
+
+.object_footer {
+
+  max-width: 280px;
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.logo-item:last-child{
+  margin-left: 18px;
+  font-size: 19px;
+}
+* {
+  background: #414840;
+  color:white;
+}

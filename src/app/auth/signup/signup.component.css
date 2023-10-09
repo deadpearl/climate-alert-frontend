@@ -1,0 +1,115 @@
+.header {
+  text-align: center;
+  margin-bottom: 54px;
+}
+.cont-form {
+  border-radius: 34px;
+  border: 6px solid #EFF0F6;
+  background: #FFF;
+  box-shadow: 0 5px 16px 0 rgba(8, 15, 52, 0.06);
+  width: 698px;
+  height: 748px;
+  flex-shrink: 0;
+  margin-left: 375px;
+}
+.circle {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  border-radius: 17px;
+  text-align: center;
+  display: flex; /* Добавьте flex-контейнер */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+}
+.green {
+  background-color: #343D33;
+  color: white;
+}
+
+.gray {
+  background-color: #EFF0F6;
+  color:#6F6C90;
+}
+.container{
+  margin-top: 105px;
+  margin-bottom: 80px;
+}
+.progress-bar, .row, .buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.progress-bar svg {
+  margin-top: 15px;
+}
+.progress-bar {
+  padding: 33px 163px 33px 163px;
+}
+
+.mini-header-form {
+  margin: 24px 0 64px 46px;
+}
+
+.svg-header {
+  margin-top: 15px;
+  height: 28px;
+}
+.input-form {
+  padding: 0 53px 0 53px;
+}
+input {
+  width: 264px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 46px;
+  border: 1px solid #EFF0F6;
+  background:  #FFF;
+  margin-top: 18px;
+  box-shadow: 0px 2px 6px 0px rgba(19, 18, 66, 0.07);
+  padding-left: 20px;
+}
+
+.submit-btn{
+  border: none;
+  display: inline-flex;
+  padding: 20px 35px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 22px;
+  background:  #374231;
+  color:white;
+}
+.right {
+  margin-left: 920px;
+  margin-top: 60px;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  background: #536453;
+}
+.buttons{
+  margin: 60px 0 0 345px;
+  width:719px;
+}
+.prev-button {
+  display: flex;
+  border: 2px solid #475F45;
+  border-radius: 22px;
+  width: 160px;
+  margin-left: 36px;
+  padding-left: 22px;
+  align-items: center;
+  text-align: center;
+  background: white;
+}
+
+.prev-button:hover {
+  cursor: pointer;
+  background: #e8e7e7;
+}
+.height {
+  padding: 18px 0 18px 22px;
+  margin: 60px 0 0 380px;
+}

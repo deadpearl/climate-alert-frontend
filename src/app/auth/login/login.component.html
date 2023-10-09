@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="header">
+    <h1>Login</h1>
+  </div>
+  <form (ngSubmit)="submitForm()">
+    <div class="cont-form">
+
+      <div class="input-form">
+
+        <div class="row">
+          <div class="row-input-item">
+            <span class="descr"><b>Email</b></span><br>
+            <input class="login_input" type="text" name="email"  [(ngModel)]="form.email"  placeholder="example@gmail.com">
+          </div>
+          <div class="row-input-item" style="margin-top: 25px">
+            <span class="descr"><b>Password</b></span><br>
+            <input class="login_input" type="password" [(ngModel)]="form.password" name="password"  placeholder="Password">
+          </div>
+        </div>
+
+
+      </div>
+      <button class="submit-btn" >LOGIN</button>
+    </div>
+  </form>
+
+
+
+</div>

@@ -1,0 +1,35 @@
+.container {
+  margin:20px 100px 20px 100px;
+}
+
+.logo, .menu, .container{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  padding-right: 380px;
+}
+
+.logo-item:last-child{
+  margin-left: 18px;
+  font-size: 19px;
+}
+.menu-item {
+  margin-left: 36px;
+  width: 80px;
+}
+.menu {
+  margin-top: 6px;
+}
+
+.button {
+  display: flex;
+  border: 2px solid #475F45;
+  width: 130px;
+  margin-left: 36px;
+  padding-left: 22px;
+  align-items: center;
+  text-align: center;
+}
+
