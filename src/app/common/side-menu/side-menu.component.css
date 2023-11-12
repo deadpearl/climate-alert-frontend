@@ -1,0 +1,222 @@
+
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  font-family: Montherat, serif;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+*{
+  color:white;
+}
+.body-menu {
+  background: rgb(44, 51, 43);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  overflow-y: scroll;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box;
+  scroll-behavior: smooth;
+  padding-bottom: 50px;
+}
+.name {
+  margin-top: 18px;
+  margin-right: 28px;
+}
+.mini-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 22px;
+  max-width: 300px;
+  padding-bottom: 20px;
+}
+
+.mini-header p {
+//max-width: 190px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu_name{
+  margin-left: 14px;
+  max-width: 175px;
+}
+
+
+/* Стили для блока меню */
+.menus_item {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 10px;
+  padding: 16px 16px 16px 16px;
+}
+
+.menus_item svg:last-of-type {
+  margin-left: auto;
+}
+
+.menu-head {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Расширяет .menu-head, чтобы svg был справа */
+}
+
+.menu-head a {
+  flex: 1; /* Расширяет ссылку на всю доступную ширину .menu-head */
+}
+
+.menu-head svg:last-child {
+  margin-left: auto; /* Перемещает последний svg вправо */
+}
+
+.menus_item:hover {
+  background: rgb(30, 37, 30);
+  cursor: pointer;
+  color: #FFFFFF !important;
+}
+
+/* Скрыть подменю по умолчанию */
+.submenus {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  border-top: none;
+  padding: 10px;
+}
+
+/* Отображение подменю, когда .expanded равно true */
+.menus_item.expanded .submenus {
+  display: block;
+}
+.active {
+  background: rgb(37, 45, 37);
+}
+/* Анимация перехода высоты подменю */
+.submenus {
+//transition: max-height 0.3s ease-in-out;
+//max-height: 0;
+  overflow: hidden;
+}
+.ngmenu_head svg{
+  margin-left: auto;
+}
+
+.submenu_items{
+  border-radius: 10px;
+  padding: 5px 18px 8px 14px;
+  margin-left: 20px;
+}
+.submenu_items a{
+  text-decoration: none;
+}
+
+.submenu_items:hover {
+  background: rgb(30, 37, 30);
+  cursor: pointer;
+}
+.bigger{
+  padding: 15px 45px 15px 10px;
+}
+.bigger2{
+  padding: 15px 105px 15px 10px;
+
+}
+
+.one.expanded + .menus_item {
+  margin-top: 140px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.two.expanded + .menus_item {
+  margin-top: 250px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.three.expanded + .menus_item {
+  margin-top: 430px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.four.expanded + .menus_item {
+  margin-top: 60px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.five.expanded + .menus_item {
+  margin-top: 530px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.six.expanded + .menus_item {
+  margin-top: 530px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.seven.expanded + .menus_item {
+  margin-top: 330px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.eight.expanded + .menus_item {
+  margin-top: 550px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+
+.nine.expanded + .menus_item {
+  margin-top: 430px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.eleven.expanded + .menus_item {
+  margin-top: 555px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.twelve.expanded + .menus_item {
+  margin-top: 310px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.thirteen.expanded + .menus_item {
+  margin-top: 410px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+.fourteen.expanded + .menus_item {
+  margin-top: 1000px; /* Здесь укажите желаемый отступ сверху для следующих элементов */
+}
+
+.ngcontainer-obj {
+  margin-top: 11px;
+}
+.menus_item.menus_item-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.padding-sub{
+  padding-bottom: 70px;
+}
+
+
+.back-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #FFFFFF !important;
+}
+
+@media (max-width:1000px) {
+  .body-menu {
+    width: 300px;
+    font-size: 20px;
+
+  }
+  .menus_item {
+    margin-top: 20px;
+  }
+}

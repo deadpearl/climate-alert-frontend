@@ -1,0 +1,101 @@
+<div class="body-menu">
+
+  <div class="mini-header">
+    <a class="" href="javascript:void(0);" title=""><img  src="assets/img/leaf.svg" style="width: 72.518px; height: 70px;" alt=""></a>
+    <div class="name" >
+      <p><b>{{'KazGeoWarning'  }}</b></p>
+    </div>
+  </div>
+  <ng-container >
+
+    <div class="menus_item one svg-problem" (click)="$event.preventDefault();  submenus.analysis = !submenus.analysis" [ngClass]="{expanded: submenus.analysis ||  getUrlPosition('risk-analysis')}"
+    >
+      <svg width="26" height="26" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>analyze</title> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="add" fill="#ffffff" transform="translate(42.666667, 64.000000)"> <path d="M266.666667,128 C331.468077,128 384,180.531923 384,245.333333 C384,270.026519 376.372036,292.938098 363.343919,311.840261 L423.228475,371.725253 L393.058586,401.895142 L333.173594,342.010585 C314.271431,355.038703 291.359852,362.666667 266.666667,362.666667 C201.865256,362.666667 149.333333,310.134744 149.333333,245.333333 C149.333333,180.531923 201.865256,128 266.666667,128 Z M266.666667,170.666667 C225.429405,170.666667 192,204.096072 192,245.333333 C192,286.570595 225.429405,320 266.666667,320 C307.903928,320 341.333333,286.570595 341.333333,245.333333 C341.333333,204.096072 307.903928,170.666667 266.666667,170.666667 Z M128.404239,234.665576 C128.136379,238.186376 128,241.743928 128,245.333333 C128,256.34762 129.284152,267.061976 131.710904,277.334851 L7.10542736e-15,277.333333 L7.10542736e-15,234.666667 L128.404239,234.665576 Z M85.3333333,1.42108547e-14 L85.3333333,213.333333 L21.3333333,213.333333 L21.3333333,1.42108547e-14 L85.3333333,1.42108547e-14 Z M170.666667,85.3333333 L170.663947,145.273483 C151.733734,163.440814 137.948238,186.928074 131.710904,213.331815 L106.666667,213.333333 L106.666667,85.3333333 L170.666667,85.3333333 Z M256,42.6666667 L255.999596,107.070854 C232.554315,108.854436 210.738728,116.46829 191.999452,128.465799 L192,42.6666667 L256,42.6666667 Z M341.333333,64 L341.333983,128.465865 C322.594868,116.468435 300.779487,108.854588 277.334424,107.070906 L277.333333,64 L341.333333,64 Z" id="Combined-Shape"> </path> </g> </g> </g></svg>
+      <a class="menu_name" href="#">
+        <u class="">{{"Кабинет"  }}</u>
+
+      </a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+        <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="white"/>
+      </svg>
+      <div class="submenus">
+        <div class="submenu_items bigger" [routerLink]="['/risk-analysis/sur']  " (click)="$event.preventDefault()" routerLinkActive="active" [ngClass]="{active: getUrlPosition('risk-analysis')}">
+          <a class="" href="#"
+          >{{"Lorem ipsum"  }}</a>
+        </div>
+        <br>
+        <div class="submenu_items bigger" [routerLink]="['/risk-analysis/forming-sur']  " routerLinkActive="active" (click)="$event.preventDefault()">
+          <a class="" href="#" >{{"Lorem ipsum"  }}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="menus_item two" (click)="$event.preventDefault(); submenus.planing = !submenus.planing" [ngClass]="{expanded: submenus.planing  ||  getUrlPosition('planning')}"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M21 6L15.7071 11.2929C15.3166 11.6834 14.6834 11.6834 14.2929 11.2929L12.7071 9.70711C12.3166 9.31658 11.6834 9.31658 11.2929 9.70711L7 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 3V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <a class="menu_name" href="#"
+      >
+        <u class="menu_text">{{"Планирование"  }}</u>
+      </a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+        <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="white"/>
+      </svg>
+      <div class="submenus">
+        <div class="submenu_items" [routerLink]="['/planning/objects']  " routerLinkActive="active"
+             (click)="$event.preventDefault()">
+          <a class="" href="#"
+          >{{"Перечень объектов государственного аудита"  }}</a>
+        </div><br>
+        <div class="submenu_items" [routerLink]="['/planning/application']  " routerLinkActive="active"
+             (click)="$event.preventDefault()">
+          <a class="" href="#"
+          >{{"Заявки на аудиторское мероприятие"  }}</a>
+        </div><br>
+        <div class="submenu_items" [routerLink]="['/planning/assesment-events'] " routerLinkActive="active"
+             (click)="$event.preventDefault()">
+          <a class="" href="#"
+          >{{"Мероприятия по проведению оценки деятельности органов государственного аудита в плановом порядке"  }}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="menus_item three"  (click)="$event.preventDefault(); submenus.audits=!submenus.audits" [ngClass]="{expanded: submenus.audits ||  getUrlPosition('fire/report/real-time')}"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M8 10L8 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 12V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 8V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="3" y="4" width="18" height="16" rx="2" stroke="white" stroke-width="2"/>
+      </svg>
+      <a class="menu_name" href="#">
+        {{"Генерация отчетов"  }}
+      </a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+        <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="white"/>
+      </svg>
+      <div class="submenus">
+        <!--<perfect-scrollbar style="max-height: 200px; max-width: 100%;">-->
+        <div class="submenu_items bigger" [routerLink]="['/fire/report/real-time']  " routerLinkActive="active"
+             (click)="$event.preventDefault()">
+          <a class="" >{{"Пожары"  }}</a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+  </ng-container>
+
+
+</div>
+
+
+
+
