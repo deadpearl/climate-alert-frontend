@@ -21,12 +21,33 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/locale",
+                "output": "/assets/locale/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/images",
+                "output": "/assets/images/"
+              },
+              {
+                "glob": "**/pdf.worker*.js",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/ngx-extended-pdf-viewer/assets/pdf-es5.js",
+              "node_modules/ngx-extended-pdf-viewer/assets/viewer-es5.js",
+              "src/assets/js/dist/Chart.js",
+              "src/assets/js/dist/plugin.js",
+              "src/assets/js/dist/annotation.js"
+            ]
           },
           "configurations": {
             "production": {

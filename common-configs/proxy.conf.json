@@ -6,6 +6,14 @@
             "^/api/auth": ""
         },
         "changeOrigin": true
+    },
+    "/report/*": {
+      "target": "http://localhost:8086/report",
+      "secure": false,
+      "pathRewrite": {
+        "^/report": ""
+      },
+      "changeOrigin": true
     }
 
 }
