@@ -1,0 +1,81 @@
+<div class="cont">
+  <div class="account_tabs cretabs">
+      <ngb-tabset>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <div>{{"Документ"}}</div>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <form class="form">
+                <div class="row">
+                  <label> Дата начала <br>
+                    <input type="text" placeholder="start_date" [ngModel]="formData.startDate" name="startDate" [disabled]="readonly">
+                  </label>
+
+                  <label> Дата завершения <br>
+                    <input type="text" placeholder="end_date" [ngModel]="formData.endDate" name="endDate" [disabled]="readonly">
+                  </label>
+                </div>
+
+                <div class="row">
+                  <label> asdf <br>
+                    <input type="text" placeholder="region" [ngModel]="formData.region" name="region" [disabled]="readonly">
+                  </label>
+
+                  <label> asdf <br>
+                    <input type="text" placeholder="fire_area" [ngModel]="formData.fireArea" name="fireArea" [disabled]="readonly">
+                  </label>
+                </div>
+
+                <div class="row">
+                  <label> asdf <br>
+                    <input type="text" placeholder="latitude" [ngModel]="formData.latitude" name="latitude" [disabled]="readonly">
+                  </label>
+
+                  <label> asdf <br>
+                    <input type="text" placeholder="longitude" [ngModel]="formData.longitude" name="longitude" [disabled]="readonly">
+                  </label>
+                </div>
+
+                <div class="row">
+                  <label> asdf <br>
+                    <input type="text" placeholder="vegetation_area" [ngModel]="formData.vegetationArea" name="vegetationAarea" [disabled]="readonly">
+                  </label>
+
+                  <label> asdf <br>
+                    <input type="text" placeholder="vegetation_density" [ngModel]="formData.vegetationDensity" name="vegetationDensity" [disabled]="readonly">
+                  </label>
+                </div>
+
+                <div class="row">
+                  <label> asdf <br>
+                    <input type="text" placeholder="vegetation_moisture" [ngModel]="formData.vegetationMoisture" name="vegetationMoisture" [disabled]="readonly">
+                  </label>
+
+                  <label> asdf <br>
+                    <input type="text" placeholder="vegetation_type" [ngModel]="formData.vegetationType" name="vegetationType" [disabled]="readonly">
+                  </label>
+                </div>
+                <div class="row">
+                  <label> asdf <br>
+                    <input type="text" placeholder="information" [ngModel]="formData.information" name="information" [disabled]="readonly">
+                  </label>
+                </div>
+                <button class="button" type="submit" [class.disabled]="readonly" [disabled]="readonly">Сохранить</button>
+            </form>
+          </ng-template>
+
+
+
+
+        </ngb-tab>
+
+
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <div>{{"Просмотр"}}</div>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+  </div>
+</div>

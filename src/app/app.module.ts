@@ -11,6 +11,9 @@ import {RouterModule} from '@angular/router';
 import { FireRealTimeReportComponent } from './fire-real-time-report/fire-real-time-report.component';
 import { CommonInternalTemplateComponent } from './common-internal-template/common-internal-template.component';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
+import { FireFormRealTimeReadonlyComponent } from './fire-real-time-report/fire-form-real-time-readonly/fire-form-real-time-readonly.component';
+import {NgbTabsetModule} from "@ng-bootstrap/ng-bootstrap";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
     MainComponent,
     FireRealTimeReportComponent,
     CommonInternalTemplateComponent,
+    FireFormRealTimeReadonlyComponent,
   ],
     imports: [
         BrowserModule,
@@ -26,7 +30,9 @@ import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
         CommonBlocksModule,
         AuthModule,
         RouterModule,
-        NgxExtendedPdfViewerModule
+        NgxExtendedPdfViewerModule,
+        NgbTabsetModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

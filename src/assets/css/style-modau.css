@@ -1,0 +1,3388 @@
+.stable.ver tbody > tr:hover {
+    cursor: pointer;
+}
+.mr-200 {
+    margin-right: 259px;
+}
+.mb-13 {
+    margin-bottom: 13px;
+}
+.hodfilter {
+    height: 146px;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-top: 16px;
+    padding-left: 11px;
+    padding-right: 13px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin-bottom: 28px;
+}
+.hodfilter_box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.hodfilter_name,
+.stselect_name {
+    color: #000000;
+    font-family: "Proxima Nova bold";
+    font-size: 18px;
+}
+.stselect.large,
+.stselect_top.large {
+    width: 392px;
+    margin-left: 27px;
+}
+.stselect.large ul,
+.stselect_top.large ul {
+    width: 392px;
+}
+.stselect_name {
+    color: #000000;
+    position: absolute;
+    left: 0;
+    top: -28px;
+    font-size: 14px;
+}
+.stable_box.ver.hoditable1,
+.stable_box.ver.hoditable2,
+.stable_box.ver.hoditable3,
+.stable_box.ver.prepatable1 {
+    margin-top: 10px;
+    margin-bottom: 27px;
+}
+.stable_box.ver.hoditable1 th,
+.stable_box.ver.hoditable2 th {
+    height: 50px;
+}
+.stable_box.ver.hoditable1 td,
+.stable_box.ver.hoditable2 td {
+    height: 40px;
+}
+.stable_box.ver.hoditable1 th,
+.stable_box.ver.hoditable1 td,
+.stable_box.ver.hoditable2 th,
+.stable_box.ver.hoditable2 td {
+    padding-left: 42px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.gaifk_table.stable_box.ver.hoditable2 th {
+    height: 45px;
+}
+
+.gaifk_table .tasks_table.stable.ver th:nth-child(1),
+.gaifk_table .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 215px;
+    padding-right: 5px !important;
+}
+
+.gaifk_table .tasks_table.stable.ver th:nth-child(2),
+.gaifk_table .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 110px;
+    padding-left: 18px;
+}
+
+.gaifk_table .tasks_table.stable.ver th:nth-child(3),
+.gaifk_table .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 100px;
+    padding-left: 18px;
+}
+.gaifk_table .tasks_table.stable.ver th:nth-child(4),
+.gaifk_table .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 175px;
+    padding-left: 18px;
+}
+.gaifk_table .tasks_table.stable.ver th:nth-child(5),
+.gaifk_table .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 590px;
+    padding-left: 18px;
+}
+
+.stable_box.ver.hoditable1 th a,
+.stable_box.ver.hoditable1 td a,
+.stable_box.ver.hoditable2 th a,
+.stable_box.ver.hoditable2 td a {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    outline: 0;
+}
+.stable_box.ver.hoditable2 td.subblock {
+    height: 35px;
+}
+.stable_box.ver.hoditable2 td.subblock:first-child {
+    padding-left: 62px;
+}
+.stable_box.ver.hoditable2 td.spoiler:before {
+    content: "";
+    position: absolute;
+    /*top: 20px;*/
+    top: 50%;
+    left: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23303030' d='M-.019 0H9.988L4.985 5z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    height: 5px;
+    margin-top: -3px;
+    width: 10px;
+    transform: translate(0, -50%);
+}
+.stable_box.ver.hoditable2 td.spoiler.closed:before {
+    transform: rotate(270deg);
+    transform-origin: center center;
+}
+
+.hoditable2 .auditinfo_table.stable.ver th:nth-child(1),
+.hoditable2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 767px;
+}
+.hoditable2 .auditinfo_table.stable.ver th:nth-child(2),
+.hoditable2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 233px;
+}
+.hodinfo_subheaderbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hodinfo_subheaderbox.gaifl_sub {
+    justify-content: flex-start;
+    margin-top: 9px;
+    margin-bottom: 8px;
+}
+.hodinfo_subheaderbox.gaifl_sub .account_btn:first-child {
+    margin-left: 0;
+}
+.hodinfo_subheaderbox.gaifl_sub .account_btn {
+    font-size: 14px;
+    height: 34px;
+    padding: 0 15px;
+}
+.hodinfo_subheaderbox .account_btn.discussion_btn {
+    padding: 0 20px;
+    margin-left: 5px;
+}
+.hodinfo_subheaderbox .tasks_select {
+    margin-left: 5px;
+    margin-right: 0;
+    width: 189px;
+}
+.hodinfo_subheaderbox .tasks_select:hover > .head {
+    opacity: 0.95;
+    cursor: pointer;
+}
+.hodinfo_subheaderbox .tasks_select > .head {
+    width: auto;
+}
+.hodinfo_subheaderbox .stselect ul {
+    width: 189px;
+    left: 0;
+}
+.stable_box.ver.hoditable3 th {
+    height: 46px;
+}
+
+.stable_box.ver.hoditable3 td {
+    height: 56px;
+}
+
+.hoditable3 .stable.ver.tasks_table th:nth-child(1),
+.hoditable3 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 360px;
+}
+.hoditable3 .stable.ver.tasks_table th:nth-child(2),
+.hoditable3 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 118px;
+}
+.hoditable3 .stable.ver.tasks_table th:nth-child(3),
+.hoditable3 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 130px;
+}
+.hoditable3 .stable.ver.tasks_table th:nth-child(4),
+.hoditable3 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 160px;
+}
+.hoditable3 .stable.ver.tasks_table th:nth-child(5),
+.hoditable3 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 235px;
+}
+
+.hoditable3 .stable.ver.tasks_table tbody tr:hover {
+    cursor: pointer;
+}
+
+.audit_header.modau_header {
+    margin-top: 0;
+}
+
+.audit_header.modau_header .audit_hdr {
+    margin-top: 11px;
+    margin-bottom: 18px;
+}
+
+.stable_box.ver.prepatable1 th {
+    height: 66px;
+    vertical-align: top;
+    padding-top: 9px;
+}
+.stable_box.ver.prepatable1 td {
+    height: 56px;
+}
+.prepatable1 .stable.ver.tasks_table tbody tr:hover {
+    cursor: pointer;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(1),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 60px;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(2),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 109px;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(3),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 117px;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(4),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 137px;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(5),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 147px;
+}
+.rating_criteria_auditors.prepatable1 .stable.ver.tasks_table th:nth-child(5),
+.rating_criteria_auditors.prepatable1
+    .stable.ver.tasks_table
+    tbody
+    td:nth-child(5) {
+    width: 90px;
+    padding-left: 15px;
+}
+
+.prepatable1 .stable.ver.tasks_table th:nth-child(6),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 140px;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(7),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 154px;
+}
+.prepatable1 .stable.ver.tasks_table th:nth-child(8),
+.prepatable1 .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 140px;
+}
+.hodinfo_subheaderbox .langname {
+    margin-right: 18px;
+}
+.hodinfo_subheaderbox .pageheader_link {
+    margin-right: 14px;
+}
+.hodinfo_subheaderbox .langname,
+.hodinfo_subheaderbox .pageheader_link {
+    font-family: "Proxima Nova bold";
+    font-size: 16px;
+}
+.hodinfo_subheaderbox .tasks_select.prepabtn,
+.hodinfo_subheaderbox .stselect.prepabtn ul {
+    width: 139px;
+}
+.prepadoc {
+    display: block;
+}
+.credetails .tidetails_table {
+    width: 100%;
+}
+.credetails .tidetails_table td:nth-child(odd) {
+    width: 179px;
+}
+.credetails .tidetails_table.formation-audit td:nth-child(odd) {
+    width: 214px;
+}
+.credetails .tidetails_table.firstcolumnright td:nth-child(odd) {
+    text-align: right;
+    padding-right: 10px;
+}
+.credetails .tidetails_table.firstcolumnoneworld td:nth-child(odd) {
+    width: 86px;
+}
+.credetails .tidetails_table td:nth-child(even) {
+    width: auto;
+}
+.account_tabs.cretabs {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+.stable_box.ver.hoditable2 td.spoiler.subblock:before {
+    left: 45px;
+    margin-top: -7px;
+}
+.subblock > .checkbox,
+.subblock > p,
+.secondsblock > .checkbox,
+.secondsblock > p {
+    display: inline-block;
+}
+.subblock .checkbox label,
+.secondsblock .checkbox label {
+    padding-right: 2px;
+}
+.stable_box.ver.cretable1,
+.stable_box.ver.cretable2 {
+    margin-top: 11px;
+}
+.stable_box.ver.cretable1 th,
+.stable_box.ver.cretable2 th,
+.stable_box.ver.reqtable1 th {
+    height: 54px;
+    vertical-align: top;
+    padding-top: 3px;
+}
+.stable_box.ver.cretable1 td,
+.stable_box.ver.cretable2 td,
+.stable_box.ver.reqtable1 td {
+    height: 36px;
+}
+.stable_box.ver.cretable1 tbody > tr:hover,
+.stable_box.ver.cretable2 tbody > tr:hover,
+.stable_box.ver.reqtable1 tbody > tr:hover {
+    cursor: pointer;
+}
+.cretable1 .stable.ver.auditinfo_table th:nth-child(1),
+.cretable1 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 71px;
+}
+.cretable1 .stable.ver.auditinfo_table th:nth-child(2),
+.cretable1 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 44px;
+}
+.cretable1 .stable.ver.auditinfo_table th:nth-child(3),
+.cretable1 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 887px;
+}
+
+.creasavebtn1 {
+    width: 205px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.crerinput {
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+.crerinput span {
+    width: 100%;
+    color: #000000;
+    font-family: "Proxima Nova Semibold";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.crerinput input {
+    width: 819px;
+}
+.crerinput .account_btn.discussion_btn {
+    width: 148px;
+}
+.crerinput.twobtn input {
+    width: 655px;
+}
+.crerinput.twobtn .account_btn.discussion_btn {
+    margin-left: 7px;
+}
+.creasavebtn2 {
+    width: 148px;
+    font-size: 16px;
+    height: 40px;
+    margin-top: 24px;
+}
+.creaform .aisection_hdr.v1 {
+    margin-bottom: 17px;
+}
+.creaform_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+.FormatAudit {
+    justify-content: inherit;
+}
+
+.creaform_subline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.creaform_line .crerinput > input {
+    width: 400px;
+}
+.creaform_line .account_btn.discussion_btn {
+    margin-top: 15px;
+    width: 148px;
+    margin-left: 7px;
+}
+.FormatAudit .account_btn.discussion_btn {
+    width: 120px;
+}
+.creaform_line .crerinput {
+    position: relative;
+}
+.creaform_line.gaifk_text .crerinput {
+    margin-bottom: 6px;
+}
+.creaform_line.gaifk_text .crerinput span {
+    margin-bottom: 0;
+}
+.gaifkAudit {
+    margin-bottom: 5px;
+}
+.creaform_line .crerinput.date {
+    width: 322px;
+}
+.creaform_line .crerinput .graphfilter_calendar {
+    top: 70%;
+}
+.creaform_line .stselect.large {
+    margin-left: 0;
+    margin-top: 27px;
+    height: 50px;
+}
+.creaform_line .stselect_name {
+    color: #000000;
+    font-family: "Proxima Nova Semibold";
+    font-size: 16px;
+}
+.creaform_line .stselect .head {
+    height: 50px;
+    line-height: 50px;
+}
+.creaform_line .stselect .head:after {
+    height: 50px;
+}
+.creaform_line .stselect.large ul {
+    top: 48px;
+}
+.creaform .hodinfo_subheaderbox {
+    margin-top: 18px;
+}
+.cretable2 .stable.ver.tasks_table th:nth-child(1),
+.cretable2 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 55px;
+}
+.cretable2 .stable.ver.tasks_table th:nth-child(2),
+.cretable2 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 495px;
+}
+.cretable2 .stable.ver.tasks_table th:nth-child(3),
+.cretable2 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 230px;
+}
+.cretable2 .stable.ver.tasks_table th:nth-child(4),
+.cretable2 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 223px;
+}
+.addperformer_modal .stselect.large {
+    width: 461px;
+    margin: auto;
+    margin-bottom: 14px;
+}
+.addperformer_modal .stselect.large ul {
+    width: 461px;
+}
+.addperformer_modal .stselect.large span {
+    color: #000000;
+    font-family: "Proxima Nova Semibold";
+    font-size: 16px;
+}
+.addperformer_modal .account_input.crerinput {
+    width: 461px;
+    margin-bottom: 0;
+    position: relative;
+}
+.addperformer_modal .account_input.crerinput input {
+    height: 40px;
+    line-height: 40px;
+}
+.addperformer_link {
+    color: #4A89C3;
+    font-family: "Proxima Nova bold";
+    font-size: 14px;
+    margin-top: 7px;
+    display: block;
+}
+.addperformer_link svg {
+    margin-right: 5px;
+}
+.addperformer_link:hover,
+.addperformer_link:active,
+.addperformer_link:focus {
+    color: #4A89C3;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.95;
+}
+.addperformer_remove {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 11px;
+    display: block;
+    width: 20;
+    height: 20;
+}
+.addperformer_remove:hover,
+.addperformer_remove:focus,
+.addperformer_remove:active {
+    outline: 0;
+    opacity: 0.95;
+}
+.custommargin {
+    margin-bottom: 35px;
+}
+.addperformer_modal .modal_footer {
+    width: 460px;
+}
+.addperformer_modal .modal_footer .account_btn {
+    width: 221px;
+}
+.rfilter_name {
+    color: #000000;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+    margin-right: 13px;
+}
+.requrement_hbox .stselect.rfilter_box,
+.requrement_hbox .stselect.rfilter_box ul {
+    width: 196px;
+}
+.requrement_hbox .stselect.rfilter_box ul {
+    left: -2px;
+}
+
+.requrement_hbox .stselect.tasks_select {
+    width: 141px;
+}
+.requrement_hbox .stselect.tasks_select ul {
+    width: 350px;
+}
+.requrement_hbox .stselect.tasks_select ul a {
+    color: inherit;
+    display: block;
+}
+.requrement_hbox .stselect.tasks_select ul a:hover,
+.requrement_hbox .stselect.tasks_select ul a:active,
+.requrement_hbox .stselect.tasks_select ul a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+.checksvg {
+    width: 14px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='158' viewBox='0 0 14 158'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%234A89C3' d='M11.916 148.348a1.208 1.208 0 0 1 1.715 0 1.233 1.233 0 0 1 0 1.73l-7.505 7.572c-.253.258-.599.37-.933.35a1.208 1.208 0 0 1-.938-.35L.334 153.68a1.234 1.234 0 0 1 0-1.727 1.214 1.214 0 0 1 1.72 0l3.14 3.182zm0-37a1.208 1.208 0 0 1 1.715 0 1.233 1.233 0 0 1 0 1.729l-7.505 7.573c-.253.258-.599.37-.933.35a1.2 1.2 0 0 1-.938-.35l-3.921-3.969a1.236 1.236 0 0 1 0-1.729 1.215 1.215 0 0 1 1.72 0l3.14 3.183zm0-37a1.21 1.21 0 0 1 1.715 0 1.234 1.234 0 0 1 0 1.73L6.126 83.65a1.195 1.195 0 0 1-.933.35 1.201 1.201 0 0 1-.938-.35L.334 79.68a1.233 1.233 0 0 1 0-1.727 1.215 1.215 0 0 1 1.72 0l3.14 3.183zm0-37a1.208 1.208 0 0 1 1.715 0 1.233 1.233 0 0 1 0 1.73l-7.505 7.57c-.253.26-.599.372-.933.352a1.203 1.203 0 0 1-.938-.351L.334 42.682a1.236 1.236 0 0 1 0-1.73 1.215 1.215 0 0 1 1.72 0l3.14 3.183zm0-37.002a1.211 1.211 0 0 1 1.715 0 1.235 1.235 0 0 1 0 1.731L6.126 9.65a1.195 1.195 0 0 1-.933.35 1.201 1.201 0 0 1-.938-.35L.334 5.681a1.233 1.233 0 0 1 0-1.728 1.215 1.215 0 0 1 1.72 0l3.14 3.183z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    display: block;
+}
+.auditinfo_tbox.stable_box.ver.reqtable1 {
+    margin-top: 15px;
+}
+.reqtable1 .stable.ver.auditinfo_table th:nth-child(1),
+.reqtable1 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 55px;
+}
+.reqtable1 .stable.ver.auditinfo_table th:nth-child(2),
+.reqtable1 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 505px;
+}
+.reqtable1 .stable.ver.auditinfo_table th:nth-child(3),
+.reqtable1 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 443px;
+}
+.reqsavebtn1 {
+    font-family: "Proxima Nova Rg";
+}
+.addperformer_modal .crerinput.datareqinput1 {
+    margin-bottom: 16px;
+}
+.addperformer_modal .crerinput.datareqinput1.gaifk_file {
+    margin-bottom: 0;
+}
+.searchebd_modal.adddatareq_modal .account_form {
+    padding-top: 11px;
+}
+.documentcreate_modal.addperformer_modal .modal_footer {
+    margin-top: 41px;
+    margin-bottom: 21px;
+}
+
+.documentcreate_modal.addperformer_modal.modal_lg .modal-dialog{
+    max-width: 800px!important;
+}
+.crerinput.datareqinput1 input {
+    width: 215px;
+}
+
+.crerinput.datareqinput1 .creasavebtn2 {
+    margin-top: 0;
+    width: 221px;
+    font-family: "Proxima Nova Rg";
+}
+.datareqinput1 textarea {
+    width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    border: 2px solid #e2e2e2;
+    background-color: #fefefe;
+    resize: none;
+    color: #000000;
+    font-family: "Proxima Nova Rg";
+    font-size: 18px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.datareqinput1.gaifk_textarea textarea {
+    height: 60px;
+}
+.addсataloguereq_modal.documentcreate_modal .modal-dialog {
+    max-width: 1002px;
+}
+.reqtable2 {
+    margin-bottom: 70px;
+}
+.reqtable2 .stable.ver.auditinfo_table th:nth-child(1),
+.reqtable2 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 86px;
+}
+.reqtable2 .stable.ver.auditinfo_table th:nth-child(2),
+.reqtable2 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 891px;
+}
+.stselect.tasks_select.modau_select {
+    width: auto;
+}
+.stselect.tasks_select.modau_select .head {
+    padding-left: 16px;
+    padding-right: 50px;
+}
+.stselect.tasks_select.modau_select ul {
+    width: 100%;
+}
+.stselect.tasks_select.modau_select ul.large {
+    width: 450px;
+}
+.stselect.tasks_select.modau_select a {
+    color: inherit;
+    display: block;
+}
+.stselect.tasks_select.modau_select a:hover,
+.stselect.tasks_select.modau_select a:focus,
+.stselect.tasks_select.modau_select a:active {
+    text-decoration: none;
+    outline: 0;
+}
+.errandtable1 .stable.ver.tasks_table th,
+.controlmeasuretable1 .stable.ver.tasks_table th {
+    height: 59px;
+    vertical-align: top;
+    padding-top: 8px;
+}
+.errandtable1 .stable.ver.tasks_table tbody td,
+.controlmeasuretable1 .stable.ver.tasks_table tbody td {
+    height: 42px;
+}
+.errandtable1 .stable.ver.tasks_table th:nth-child(1),
+.errandtable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 146px;
+}
+.errandtable1 .stable.ver.tasks_table th:nth-child(2),
+.errandtable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 119px;
+}
+.errandtable1 .stable.ver.tasks_table th:nth-child(3),
+.errandtable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 331px;
+}
+.errandtable1 .stable.ver.tasks_table th:nth-child(4),
+.errandtable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 141px;
+}
+.errandtable1 .stable.ver.tasks_table th:nth-child(5),
+.errandtable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 155px;
+}
+.errandtable1 .stable.ver.tasks_table th:nth-child(6),
+.errandtable1 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 109px;
+}
+.subtitle {
+    color: #000000 !important;
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+.subtitle b {
+    font-family: "Montserrat", serif;
+}
+.account_input.large input {
+    width: 655px;
+}
+.account_input.large {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+.creaform_line.linewrap {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+.creaform_line.linewrap .account_btn.discussion_btn {
+    margin-top: 0;
+}
+.errand_before {
+    margin-left: 20px;
+    position: relative;
+}
+.errand_before:first-child {
+    margin-right: 16px;
+}
+.errand_before .subtitle {
+    position: absolute;
+    left: -22px;
+    bottom: 0;
+    line-height: 50px;
+    margin-bottom: 0;
+}
+.errand_graph {
+    width: 655px;
+}
+.errand_graph .crerinput input {
+    width: 299px;
+}
+.creaform_line .errand_graph .crerinput .graphfilter_calendar {
+    top: 46%;
+}
+.creaform_line.ver .crerinput.date,
+.creaform_line.ver .crerinput > input {
+    width: 486px;
+    margin-right: 0;
+}
+.account_tabs.cretabs,
+.editdatatask_form {
+    max-width: 1060px;
+}
+.account_tabs.cretabs.fullBlock {
+    max-width: inherit;
+}
+.stselect.tasks_select.modau_select ul.medium {
+    width: 350px;
+}
+.aisection_hdr.hdr_positioning {
+    margin-top: 20px;
+}
+
+.tasktable1 .stable.ver.tasks_table th:nth-child(1),
+.tasktable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 85px;
+}
+.tasktable1 .stable.ver.tasks_table th:nth-child(2),
+.tasktable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 580px;
+}
+.tasktable1 .stable.ver.tasks_table th:nth-child(3),
+.tasktable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 183px;
+}
+.tasktable1 .stable.ver.tasks_table th:nth-child(4),
+.tasktable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 152px;
+}
+.tidetails.modau_taskt .tidetails_table:first-child {
+    width: 244px;
+}
+.tidetails.modau_taskt .tidetails_table:last-child {
+    width: 232px;
+}
+.tidetails.modau_taskt .tidetails_table td:nth-child(1) {
+    width: 142px;
+}
+.tidetails.modau_taskt .tidetails_table td:nth-child(2) {
+    width: 110px;
+}
+
+.crerinput.smallinput input {
+    width: 236px;
+}
+.crerinput.smallinput .account_btn.discussion_btn {
+    margin-right: auto;
+    margin-left: 25px;
+}
+.stselect.medium {
+    width: 487px;
+}
+.stselect.medium ul {
+    width: 100.9%;
+}
+.creaform_line .stselect.twostringname {
+    margin-top: 64px;
+}
+.stselect.twostringname span {
+    top: -58px;
+}
+.account_input.twostringname {
+    height: 113px;
+    padding-top: 11px;
+    margin-left: 25px;
+    width: 348px;
+}
+.account_input.onestrringname {
+    width: 348px;
+}
+.account_input.twostringname span {
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.account_input.twostringname input {
+    width: 348px;
+}
+.account_btn.discussion_btn.twostringname {
+    margin-top: 55px;
+}
+.account_input.mediuminput {
+    width: 487px;
+}
+.account_input.smediuminput {
+    width: 533px;
+    margin-right: 0;
+}
+.account_input.mediuminput input {
+    width: 100%;
+}
+.creaform_line .stselect.onestrringname {
+    margin-top: 22px;
+}
+.stselect.onestrringname span {
+    top: -36px;
+}
+.onestrringname.onestrringname {
+    margin-left: 25px;
+}
+.account_input.onestrringname input {
+    width: 348px;
+}
+
+.formtask1 .tasks_table.stable.ver th,
+.formtask1 .tasks_table.stable.ver tbody td {
+    vertical-align: top;
+    padding-top: 10px;
+}
+.formtask1 .tasks_table.stable.ver th:nth-child(1),
+.formtask1 .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 44px;
+}
+.formtask1 .tasks_table.stable.ver th:nth-child(2),
+.formtask1 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 245px;
+}
+.formtask1 .tasks_table.stable.ver th:nth-child(3),
+.formtask1 .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 493px;
+}
+.formtask1 .tasks_table.stable.ver th:nth-child(4) {
+    width: 233px;
+}
+
+.formtask1 .tasks_table.stable.ver thead > tr:first-child th {
+    height: 48px;
+}
+.formtask1 .tasks_table.stable.ver thead > tr:last-child th {
+    height: 41px;
+}
+.formtask1 .tasks_table.stable.ver thead > tr:last-child th:nth-child(1),
+.formtask1 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 82px;
+    padding-left: 0;
+}
+.formtask1 .tasks_table.stable.ver thead > tr:last-child th:nth-child(1) {
+    border-right: 2px solid #e2e2e2;
+}
+
+.formtask1 .tasks_table.stable.ver thead > tr:last-child th:nth-child(2),
+.formtask1 .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 137px;
+    padding-left: 17px;
+}
+
+.formtask2 .auditinfo_table.stable.ver th:nth-child(1),
+.formtask2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 83px;
+}
+.formtask2 .auditinfo_table.stable.ver th:nth-child(2),
+.formtask2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 920px;
+}
+.subpoint td:last-child {
+    padding-left: 29px;
+}
+.creaform_line.ver2 .crerinput .graphfilter_calendar {
+    bottom: 12%;
+    top: auto;
+}
+
+.formtask_minput.account_input.crerinput input {
+    width: 100%;
+    height: 50px;
+}
+.formtask_checkbox {
+    margin-bottom: 10px;
+}
+.formtask_checkbox label {
+    color: #000000;
+    font-family: "Proxima Nova Semibold";
+    font-size: 16px;
+}
+.formtask_inputline {
+    margin-bottom: 10px;
+}
+.formtask_inputline .account_input.crerinput input {
+    width: 100%;
+}
+.formtask_inputline .account_input.crerinput.formtask_minput {
+    width: 195px;
+    margin-left: 24px;
+    margin-right: 1px;
+}
+.account_input.crerinput.fullimput input {
+    width: 100%;
+}
+.subtitle.ver {
+    font-size: 18px;
+}
+.creaform_line .account_btn.editdatatask_btn {
+    width: auto;
+    margin-bottom: 19px;
+    align-self: end;
+}
+.creaform_line.edittask .crerinput.date {
+    margin-left: 0;
+    margin-right: 0;
+    width: 377px;
+}
+.creaform_line.edittask .crerinput.date.crerinput input {
+    width: 377px;
+}
+.creaform_line.edittask .crerinput.large input {
+    width: 722px;
+}
+.account_input.addohvat_input {
+    width: 400px;
+    margin-right: auto;
+}
+.addohvat_graph .account_input.crerinput .subtitle {
+    margin-bottom: 0;
+}
+.addohvat_graph .account_input.crerinput:nth-child(1) {
+    width: 236px;
+    margin-right: 16px;
+}
+.addohvat_graph .account_input.crerinput:nth-child(1) input {
+    width: 216px;
+}
+.addohvat_graph .account_input.crerinput:nth-child(2) {
+    width: 234px;
+}
+.addohvat_graph .account_input.crerinput:nth-child(2) input {
+    width: 206px;
+}
+
+.grupparestable1 .auditinfo_table.stable.ver th:nth-child(1),
+.grupparestable1 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 71px;
+}
+.grupparestable1 .auditinfo_table.stable.ver th:nth-child(2),
+.grupparestable1 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 156px;
+}
+.grupparestable1 .auditinfo_table.stable.ver th:nth-child(3),
+.grupparestable1 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 175px;
+}
+.grupparestable1 .auditinfo_table.stable.ver th:nth-child(4),
+.grupparestable1 .auditinfo_table.stable.ver tbody td:nth-child(4) {
+    width: 319px;
+}
+.grupparestable1 .auditinfo_table.stable.ver th:nth-child(5),
+.grupparestable1 .auditinfo_table.stable.ver tbody td:nth-child(5) {
+    width: 282px;
+}
+.stable_box.ver.hoditable2 td.secondsblock:first-child {
+    padding-left: 87px;
+}
+.stable_box.ver.hoditable2 td.secondsblock {
+    height: 35px;
+}
+.stable_box.ver.hoditable2 td.spoiler.secondsblock:before {
+    left: 64px;
+    margin-top: -7px;
+}
+
+.grupparestable2 .auditinfo_table.stable.ver th:nth-child(1),
+.grupparestable2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 569px;
+}
+.grupparestable2 .auditinfo_table.stable.ver th:nth-child(2),
+.grupparestable2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 435px;
+}
+
+.checkbox.margin {
+    margin-top: 30px;
+    margin-left: 26px;
+    margin-right: auto;
+}
+.checkboxes {
+    margin-top: 36px;
+    align-items: baseline;
+}
+.checkboxes_column:first-child {
+    margin-right: 147px;
+}
+.checkboxes_column:nth-child(2) {
+    margin-right: auto;
+}
+.datacalendar {
+    width: 100%;
+}
+.datacalendar .account_input {
+    margin: 0;
+}
+.datacalendar .account_input:nth-child(odd) {
+    width: 237px;
+}
+.datacalendar .account_input:nth-child(even) {
+    width: 225px;
+}
+.datacalendar .crerinput input {
+    width: 100%;
+}
+.creaform_line .datacalendar .crerinput .graphfilter_calendar {
+    top: auto;
+    bottom: 17%;
+}
+.audit_modal.addresultdata_modal .modal-dialog {
+    max-width: 1002px;
+}
+.resultmodal_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.addresultdata_modal .hodfilter {
+    height: auto;
+}
+.resultmodal_line .stselect.large {
+    margin-top: 13px;
+    margin-left: 0;
+    width: 451px;
+}
+.resultmodal_line .stselect.large ul {
+    width: 451px;
+}
+.resultmodal_line .account_input {
+    width: 451px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.resultmodal_line .account_input input {
+    height: 40px;
+    width: 459px;
+    border: 2px solid #e2e2e2;
+    background-color: #fefefe;
+}
+.resultmodal_line .crerinput span {
+    font-size: 14px;
+    font-family: "Proxima Nova bold";
+    margin-bottom: 5px;
+}
+.addresultdata_modal .hodfilter_box {
+    flex-direction: column;
+}
+.resultmodal_line .discussion_btn {
+    width: 119px;
+}
+.resultmodal_line .checkbox label {
+    width: 243px;
+}
+.resultmodal_line.itemsend {
+    align-items: end;
+}
+.resultmodal_line:last-child {
+    padding-bottom: 10px;
+}
+.resultmodal_line .checkbox {
+    margin-right: auto;
+    margin-bottom: -11px;
+    margin-left: 42px;
+}
+.resultmodal_line .checkbox label {
+    color: #000000;
+    font-family: "Proxima Nova Rg";
+    font-size: 16px;
+}
+
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table th:nth-child(1),
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table td:nth-child(1) {
+    width: 54px;
+}
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table th:nth-child(2),
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table td:nth-child(2) {
+    width: 487px;
+}
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table th:nth-child(3),
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table td:nth-child(3) {
+    width: 128px;
+}
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table th:nth-child(4),
+.cretable1.modaladdresulttable1 .stable.ver.auditinfo_table td:nth-child(4) {
+    width: 308px;
+}
+
+.cretable1.modaladdresulttable2 .stable.ver.auditinfo_table th:nth-child(1),
+.cretable1.modaladdresulttable2 .stable.ver.auditinfo_table td:nth-child(1) {
+    width: 54px;
+}
+.cretable1.modaladdresulttable2 .stable.ver.auditinfo_table th:nth-child(2),
+.cretable1.modaladdresulttable2 .stable.ver.auditinfo_table td:nth-child(2) {
+    width: 923px;
+}
+
+.addresultdata_modal .account_tabs.cretabs .nav-link {
+    font-size: 16px;
+}
+
+.addresultdata_modal .account_tabs.cretabs .datareqinput1 textarea {
+    height: 100px;
+}
+
+.resultails.credetails .tidetails_table td:nth-child(2n + 1) {
+    width: 200px;
+}
+
+.resultinfo_comment {
+    display: block;
+    min-height: 234px;
+    width: 100%;
+    color: #000000;
+    font-family: "Proxima Nova Rg";
+    font-size: 18px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #f5f5f5;
+    margin-top: 9px;
+}
+
+.formresultable1 .stable.ver.auditinfo_table th:nth-child(1),
+.formresultable1 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 69px;
+}
+.formresultable1 .stable.ver.auditinfo_table th:nth-child(2),
+.formresultable1 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 270px;
+}
+.formresultable1 .stable.ver.auditinfo_table th:nth-child(3),
+.formresultable1 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 130px;
+}
+.formresultable1 .stable.ver.auditinfo_table th:nth-child(4),
+.formresultable1 .stable.ver.auditinfo_table tbody td:nth-child(4) {
+    width: 533px;
+}
+
+.account_tabs.formresultabs .nav-link {
+    padding: 0 0.8rem;
+}
+
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(1),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 45px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(2),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 98px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(3),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 73px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(4),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 132px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(5),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 64px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(6),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 103px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver th:nth-child(7),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(7) {
+    width: 123px;
+}
+.formresultable2.formtask1
+    .tasks_table.stable.ver
+    thead
+    > tr:first-child
+    th:nth-child(8) {
+    width: 199px;
+}
+.formresultable2.formtask1
+    .tasks_table.stable.ver
+    thead
+    > tr:first-child
+    th:nth-child(9) {
+    width: 178px;
+}
+.formresultable2.formtask1
+    .tasks_table.stable.ver
+    tr:last-child
+    th:nth-child(1),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(8) {
+    width: 80px;
+}
+.formresultable2.formtask1
+    .tasks_table.stable.ver
+    tr:last-child
+    th:nth-child(2),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(9) {
+    width: 119px;
+}
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(9) {
+    padding-left: 20px;
+}
+.formresultable2.formtask1
+    .tasks_table.stable.ver
+    tr:last-child
+    th:nth-child(3),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(10) {
+    width: 83px;
+}
+.formresultable2.formtask1
+    .tasks_table.stable.ver
+    tr:last-child
+    th:nth-child(4),
+.formresultable2.formtask1 .tasks_table.stable.ver tbody td:nth-child(11) {
+    width: 95px;
+}
+.formresultinput {
+    margin-top: 10px;
+}
+.formresultinput,
+.formresultinput input {
+    width: 100%;
+}
+.account_tabs.objectexclusion_tabs .nav-link {
+    font-size: 16px;
+}
+.objectexclusion_tabs .datareqinput1 textarea {
+    height: 210px;
+}
+.subtitle strong {
+    font-family: "Proxima Nova bold";
+}
+.addresultdata_modal .hodfilter_box.ver {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+}
+.hodfilter_column .resultmodal_line {
+    align-items: center;
+    justify-content: end;
+}
+.hodfilter_column .subtitle {
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+.hodfilter_column .account_btn.discussion_btn {
+    width: 119px;
+    height: 40px;
+}
+
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(1),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(1) {
+    width: 46px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(2),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(2) {
+    width: 52px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(3),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(3) {
+    width: 139px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(4),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(4) {
+    width: 52px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(5),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(5) {
+    width: 220px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(6),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(6) {
+    width: 111px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(7),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(7) {
+    width: 132px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(8),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(8) {
+    width: 132px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table th:nth-child(9),
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td:nth-child(9) {
+    width: 106px;
+}
+.cretable1.modalformresultable4 .stable.ver.auditinfo_table td .checkbox label {
+    padding-left: 5px;
+}
+.formresultable3.cretable1 .stable.ver.auditinfo_table th:nth-child(1),
+.formresultable3.cretable1 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 83px;
+}
+.formresultable3.cretable1 .stable.ver.auditinfo_table th:nth-child(2),
+.formresultable3.cretable1 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 549px;
+}
+.formresultable3.cretable1 .stable.ver.auditinfo_table th:nth-child(3),
+.formresultable3.cretable1 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 371px;
+}
+
+.formresultable5.hoditable2 .auditinfo_table.stable.ver th:nth-child(1),
+.formresultable5.hoditable2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 64px;
+}
+.formresultable5.hoditable2 .auditinfo_table.stable.ver th:nth-child(2),
+.formresultable5.hoditable2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 939px;
+}
+.formresultable5.stable_box.ver.hoditable2 td.subblock:first-child {
+    padding-left: 0;
+}
+.formresultable5.stable_box.ver.hoditable2 td.subblock:last-child {
+    padding-left: 62px;
+}
+.account_tabs.formresultabs1 {
+    margin-top: -24px;
+}
+.account_tabs.formresultabs1 .nav-link {
+    padding: 0 0.39rem;
+}
+.formresult_line .account_input.crerinput,
+.formresult_line .account_input.crerinput > input {
+    width: 240px;
+    margin-right: 0;
+    margin-top: 2px;
+}
+.crerinput.twobtn.threebtn input {
+    width: 570px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th {
+    vertical-align: top;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(1),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 65px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(2),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 111px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(3),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 110px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(4),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 310px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(5),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 141px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(6),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 155px;
+}
+.demandtable1.errandtable1 .stable.ver.tasks_table th:nth-child(7),
+.demandtable1.errandtable1 .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 109px;
+}
+.crerinput.date.single {
+    margin-left: 0;
+}
+.crerinput.date.single .graphfilter_calendar {
+    right: 32px;
+}
+.formdemandtable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formdemandtable1 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 46px;
+}
+.formdemandtable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formdemandtable1 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 832px;
+}
+.formdemandtable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formdemandtable1 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 150px;
+}
+.stable_box.ver.formdemandtable1 th a,
+.stable_box.ver.formdemandtable1 td a {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    outline: 0;
+}
+.formdemandtable1 .auditinfo_table.stable.ver th {
+    vertical-align: top;
+    padding-top: 6px;
+    box-sizing: border-box;
+}
+.formdemandtable1 .stable th {
+    height: 59px;
+}
+
+.formdemandtable1 .stable td {
+    height: 42px;
+}
+.deletelink {
+    outline: 0;
+    color: #e91212;
+    font-family: "Proxima Nova bold";
+    font-size: 14px;
+    margin-left: 12px;
+}
+.deletelink:hover,
+.deletelink:focus,
+.deletelink:active {
+    color: #e91212;
+    text-decoration: none;
+    outline: 0.9;
+}
+.addperformer_link.inline {
+    display: inline-block;
+    margin-right: 15px;
+}
+.refusalacttable1 .stable.ver.tasks_table th:nth-child(1),
+.refusalacttable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 89px;
+}
+.refusalacttable1 .stable.ver.tasks_table th:nth-child(2),
+.refusalacttable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 575px;
+}
+.refusalacttable1 .stable.ver.tasks_table th:nth-child(3),
+.refusalacttable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 228px;
+}
+.refusalacttable1 .stable.ver.tasks_table th:nth-child(4),
+.refusalacttable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 111px;
+}
+.account_btn.refusal_btn {
+    margin-bottom: 12px;
+}
+.crerinput.refusal_input input {
+    width: 819px;
+}
+.formdemandtable1.formrefusaltable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formdemandtable1.formrefusaltable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 83px;
+}
+.formdemandtable1.formrefusaltable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formdemandtable1.formrefusaltable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 268px;
+}
+.formdemandtable1.formrefusaltable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formdemandtable1.formrefusaltable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 357px;
+}
+.formdemandtable1.formrefusaltable1 .auditinfo_table.stable.ver th:nth-child(4),
+.formdemandtable1.formrefusaltable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(4) {
+    width: 265px;
+}
+
+.formdemandtable1.formrefusaltable2 .auditinfo_table.stable.ver th:nth-child(1),
+.formdemandtable1.formrefusaltable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 83px;
+}
+.formdemandtable1.formrefusaltable2 .auditinfo_table.stable.ver th:nth-child(2),
+.formdemandtable1.formrefusaltable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 516px;
+}
+.formdemandtable1.formrefusaltable2 .auditinfo_table.stable.ver th:nth-child(3),
+.formdemandtable1.formrefusaltable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 120px;
+}
+.formdemandtable1.formrefusaltable2 .auditinfo_table.stable.ver th:nth-child(4),
+.formdemandtable1.formrefusaltable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(4) {
+    width: 110px;
+}
+.formdemandtable1.formrefusaltable2 .auditinfo_table.stable.ver th:nth-child(5),
+.formdemandtable1.formrefusaltable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(5) {
+    width: 174px;
+}
+.graphfilter_calendar.inmodal {
+    top: 70%;
+}
+
+.controlmeasuretable1 .stable.ver.tasks_table th:nth-child(1),
+.controlmeasuretable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 90px;
+}
+.controlmeasuretable1 .stable.ver.tasks_table th:nth-child(2),
+.controlmeasuretable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 305px;
+}
+.controlmeasuretable1 .stable.ver.tasks_table th:nth-child(3),
+.controlmeasuretable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 161px;
+}
+.controlmeasuretable1 .stable.ver.tasks_table th:nth-child(4),
+.controlmeasuretable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 163px;
+}
+.controlmeasuretable1 .stable.ver.tasks_table th:nth-child(5),
+.controlmeasuretable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 173px;
+}
+.controlmeasuretable1 .stable.ver.tasks_table th:nth-child(6),
+.controlmeasuretable1 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 109px;
+}
+.formcmeasuretextarea {
+    align-items: baseline;
+}
+.formcmeasuretextarea textarea {
+    width: 819px;
+    min-height: 110px;
+    resize: vertical;
+}
+
+.formcmeasuretable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formcmeasuretable1 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 83px;
+}
+.formcmeasuretable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formcmeasuretable1 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 268px;
+}
+.formcmeasuretable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formcmeasuretable1 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 652px;
+}
+
+.formcmeasuretable2 .auditinfo_table.stable.ver th:nth-child(1),
+.formcmeasuretable2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 83px;
+}
+.formcmeasuretable2 .auditinfo_table.stable.ver th:nth-child(2),
+.formcmeasuretable2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 920px;
+}
+
+.formcmeasuretable3 .auditinfo_table.stable.ver th:nth-child(1),
+.formcmeasuretable3 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 90px;
+}
+.formcmeasuretable3 .auditinfo_table.stable.ver th:nth-child(2),
+.formcmeasuretable3 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 493px;
+}
+.formcmeasuretable3 .auditinfo_table.stable.ver th:nth-child(3),
+.formcmeasuretable3 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 127px;
+}
+.formcmeasuretable3 .auditinfo_table.stable.ver th:nth-child(4),
+.formcmeasuretable3 .auditinfo_table.stable.ver tbody td:nth-child(4) {
+    width: 179px;
+}
+.formcmeasuretable3 .auditinfo_table.stable.ver th:nth-child(5),
+.formcmeasuretable3 .auditinfo_table.stable.ver tbody td:nth-child(5) {
+    width: 112px;
+}
+
+.tidetails .tidetails_table.reporttable1,
+.tidetails .tidetails_table.reporttable2,
+.tidetails .tidetails_table.reporttable3 {
+    width: auto;
+}
+.tidetails .tidetails_table.reporttable1 {
+    margin-right: 50px;
+}
+.tidetails .tidetails_table.reporttable2 {
+    margin-right: 0;
+}
+.tidetails .tidetails_table.reporttable3 {
+    margin-right: auto;
+}
+.tidetails .tidetails_table.reporttable1 td:nth-child(1) {
+    width: 193px;
+}
+.tidetails .tidetails_table.reporttable1 td:nth-child(2) {
+    width: 90px;
+}
+
+.tidetails .tidetails_table.reporttable2 td:nth-child(1) {
+    width: 61px;
+}
+.tidetails .tidetails_table.reporttable2 td:nth-child(2) {
+    width: 200px;
+}
+
+.tidetails .tidetails_table.reporttable3 td:nth-child(1) {
+    width: 64px;
+}
+.tidetails .tidetails_table.reporttable3 td:nth-child(2) {
+    width: 98px;
+}
+
+.formaureporttable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formaureporttable1 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 82px;
+}
+.formaureporttable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formaureporttable1 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 131px;
+}
+.formaureporttable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formaureporttable1 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 367px;
+}
+.formaureporttable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formaureporttable1 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 423px;
+}
+
+.formaureporttable2 .auditinfo_table.stable.ver th:nth-child(1),
+.formaureporttable2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 78px;
+}
+.formaureporttable2 .auditinfo_table.stable.ver th:nth-child(2),
+.formaureporttable2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 135px;
+}
+.formaureporttable2 .auditinfo_table.stable.ver th:nth-child(3),
+.formaureporttable2 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 297px;
+}
+.formaureporttable2 .auditinfo_table.stable.ver th:nth-child(4),
+.formaureporttable2 .auditinfo_table.stable.ver tbody td:nth-child(4) {
+    width: 290px;
+}
+.formaureporttable2 .auditinfo_table.stable.ver th:nth-child(5),
+.formaureporttable2 .auditinfo_table.stable.ver tbody td:nth-child(5) {
+    width: 203px;
+}
+
+.formaureporttable3 .auditinfo_table.stable.ver th:nth-child(1),
+.formaureporttable3 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 78px;
+}
+.formaureporttable3 .auditinfo_table.stable.ver th:nth-child(2),
+.formaureporttable3 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 722px;
+}
+.formaureporttable3 .auditinfo_table.stable.ver th:nth-child(3),
+.formaureporttable3 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 203px;
+}
+
+.formaureporttable4 .auditinfo_table.stable.ver th:nth-child(1),
+.formaureporttable4 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 92px;
+}
+.formaureporttable4 .auditinfo_table.stable.ver th:nth-child(2),
+.formaureporttable4 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 494px;
+}
+.formaureporttable4 .auditinfo_table.stable.ver th:nth-child(3),
+.formaureporttable4 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 126px;
+}
+.formaureporttable4 .auditinfo_table.stable.ver th:nth-child(4),
+.formaureporttable4 .auditinfo_table.stable.ver tbody td:nth-child(4) {
+    width: 179px;
+}
+.formaureporttable4 .auditinfo_table.stable.ver th:nth-child(5),
+.formaureporttable4 .auditinfo_table.stable.ver tbody td:nth-child(5) {
+    width: 112px;
+}
+.nomaxwidth {
+    max-width: none !important;
+}
+
+.formdemandtable1.formgrouppptable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formdemandtable1.formgrouppptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 71px;
+}
+.formdemandtable1.formgrouppptable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formdemandtable1.formgrouppptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 156px;
+}
+.formdemandtable1.formgrouppptable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formdemandtable1.formgrouppptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 175px;
+}
+.formdemandtable1.formgrouppptable1 .auditinfo_table.stable.ver th:nth-child(4),
+.formdemandtable1.formgrouppptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(4) {
+    width: 311px;
+}
+.formdemandtable1.formgrouppptable1 .auditinfo_table.stable.ver th:nth-child(5),
+.formdemandtable1.formgrouppptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(5) {
+    width: 290px;
+}
+.credetails.firstcolumnmedium .tidetails_table td:nth-child(2n + 1) {
+    width: 225px;
+}
+
+.versionpptable1 .stable.ver.tasks_table th:nth-child(1),
+.versionpptable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 78px;
+}
+.versionpptable1 .stable.ver.tasks_table th:nth-child(2),
+.versionpptable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 315px;
+}
+.versionpptable1 .stable.ver.tasks_table th:nth-child(3),
+.versionpptable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 168px;
+}
+.versionpptable1 .stable.ver.tasks_table th:nth-child(4),
+.versionpptable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 192px;
+}
+.versionpptable1 .stable.ver.tasks_table th:nth-child(5),
+.versionpptable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 247px;
+}
+
+.creaform_line .crerinput.normalinput > input {
+    width: 819px;
+}
+.errand_graph .crerinput.normalinput input {
+    width: 400px;
+}
+.crerinput.date.single.normalinput .graphfilter_calendar {
+    right: 18px;
+}
+.crerinput.twobtn.ver input {
+    width: 716px;
+}
+.checkbox.right label {
+    padding-left: 0;
+    padding-right: 30px;
+    user-select: none;
+    line-height: 1;
+    margin-bottom: 0;
+}
+.checkbox.right label:before {
+    left: auto;
+    right: 0;
+}
+.formdemandtable1.normaprovpptable1 .auditinfo_table.stable.ver tbody td {
+    cursor: pointer;
+}
+.formdemandtable1.normaprovpptable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formdemandtable1.normaprovpptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 64px;
+}
+.formdemandtable1.normaprovpptable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formdemandtable1.normaprovpptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 829px;
+}
+.formdemandtable1.normaprovpptable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formdemandtable1.normaprovpptable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 101px;
+}
+.hodfilter.form {
+    position: relative;
+    min-height: 271px;
+    height: auto;
+}
+.hodfilter.form:before {
+    content: "";
+    height: 2px;
+    background-color: #ffffff;
+    top: 44px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+}
+.hodfilter.form .hodfilter_box {
+    align-items: baseline;
+    justify-content: space-around;
+}
+.form_column {
+    width: 473px;
+    display: flex;
+    flex-direction: column;
+}
+.creaform_subline.normaprov .crerinput input {
+    width: 203px;
+}
+.mr-85 {
+    margin-right: 85px;
+}
+.hodfilter.form .form_column .crerinput {
+    margin-right: 0;
+}
+.maxwidth1060 {
+    max-width: 1060px;
+}
+.hodfilter.form .form_column .crerinput input {
+    background-color: #fefefe;
+    height: 40px;
+}
+.hodfilter.form .form_column .errand_before .subtitle {
+    line-height: 40px;
+}
+.hodfilter.form .hodfilter_name {
+    margin-left: 19px;
+}
+
+.account_input.crerinput.input225 input {
+    width: 225px;
+}
+
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(1),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 94px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(2),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 46px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(3),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 258px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(4),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(4) {
+    width: 133px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(5),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(5) {
+    width: 132px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(6),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(6) {
+    width: 100px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(7),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(7) {
+    width: 111px;
+}
+.formdemandtable1.normaprovpptable2 .auditinfo_table.stable.ver th:nth-child(8),
+.formdemandtable1.normaprovpptable2
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(8) {
+    width: 128px;
+}
+
+.formdemandtable1.normaprovpptable2 .stable th {
+    height: 63px;
+}
+.formdemandtable1.normaprovpptable2 .stable td {
+    height: 56px;
+    cursor: pointer;
+}
+.account_btn.creasavebtn3 {
+    padding-left: 32px;
+    padding-right: 20px;
+    width: auto;
+    font-size: 16px;
+    font-family: "Proxima Nova Rg";
+    height: 40px;
+}
+.planprog_line {
+    justify-content: flex-start;
+}
+.creaform_line .planprog_line .crerinput .graphfilter_calendar {
+    top: 55%;
+}
+.stselect.smedium {
+    width: 533px;
+}
+
+.formplanprogtable1 .tasks_table.stable.ver th:nth-child(1),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 75px;
+}
+.formplanprogtable1 .tasks_table.stable.ver th:nth-child(2),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 255px;
+}
+.formplanprogtable1 .tasks_table.stable.ver th:nth-child(3),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 100px;
+}
+.formplanprogtable1 .tasks_table.stable.ver th:nth-child(4),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 142px;
+}
+.formplanprogtable1 .tasks_table.stable.ver th:nth-child(5),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 212px;
+}
+.formplanprogtable1 .tasks_table.stable.ver th:nth-child(6) {
+    width: 219px;
+}
+
+.formplanprogtable1
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(1),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 82px;
+}
+.formplanprogtable1
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(2),
+.formplanprogtable1 .tasks_table.stable.ver tbody td:nth-child(7) {
+    width: 137px;
+    padding-left: 17px;
+}
+.formplanprogtable1 .tasks_table.stable.ver thead > tr:first-child th {
+    height: 48px;
+}
+.formplanprogtable1 .tasks_table.stable.ver thead > tr:last-child th {
+    height: 41px;
+}
+.formplanprogtable1
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(1) {
+    border-right: 2px solid #e2e2e2;
+}
+
+.stable_box.ver.hoditable2.formplanprogtable1 th,
+.stable_box.ver.hoditable2.formplanprogtable1 td,
+.stable_box.ver.hoditable2.formplanprogtable2 th,
+.stable_box.ver.hoditable2.formplanprogtable2 td {
+    padding-left: 0;
+}
+.stable_box.ver.hoditable2.formplanprogtable1 th:first-child,
+.stable_box.ver.hoditable2.formplanprogtable1 td:first-child,
+.stable_box.ver.hoditable2.formplanprogtable2 th:first-child,
+.stable_box.ver.hoditable2.formplanprogtable2 td:first-child {
+    padding-left: 40px;
+}
+.stable_box.ver.hoditable2.formplanprogtable1 tr:last-child th:first-child {
+    padding-left: 0;
+}
+.stable_box.ver.hoditable2.formplanprogtable1 td.spoiler:before,
+.stable_box.ver.hoditable2.formplanprogtable2 td.spoiler:before {
+    top: 50%;
+}
+.stable_box.ver.hoditable2.formplanprogtable1 tr.subline td.spoiler:before,
+.stable_box.ver.hoditable2.formplanprogtable2 tr.subline td.spoiler:before {
+    left: 45px;
+    top: 56%;
+    margin-top: -7px;
+}
+.stable_box.ver.hoditable2.formplanprogtable1 tr.subline td:first-child,
+.stable_box.ver.hoditable2.formplanprogtable2 tr.subline td:first-child {
+    padding-left: 67px;
+}
+.stable_box.ver.hoditable2.formplanprogtable1 tr.subline td:nth-child(2) {
+    padding-left: 20px;
+}
+.mt-41 {
+    margin-top: 41px !important;
+}
+.formplanprogtable2 .tasks_table.stable.ver th:nth-child(1),
+.formplanprogtable2 .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 74px;
+}
+.formplanprogtable2 .tasks_table.stable.ver th:nth-child(2),
+.formplanprogtable2 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 430px;
+}
+.formplanprogtable2 .tasks_table.stable.ver th:nth-child(3),
+.formplanprogtable2 .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 146px;
+}
+.formplanprogtable2 .tasks_table.stable.ver th:nth-child(4),
+.formplanprogtable2 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 141px;
+}
+.formplanprogtable2 .tasks_table.stable.ver th:nth-child(5),
+.formplanprogtable2 .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 212px;
+}
+.mr-142 {
+    margin-right: 142px !important;
+}
+
+.formauconclusiontable1 .auditinfo_table.stable.ver th:nth-child(1),
+.formauconclusiontable1 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 90px;
+}
+.formauconclusiontable1 .auditinfo_table.stable.ver th:nth-child(2),
+.formauconclusiontable1 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 497px;
+}
+.formauconclusiontable1 .auditinfo_table.stable.ver th:nth-child(3),
+.formauconclusiontable1 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 126px;
+}
+.formauconclusiontable1 .auditinfo_table.stable.ver th:nth-child(4),
+.formauconclusiontable1 .auditinfo_table.stable.ver tbody td:nth-child(4) {
+    width: 176px;
+}
+.formauconclusiontable1 .auditinfo_table.stable.ver th:nth-child(5),
+.formauconclusiontable1 .auditinfo_table.stable.ver tbody td:nth-child(5) {
+    width: 114px;
+}
+.modaltwoinputs .account_input.crerinput {
+    width: 218px;
+}
+.modaltwoinputs .account_input.crerinput input {
+    width: 100%;
+}
+
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(1),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 53px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(2),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 99px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(3),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 100px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(4),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 122px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(5),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 225px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(6),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 129px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(7),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 141px;
+}
+.rulesregulationstable1 .stable.ver.tasks_table th:nth-child(8),
+.rulesregulationstable1 .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 134px;
+}
+.creaform_subcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.creaform_subcol .account_btn.discussion_btn {
+    margin-top: 0;
+    margin-left: 0;
+    /*width: 162px;*/
+}
+.creaform_subcol .stselect .head {
+    height: 40px;
+}
+.creaform_line.textareabtn .formcmeasuretextarea textarea {
+    height: 134px;
+    resize: none;
+}
+.creaform_line.textareabtn .creaform_subcol {
+    height: 156px;
+    padding-top: 22px;
+    box-sizing: border-box;
+}
+.creaform_subcol .tasks_select > .head {
+    width: 162px;
+    cursor: pointer;
+}
+.creaform_subcol .stselect.tasks_select.modau_select ul {
+    left: 0;
+}
+.tasks_select.active:hover {
+    background-color: #30548E;
+}
+.creaform_subcol .stselect.tasks_select.modau_select {
+    margin-right: 0;
+}
+.creaform_line .creaform_subcol .stselect .head:after {
+    height: 23px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(1),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 53px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(2),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 147px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(4),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(4) {
+    width: 107px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(5),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(5) {
+    width: 99px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(6),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(6) {
+    width: 201px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(7),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(7) {
+    width: 169px;
+}
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    th:nth-child(8),
+.formdemandtable1.formregulationtable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(8) {
+    width: 123px;
+}
+.account_input.small {
+    width: 319px;
+}
+.creaform_line .stselect.large.small,
+.creaform_line .stselect.large.small ul {
+    width: 319px;
+}
+.creaform_line .stselect.large.wide,
+.creaform_line .stselect.large.wide ul {
+    width: 653px;
+}
+.datareqinput1 textarea.vresize {
+    resize: vertical;
+}
+.twobtnarea {
+    align-items: normal;
+}
+.twobtnarea .hodinfo_subheaderbox {
+    align-items: normal;
+    margin-top: 32px;
+}
+.resultmodal_line .checkbox label.w300 {
+    width: 300px;
+}
+.resultmodal_subcbox {
+    height: 40px;
+    line-height: 40px;
+}
+.cretable1.modaladdregulationtable1 .stable.ver.auditinfo_table th:nth-child(1),
+.cretable1.modaladdregulationtable1
+    .stable.ver.auditinfo_table
+    td:nth-child(1) {
+    width: 541px;
+}
+.cretable1.modaladdregulationtable1 .stable.ver.auditinfo_table th:nth-child(2),
+.cretable1.modaladdregulationtable1
+    .stable.ver.auditinfo_table
+    td:nth-child(2) {
+    width: 128px;
+}
+.cretable1.modaladdregulationtable1 .stable.ver.auditinfo_table th:nth-child(3),
+.cretable1.modaladdregulationtable1
+    .stable.ver.auditinfo_table
+    td:nth-child(3) {
+    width: 308px;
+}
+
+.creaform_line.textareabtn.version2btn .formcmeasuretextarea textarea {
+    height: 87px;
+}
+.creaform_line.textareabtn.version2btn .creaform_subcol {
+    height: 128px;
+}
+.version2btn .creaform_subcol .account_btn.discussion_btn {
+    width: 148px;
+}
+
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(1),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 85px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(2),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 81px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(3),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 122px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(4),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(4) {
+    width: 155px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(5),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(5) {
+    width: 157px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(6),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(6) {
+    width: 106px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(7),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(7) {
+    width: 99px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(8),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(8) {
+    width: 201px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(9),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(9) {
+    width: 169px;
+}
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    th:nth-child(10),
+.formplanprogtable2.formauditconclusiontable1
+    .tasks_table.stable.ver
+    tbody
+    td:nth-child(10) {
+    width: 165px;
+}
+.bigtablebox {
+    overflow-x: scroll;
+    min-width: 1000px;
+    width: calc(100vw - 300px);
+}
+.bigtablebox .stable.ver {
+    table-layout: fixed;
+}
+
+table.stable.ver tbody {
+    word-break: break-word;
+}
+
+.formregviolationstable1 .stable.ver.auditinfo_table th:nth-child(1),
+.formregviolationstable1 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 72px;
+}
+.formregviolationstable1 .stable.ver.auditinfo_table th:nth-child(2),
+.formregviolationstable1 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 629px;
+}
+.formregviolationstable1 .stable.ver.auditinfo_table th:nth-child(3),
+.formregviolationstable1 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 302px;
+}
+
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(1),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 79px;
+}
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(2),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 102px;
+}
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(3),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 150px;
+}
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(4),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 282px;
+}
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(5),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 67px;
+}
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(6) {
+    width: 66px;
+}
+.formregviolationstable2 .tasks_table.stable.ver th:nth-child(7) {
+    width: 257px;
+}
+
+.formregviolationstable2
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(1),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(7) {
+    width: 145px;
+}
+.formregviolationstable2
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(2),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(8) {
+    width: 120px;
+}
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(7),
+.formregviolationstable2 .tasks_table.stable.ver tbody td:nth-child(8) {
+    text-align: center;
+}
+
+.colspoilertable th {
+    border-right: 3px solid #e2e2e2;
+    vertical-align: top !important;
+    padding-left: 8px !important;
+    padding-top: 5px !important;
+    box-sizing: border-box;
+    /*-moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;*/
+}
+.colspoilertable tr:first-child > th {
+    height: 144px;
+}
+.colspoilertable tr:last-child > th {
+    height: 22px;
+}
+.colspoilertable th:last-child {
+    border-right: none;
+}
+.column1 {
+    width: 29px !important;
+}
+.column2 {
+    width: 119px !important;
+}
+.column3 {
+    width: 87px !important;
+}
+.column4 {
+    width: 50px !important;
+}
+.bigcolumn.subcolumn1 {
+    width: 135px !important;
+}
+.bigcolumn.subcolumn2 {
+    width: 121px !important;
+}
+.bigcolumn.subcolumn3 {
+    width: 90px !important;
+}
+.bigcolumn.subcolumn4 {
+    width: 103px !important;
+}
+.bigcolumn.subcolumn4 {
+    width: 105px !important;
+}
+.bigcolumn.subcolumn5 {
+    width: 100px !important;
+}
+.bigcolumn.subcolumn6 {
+    width: 100px !important;
+}
+.bigcolumn1 {
+    width: 212px !important;
+}
+.bigcolumn2 {
+    width: 201px !important;
+}
+.column5 {
+    width: 164px !important;
+}
+.column6 {
+    width: 132px !important;
+}
+.column7 {
+    width: 129px !important;
+}
+.colspoilertable .tablebtn {
+    text-align: center;
+    font-family: "Proxima Nova Rg";
+    font-size: 14px;
+    border-right: 3px solid white;
+    position: relative;
+}
+.colspoilertable .tablebtn > a {
+    background-color: #e2e2e2;
+    display: block;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.colspoilertable .tablebtn > a:hover {
+    background-color: rgba(226, 226, 226, 0.8);
+}
+.colspoilertable td {
+    height: 56px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center !important;
+}
+.formregviolationstable4 .stable.ver.auditinfo_table th:nth-child(1),
+.formregviolationstable4 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 65px;
+}
+.formregviolationstable4 .stable.ver.auditinfo_table th:nth-child(2),
+.formregviolationstable4 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 202px;
+}
+.formregviolationstable4 .stable.ver.auditinfo_table th:nth-child(3),
+.formregviolationstable4 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 736px;
+}
+.stable_box.ver.cretable1.formregviolationstable4 td {
+    height: 56px;
+}
+.rvtablecolumn1 {
+    width: 35px !important;
+}
+.rvtablecolumn2 {
+    width: 134px !important;
+}
+.rvtablecolumn3 {
+    width: 84px !important;
+}
+.rvtablecolumn4 {
+    width: 87px !important;
+}
+.rvtablecolumn5 {
+    width: 127px !important;
+}
+.rvtablecolumn6 {
+    width: 101px !important;
+}
+.rvtablecolumn7 {
+    width: 77px !important;
+}
+.rvtablecolumn8 {
+    width: 92px !important;
+}
+.rvtablecolumn9 {
+    width: 311px !important;
+}
+.rvtablecolumn10 {
+    width: 75px !important;
+}
+.rvtablecolumn11 {
+    width: 75px !important;
+}
+.rvtablebigcolumn1.subcolumn1 {
+    width: 146px;
+}
+.rvtablebigcolumn1.subcolumn2 {
+    width: 113px;
+}
+.rvtablebigcolumn1.subcolumn3 {
+    width: 105px;
+}
+.rvtablebigcolumn1.subcolumn4 {
+    width: 92px !important;
+}
+.rvtablebigcolumn2.subcolumn1 {
+    width: 174px !important;
+}
+.rvtablebigcolumn2.subcolumn2 {
+    width: 108px !important;
+}
+.rvtablebigcolumn2.subcolumn3 {
+    width: 106px !important;
+}
+.rvtablebigcolumn2.subcolumn4 {
+    width: 97px !important;
+}
+.rvtablebigcolumn2.subcolumn5 {
+    width: 108px !important;
+}
+.rvtablebigcolumn2.subcolumn6 {
+    width: 114px !important;
+}
+.rvtablebigcolumn3 {
+    width: 252px !important;
+}
+.rvtablebigcolumn4.subcolumn1 {
+    width: 186px !important;
+}
+.rvtablebigcolumn4.subcolumn2 {
+    width: 114px !important;
+}
+.rvtablebigcolumn4.subcolumn3 {
+    width: 122px !important;
+}
+.rvtablecolumn12 {
+    width: 150px !important;
+}
+.rvtablecolumn13 {
+    width: 140px !important;
+}
+.rvtablecolumn14 {
+    width: 110px !important;
+}
+.rvtablecolumn15 {
+    width: 173px !important;
+}
+
+.rvtable2column1 {
+    width: 46px !important;
+}
+.rvtable2column2 {
+    width: 126px !important;
+}
+.rvtable2column3 {
+    width: 87px !important;
+}
+.rvtable2column4 {
+    width: 80px !important;
+}
+.rvtable2column5 {
+    width: 101px !important;
+}
+.rvtable2column6 {
+    width: 77px !important;
+}
+.rvtable2column7 {
+    width: 92px !important;
+}
+.rvtable2column8 {
+    width: 311px !important;
+}
+.rvtable2column9 {
+    width: 75px !important;
+}
+.rvtable2column10 {
+    width: 75px !important;
+}
+.rvtable2column11 {
+    width: 163px !important;
+}
+.rvtable2column12 {
+    width: 163px !important;
+}
+.rvtable2column13 {
+    width: 304px !important;
+}
+.rvtable2bigcolumn1.subcolumn1 {
+    width: 109px !important;
+}
+.rvtable2bigcolumn1.subcolumn2 {
+    width: 111px !important;
+}
+.rvtable2bigcolumn1.subcolumn3 {
+    width: 107px !important;
+}
+.rvtable2bigcolumn1.subcolumn4 {
+    width: 122px !important;
+}
+.rvtable2column14 {
+    width: 139px !important;
+}
+.rvtable2column15 {
+    width: 138px !important;
+}
+.rvtable2column16 {
+    width: 155px !important;
+}
+.rvtable2column17 {
+    width: 139px !important;
+}
+.rvtable2column18 {
+    width: 110px !important;
+}
+.rvtable2column19 {
+    width: 143px !important;
+}
+
+.cretable1.modalregviolationtable1 .stable.ver.auditinfo_table th:nth-child(1),
+.cretable1.modalregviolationtable1 .stable.ver.auditinfo_table td:nth-child(1) {
+    width: 48px;
+}
+.cretable1.modalregviolationtable1 .stable.ver.auditinfo_table th:nth-child(2),
+.cretable1.modalregviolationtable1 .stable.ver.auditinfo_table td:nth-child(2) {
+    width: 927px;
+}
+.stable_box.ver.cretable1.modalregviolationtable1 th {
+    vertical-align: middle;
+}
+.stable_box.ver.cretable1.modalregviolationtable1 .checkbox label {
+    margin-bottom: 0.3rem;
+}
+.violtails .tidetails_table {
+    border-spacing: 0 5px;
+    border-collapse: unset;
+    width: 100%;
+}
+.violtails .tidetails_table td:nth-child(1) {
+    text-align: right;
+    width: 200px;
+    padding-right: 27px;
+    vertical-align: middle;
+}
+.violtails .tidetails_table td:nth-child(2) {
+    width: 100%;
+}
+.violtails .account_input {
+    margin-bottom: 0;
+}
+.violtails .account_input > input {
+    width: 223px;
+    border: 2px solid #e2e2e2;
+    background-color: #fefefe;
+    height: 40px;
+    font-family: "Proxima Nova Semibold";
+    font-size: 16px;
+}
+.violtails .stselect,
+.violtails .stselect ul {
+    width: 223px;
+}
+
+.violtails .stselect .head,
+.violtails .stselect ul {
+    font-family: "Proxima Nova Semibold";
+    font-size: 16px;
+}
+.violsection .aisection_head {
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 10px;
+}
+.violsection .aisection_hdr {
+    width: 920px;
+}
+.subtitle.wbtn {
+    display: flex;
+    line-height: 40px;
+}
+.subtitle.wbtn .account_btn.discussion_btn {
+    width: 148px;
+}
+.mr-unset {
+    margin-right: unset !important;
+}
+.ml-unset {
+    margin-left: unset !important;
+}
+.tabletopalign {
+    vertical-align: top !important;
+}
+.addviolancemodal_input1 > input {
+    width: 284px;
+    border: 2px solid #e2e2e2;
+    background-color: #fefefe;
+    height: 40px;
+    line-height: 40px;
+}
+.addviolancemodal_input2 > input {
+    width: 459px;
+    border: 2px solid #e2e2e2;
+    background-color: #fefefe;
+    height: 40px;
+    line-height: 40px;
+}
+.documentcreate_modal .addviolancemodal_btn {
+    width: 139px;
+    margin-top: 21px;
+}
+.modal_adddataviolancetable1
+    .formdemandtable1.modal_adddataviolancetable1
+    .auditinfo_table.stable.ver
+    th:nth-child(1),
+.formdemandtable1.modal_adddataviolancetable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 101px;
+}
+.formdemandtable1.modal_adddataviolancetable1
+    .auditinfo_table.stable.ver
+    th:nth-child(2),
+.formdemandtable1.modal_adddataviolancetable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 876px;
+}
+
+.formdemandtable1.modal_adddataotherviolationstable1
+    .auditinfo_table.stable.ver
+    th:nth-child(1),
+.formdemandtable1.modal_adddataotherviolationstable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(1) {
+    width: 56px;
+}
+.formdemandtable1.modal_adddataotherviolationstable1
+    .auditinfo_table.stable.ver
+    th:nth-child(2),
+.formdemandtable1.modal_adddataotherviolationstable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(2) {
+    width: 95px;
+}
+.formdemandtable1.modal_adddataotherviolationstable1
+    .auditinfo_table.stable.ver
+    th:nth-child(3),
+.formdemandtable1.modal_adddataotherviolationstable1
+    .auditinfo_table.stable.ver
+    tbody
+    td:nth-child(3) {
+    width: 826px;
+}
+
+.editebk_line.formresult_line .account_input.crerinput,
+.formresult_line .account_input.crerinput > input {
+    width: 233px;
+}
+.editebk_line.formresult_line .account_input.crerinput:nth-child(3),
+.formresult_line .account_input.crerinput:nth-child(3) > input,
+.editebk_line.formresult_line .account_input.crerinput:nth-child(4),
+.formresult_line .account_input.crerinput:nth-child(4) > input {
+    width: 257px;
+}
+.editebk_line .graphfilter_calendar {
+    top: 68%;
+}
+.checkbox .fontset {
+    color: #3E2458;
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+
+.datable1column1 {
+    width: 119px !important;
+}
+.datable1column2 {
+    width: 124px !important;
+}
+.datable1bigcolumn1 {
+    width: 116px !important;
+}
+.datable1bigcolumn2 {
+    width: 139px !important;
+}
+.datable1bigcolumn3.subcolumn1 {
+    width: 214px !important;
+}
+.datable1bigcolumn3.subcolumn2 {
+    width: 110px !important;
+}
+.datable1bigcolumn3.subcolumn3 {
+    width: 119px !important;
+}
+.datable1bigcolumn3.subcolumn4 {
+    width: 101px !important;
+}
+.datable1bigcolumn3.subcolumn5 {
+    width: 114px !important;
+}
+.datable1bigcolumn4.subcolumn1 {
+    width: 180px !important;
+}
+.datable1bigcolumn4.subcolumn2 {
+    width: 111px !important;
+}
+.datable1bigcolumn4.subcolumn3 {
+    width: 163px !important;
+}
+.stable tfoot > tr {
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+.colspoilertable tfoot > tr > th {
+    height: 36px !important;
+    vertical-align: middle;
+    padding-top: 0;
+    border-right: none;
+}
+.distribamountstable.colspoilertable td {
+    text-align: left !important;
+    padding-left: 8px !important;
+}
+
+.formauditionregrable1 .tasks_table.stable.ver th:nth-child(1),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 85px;
+}
+.formauditionregrable1 .tasks_table.stable.ver th:nth-child(2),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 175px;
+}
+.formauditionregrable1 .tasks_table.stable.ver th:nth-child(3),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 349px;
+}
+.formauditionregrable1 .tasks_table.stable.ver th:nth-child(4),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 76px;
+}
+.formauditionregrable1 .tasks_table.stable.ver th:nth-child(5),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 67px;
+}
+.formauditionregrable1
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(1),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 145px;
+}
+.formauditionregrable1
+    .tasks_table.stable.ver
+    thead
+    > tr:last-child
+    th:nth-child(2),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(7) {
+    width: 119px;
+}
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(6),
+.formauditionregrable1 .tasks_table.stable.ver tbody td:nth-child(7) {
+    text-align: center;
+}
+.farcolumn1 {
+    width: 37px !important;
+}
+.farcolumn2 {
+    width: 128px !important;
+}
+.farcolumn3 {
+    width: 92px !important;
+}
+.farcolumn4 {
+    width: 90px !important;
+}
+.farbigcolumn1.subcolumn1 {
+    width: 243px !important;
+}
+.farbigcolumn1.subcolumn2 {
+    width: 97px !important;
+}
+.farbigcolumn1.subcolumn3 {
+    width: 96px !important;
+}
+.farbigcolumn2 {
+    width: 222px !important;
+}
+.farbigcolumn3 {
+    width: 260px !important;
+}
+.farbigcolumn4 {
+    width: 310px !important;
+}
+.farbigcolumn5 {
+    width: 476px !important;
+}
+.farbigcolumn6 {
+    width: 187px !important;
+}
+.farcolumn5 {
+    width: 136px !important;
+}
+.farcolumn6 {
+    width: 300px !important;
+}
+.farcolumn7 {
+    width: 174px !important;
+}
+.farcolumn8 {
+    width: 200px !important;
+}
+
+.fartable2column1 {
+    width: 39px !important;
+}
+.fartable2column2 {
+    width: 119px !important;
+}
+.fartable2column3 {
+    width: 87px !important;
+}
+.fartable2column4 {
+    width: 50px !important;
+}
+.fartable2bigcolumn1.subcolumn1 {
+    width: 135px !important;
+}
+.fartable2bigcolumn1.subcolumn2 {
+    width: 121px !important;
+}
+.fartable2bigcolumn1.subcolumn3 {
+    width: 90px !important;
+}
+.fartable2bigcolumn1.subcolumn4 {
+    width: 103px !important;
+}
+.fartable2bigcolumn1.subcolumn5 {
+    width: 105px !important;
+}
+.fartable2bigcolumn1.subcolumn6 {
+    width: 100px !important;
+}
+.fartable2bigcolumn2 {
+    width: 212px !important;
+}
+.fartable2bigcolumn3 {
+    width: 201px !important;
+}
+.fartable2column5 {
+    width: 164px !important;
+}
+.fartable2column6 {
+    width: 132px !important;
+}
+.fartable2column7 {
+    width: 129px !important;
+}
+
+.fartable4 .stable.ver.auditinfo_table th:nth-child(1),
+.fartable4 .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: 74px;
+}
+.fartable4 .stable.ver.auditinfo_table th:nth-child(2),
+.fartable4 .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 224px;
+}
+.fartable4 .stable.ver.auditinfo_table th:nth-child(3),
+.fartable4 .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 81px;
+}
+.fartable4 .stable.ver.auditinfo_table th:nth-child(4),
+.fartable4 .stable.ver.auditinfo_table tbody td:nth-child(4) {
+    width: 320px;
+}
+.fartable4 .stable.ver.auditinfo_table th:nth-child(5),
+.fartable4 .stable.ver.auditinfo_table tbody td:nth-child(5) {
+    width: 159px;
+    text-align: center;
+}
+.fartable4 .stable.ver.auditinfo_table th:nth-child(6),
+.fartable4 .stable.ver.auditinfo_table tbody td:nth-child(6) {
+    width: 145px;
+    text-align: center;
+}
+.fartable3column1 {
+    width: 39px !important;
+}
+.fartable3column2 {
+    width: 120px !important;
+}
+.fartable3column3 {
+    width: 79px !important;
+}
+.fartable3column4 {
+    width: 74px !important;
+}
+.fartable3column5 {
+    width: 169px !important;
+}
+.fartable3column6 {
+    width: 160px !important;
+}
+.fartable3column7 {
+    width: 227px !important;
+}
+.fartable3bigcolumn1.subcolumn1 {
+    width: 146px !important;
+}
+.fartable3bigcolumn1.subcolumn2 {
+    width: 120px !important;
+}
+.fartable3bigcolumn1.subcolumn3 {
+    width: 120px !important;
+}
+.fartable3bigcolumn1.subcolumn4 {
+    width: 126px !important;
+}
+.fartable3column8 {
+    width: 138px !important;
+}
+.fartable3column9 {
+    width: 114px !important;
+}
+.fartable3column10 {
+    width: 270px !important;
+}
+.fartable3column11 {
+    width: 126px !important;
+}
+
+.fasmodaltable1 .auditinfo_table.stable.ver th:nth-child(1),
+.fasmodaltable1 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 221px;
+}
+.fasmodaltable1 .auditinfo_table.stable.ver th:nth-child(2),
+.fasmodaltable1 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 756px;
+}
+
+.fasmodaltable2 .auditinfo_table.stable.ver th:nth-child(1),
+.fasmodaltable2 .auditinfo_table.stable.ver tbody td:nth-child(1) {
+    width: 111px;
+}
+.fasmodaltable2 .auditinfo_table.stable.ver th:nth-child(2),
+.fasmodaltable2 .auditinfo_table.stable.ver tbody td:nth-child(2) {
+    width: 350px;
+}
+.fasmodaltable2 .auditinfo_table.stable.ver th:nth-child(3),
+.fasmodaltable2 .auditinfo_table.stable.ver tbody td:nth-child(3) {
+    width: 516px;
+}
+.specmediuminput,
+.specmediuminput input {
+    width: 459px;
+}
+.specmediuminput input {
+    height: 40px;
+}
+.fasmodalmt-23 {
+    margin-top: 23px;
+}
+.documentcreate_modal.fas_modal .creaform_subline > .account_btn {
+    width: unset;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.documentcreate_modal.fas_modal label > .account_btn {
+    width: unset;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+.documentcreate_modal.fas_modal .fasmodalforminput1 input {
+    width: 331px;
+}
+.documentcreate_modal.fas_modal .datareqinput1 textarea {
+    min-height: 70px;
+}
+.addperformer_modal .account_input.crerinput.fasmodaldatainput {
+    margin-bottom: 13px;
+}
+.fasmodaldatainput .graphfilter_calendar {
+    top: 70%;
+}
+.addperformer_modal .crerinput.datareqinput1.fasmodalforminput1.ver {
+    margin-bottom: 4px;
+}
+
+.fileInputDownload {
+    position: relative;
+}
+.fileInputDownload .fa-cloud-upload-alt {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    border: 2px solid rgb(37, 139, 90);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: -2px;
+}
+.indexFile.removeFile span.removeFileInput .fa-cloud-upload-alt {
+    border: 2px solid rgb(233, 18, 18);
+    top: 1px;
+}
+.indexFile.removeFile span.removeFileInput {
+    color: rgb(233, 18, 18);
+    cursor: pointer;
+    margin-top: 4px;
+}
+.indexFile.removeFile span.removeFileInput .fa-cloud-upload-alt:before {
+    width: 8px;
+    height: 8px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <path fill-rule="evenodd"  fill="rgb(233, 18, 18)" d="M5.411,3.995 L7.533,6.116 C7.922,6.505 7.922,7.139 7.533,7.529 C7.143,7.919 6.508,7.919 6.117,7.529 L3.996,5.409 L1.874,7.529 C1.485,7.919 0.851,7.919 0.460,7.529 C0.072,7.139 0.072,6.505 0.460,6.116 L2.581,3.994 L0.460,1.873 C0.072,1.482 0.072,0.849 0.460,0.458 C0.851,0.069 1.485,0.069 1.874,0.458 L3.996,2.579 L6.117,0.458 C6.508,0.069 7.143,0.069 7.533,0.458 C7.922,0.849 7.922,1.482 7.533,1.874 L5.411,3.995 Z"/> </svg>')
+        no-repeat center;
+}
+
+.fileInputDownload .fa-cloud-upload-alt:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" > <path fill-rule="evenodd"  fill="rgb(37, 139, 90)" d="M9.000,6.000 L6.000,6.000 L6.000,9.000 C6.000,9.552 5.552,10.000 5.000,10.000 C4.448,10.000 4.000,9.552 4.000,9.000 L4.000,6.000 L1.000,6.000 C0.448,6.000 -0.000,5.552 -0.000,5.000 C-0.000,4.448 0.448,4.000 1.000,4.000 L4.000,4.000 L4.000,1.000 C4.000,0.448 4.448,-0.000 5.000,-0.000 C5.552,-0.000 6.000,0.448 6.000,1.000 L6.000,4.000 L9.000,4.000 C9.552,4.000 10.000,4.448 10.000,5.000 C10.000,5.552 9.552,6.000 9.000,6.000 Z"/> </svg>')
+        no-repeat center;
+}
+.fileInputDownload .float-left {
+    padding-left: 0;
+}
+.fileInputDownload span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: rgb(37, 139, 90);
+}
+.fileInputDownload input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.aisection_hdr.gaifk_title {
+    margin-bottom: 17px;
+}
+.indexFile.removeFile {
+    margin-left: 12px;
+}
+.indexFile.removeFile span.validFile {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+.formExpertOpinion .stselect.large.medium,
+.formExpertOpinion .stselect.large.fullwbtn,
+.formExpertOpinion .stselect.large.smedium,
+.formExpertOpinion .stselect.large.smedium.tm-theme {
+    border: none;
+}
+.formExpertOpinion .stselect.large.medium .stselect.large.medium {
+    margin-top: 0;
+    width: 487px !important;
+    border: 2px solid #e2e2e2;
+}
+.formExpertOpinion .stselect.large.fullwbtn .stselect.large.fullwbtn {
+    margin-top: 0;
+    width: 885px !important;
+    border: 2px solid #e2e2e2;
+}
+.formExpertOpinion .stselect.large.smedium .stselect.large.smedium {
+    margin-top: 0;
+    width: 533px !important;
+    border: 2px solid #e2e2e2;
+}
+.formExpertOpinion
+    .stselect.large.smedium.tm-theme
+    .stselect.large.smedium.tm-theme {
+    margin-top: 0;
+    width: 533px !important;
+    border: 2px solid #e2e2e2;
+}
+.formExpertOpinion .stselect.large.medium .stselect.direction-top ul {
+    bottom: 46px;
+    width: 487px !important;
+}
+.formExpertOpinion .stselect.large.smedium .stselect.direction-top ul {
+    bottom: 46px;
+    width: 533px !important;
+}
+.formExpertOpinion .stselect.large.fullwbtn .stselect.direction-top ul {
+    bottom: 46px;
+    width: 885px !important;
+}
+.formExpertOpinion .stselect.large.smedium.tm-theme .stselect.direction-top ul {
+    bottom: 46px;
+    width: 533px !important;
+}
+
+.modal_inconsistency .modal-dialog {
+    width: 100% !important;
+    max-width: 1140px !important;
+}
+
+.modal_info .modal-dialog {
+    width: 100% !important;
+    max-width: 315px !important;
+}
+
+.modal_inconsistency .container-fluid {
+    padding: 0;
+}
+
+.modal_inconsistency .container-fluid .row {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.modal_inconsistency .container-fluid .editdatatask_form {
+    max-width: 100%;
+}
+
+.modal_inconsistency .mfilter_link {
+    display: none;
+}
+
+.modal_inconsistency .account_btn.creasavebtn2 {
+    display: none;
+}
+
+
+.big_modal .modal-dialog{
+    max-width: 80vw!important;
+}
+
+.big_modal .modal-dialog .modal-content{
+    height: 90vh!important;
+}

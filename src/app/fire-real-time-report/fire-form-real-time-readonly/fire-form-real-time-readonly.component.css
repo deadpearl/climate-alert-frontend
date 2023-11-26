@@ -1,0 +1,39 @@
+.cont{
+  width: 1100px;
+  height: 650px;
+  margin: 50px 20px 20px 350px;
+}
+input {
+  width: 310px;
+  height: 42px;
+  margin-top: 18px;
+}
+.account_tabs {
+  width: 100%;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 13px;
+  box-shadow: 0 3px 17px 1px rgba(0, 0, 0, 0.11);
+  background-color: #fefefe;
+  box-sizing: border-box;
+  margin-top: 9px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+.button {
+  margin-top: 40px;
+}
+.form {
+  margin: 20px;
+}
+.disabled {
+  cursor: default;
+  background: #4e5154;
+}
+

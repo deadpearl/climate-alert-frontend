@@ -6,3 +6,9 @@
 .prepadoc {
   display: block;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}

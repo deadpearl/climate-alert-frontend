@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-fire-real-time-report',
@@ -7,7 +8,8 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./fire-real-time-report.component.css']
 })
 export class FireRealTimeReportComponent implements OnInit {
-  constructor(private http: HttpClient
+  constructor(private http: HttpClient,
+              private router: Router,
   ) { }
   reportPdf: Blob = null;
   ngOnInit() {
@@ -23,4 +25,14 @@ export class FireRealTimeReportComponent implements OnInit {
       {responseType: 'blob'}).toPromise();
   }
 
+  goToReadOnly() {
+    console.log('gotoreadonly');
+    this.router.navigate(['fire/report/real-time/form'], {
+      queryParams: {
+        reportId: 2,
+        readonly: true,
+      },
+      queryParamsHandling: 'merge'
+    });
+  }
 }

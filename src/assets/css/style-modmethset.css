@@ -1,0 +1,824 @@
+.normabasetable .stable.ver {
+    table-layout: fixed;
+}
+
+.normabasetable .stable.ver .stable_hdr {
+    padding-right: 0 !important;
+}
+
+.normabasetable .tasks_table.stable.ver th, .normabasetable .tasks_table.stable.ver td {
+    width: unset;
+}
+
+.stable tr:not(:first-child) th:nth-child(1) {
+    padding-left: 0;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th:nth-child(2),
+.normabasetable .tasks_table.stable.ver tr:nth-child(2) th {
+    border: 2px solid #e2e2e2;
+    border-top: none;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(3) th {
+    border: 2px solid #e2e2e2;
+    border-bottom: none;
+    height: 70px;
+}
+
+.rating_criteria_auditors .normabasetable .tasks_table.stable.ver tr:nth-child(3) th {
+    height: 40px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th {
+    height: 37px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(2) th {
+    height: 40px;
+}
+
+.alignCentr {
+    text-align: center;
+}
+
+.normabasetable .tasks_table.stable.ver th:not(.alignleft), .normabasetable .tasks_table.stable.ver td:not(.alignleft) {
+    text-align: center;
+}
+
+.normabasetable .tasks_table.stable.ver th.alignleft, .normabasetable .tasks_table.stable.ver td.alignleft {
+    padding-left: 17px;
+}
+
+.rating_criteria_auditors .normabasetable .tasks_table.stable.ver td.alignleft:nth-child(7) {
+    padding-left: 49px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th.alignleft {
+    padding-top: 6px;
+    vertical-align: top;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th:nth-child(1), .normabasetable .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 54px;
+}
+
+.normabasetable .stable td {
+    height: 42px;
+    padding-right: 0;
+}
+
+.stable label {
+    margin-bottom: .3rem;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(3) th:nth-child(1),
+.normabasetable .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 124px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(3) th:nth-child(2),
+.normabasetable .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 130px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(3) th:nth-child(3),
+.normabasetable .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 98px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(3) th:nth-child(4),
+.normabasetable .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 112px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(3) th:nth-child(5),
+.normabasetable .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 116px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th:nth-child(3),
+.normabasetable .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 368px;
+}
+
+.rating_criteria_auditors .normabasetable .tasks_table.stable.ver tr:first-child th:nth-child(3) {
+    width: 125px;
+}
+
+.stable_box.ver.prepatable1.evaltable1 th,
+.stable_box.ver.prepatable1.evaltable2 th {
+    height: 50px;
+}
+
+.stable_box.ver.prepatable1.evaltable1 td,
+.stable_box.ver.prepatable1.evaltable2 td {
+    height: 42px;
+}
+
+.evaltable1 .stable.ver.tasks_table th:nth-child(1), .evaltable1 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 56px;
+}
+
+.evaltable1 .stable.ver.tasks_table th:nth-child(2), .evaltable1 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 219px;
+}
+
+.evaltable1 .stable.ver.tasks_table th:nth-child(3), .evaltable1 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 170px;
+}
+
+.evaltable1 .stable.ver.tasks_table th:nth-child(4), .evaltable1 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 221px;
+}
+
+.evaltable1 .stable.ver.tasks_table th:nth-child(5), .evaltable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 344px;
+}
+
+.rating_criteria_auditors.evaltable1 .stable.ver.tasks_table th:nth-child(5),
+.rating_criteria_auditors.evaltable1 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 90px;
+}
+
+.evaltable2 .stable.ver.tasks_table th:nth-child(1), .evaltable2 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 56px;
+}
+
+.evaltable2 .stable.ver.tasks_table th:nth-child(2), .evaltable2 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 130px;
+    padding-left: 15px;
+}
+
+.evaltable2 .stable.ver.tasks_table th:nth-child(3), .evaltable2 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 206px;
+    padding-left: 15px;
+}
+
+.evaltable2 .stable.ver.tasks_table th:nth-child(4), .evaltable2 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 610px;
+    padding-left: 15px;
+}
+
+.stable_box.ver.hoditable2.evaltable2 th, .stable_box.ver.hoditable2.evaltable2 td {
+    padding-left: 18px;
+}
+
+.stable_box.ver.hoditable2.evaltable2 td:nth-child(2) {
+    padding-left: 42px;
+}
+
+.stable_box.ver.hoditable2.evaltable2 tr.subline td:nth-child(2) {
+    padding-left: 67px;
+}
+
+.hoditable_auditinfo_tbox tr.subline td.spoiler:nth-child(1) {
+    padding-left: 67px;
+}
+
+.stable_box.ver.hoditable2.evaltable2 tr.subline.subline2 td:nth-child(2) {
+    padding-left: 90px;
+}
+
+.stable_box.ver.hoditable2.evaltable2 tr.subline td.spoiler:before {
+    left: 45px;
+    /*top: 56%;*/
+    /*margin-top: -7px;*/
+}
+
+.hoditable_auditinfo_tbox.stable_box.ver.hoditable2 tr.subline td.spoiler:before {
+    left: 45px;
+    top: 56%;
+    margin-top: -7px;
+}
+
+.stable_box.ver.hoditable2.evaltable2 tr.subline.subline2 td.spoiler:before {
+    left: 68px;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:first-child th {
+    border-right: 2px solid #e2e2e2;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:first-child th:last-child {
+    border-right: none;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th {
+    border: 2px solid #e2e2e2;
+    border-bottom: 0;
+}
+
+.evaltable3 .stable.ver.tasks_table th:nth-child(1), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 44px;
+}
+
+.evaltable3 .stable.ver.tasks_table th:nth-child(2), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 70px;
+}
+
+.rating_criteria_auditors.evaltable3 .stable.ver.tasks_table th:nth-child(2),
+.rating_criteria_auditors.evaltable3 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 130px;
+}
+
+.evaltable3 .stable.ver.tasks_table th:nth-child(3), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 158px;
+}
+
+.rating_criteria_auditors.evaltable3 .stable.ver.tasks_table th:nth-child(3),
+.rating_criteria_auditors.evaltable3 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 22%;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:first-child th:nth-child(4) {
+    width: unset;
+    text-align: center;
+}
+
+.rating_criteria_auditors.evaltable3 .stable.ver.tasks_table tr:first-child th:nth-child(4) {
+    width: 59%;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(1), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 89px;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(2), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 150px;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(3), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 149px;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(4), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 51px;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(5), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 203px;
+}
+
+.evaltable3 .stable.ver.tasks_table th:nth-child(8), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 88px;
+}
+
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(1), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(4),
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(2), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(5),
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(3), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(6),
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(4), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(7),
+.evaltable3 .stable.ver.tasks_table tr:nth-child(2) th:nth-child(5), .evaltable3 .stable.ver.tasks_table tbody td:nth-child(8) {
+    padding-left: 0;
+    text-align: center;
+    padding-right: 0 !important;
+}
+
+.evaltable4 .stable.ver.tasks_table th:nth-child(1), .evaltable4 .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 56px;
+}
+
+.evaltable4 .stable.ver.tasks_table th:nth-child(2), .evaltable4 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 70px;
+}
+
+.rating_criteria_auditors.evaltable4 .stable.ver.tasks_table th:nth-child(2),
+.rating_criteria_auditors.evaltable4 .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 140px;
+}
+
+.evaltable4 .stable.ver.tasks_table th:nth-child(3), .evaltable4 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 384px;
+}
+
+.rating_criteria_auditors.evaltable4 .stable.ver.tasks_table th:nth-child(3),
+.rating_criteria_auditors.evaltable4 .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: unset;
+}
+
+.evaltable4 .stable.ver.tasks_table th:nth-child(4), .evaltable4 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 168px;
+}
+
+.rating_criteria_auditors.evaltable4 .stable.ver.tasks_table th:nth-child(4),
+.rating_criteria_auditors.evaltable4 .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 35%
+}
+
+.evaltable4 .stable.ver.tasks_table th:nth-child(5), .evaltable4 .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 240px;
+}
+
+.evaltable4 .stable.ver.tasks_table th:nth-child(6), .evaltable4 .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 80px;
+}
+
+.stselect.large.medium.margintop-37 {
+    margin-top: 37px;
+}
+
+.tidetails.paddingtb-17 {
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.tidetails.paddingtb-11 {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.documentcreate_modal .modal-title.custom-margin {
+    margin: 0 -4px;
+}
+
+.checkbox.norma-theme .stselect_name {
+    top: unset;
+    left: unset;
+}
+
+.datareqinput1.norma-theme textarea {
+    height: 101px;
+}
+
+.eval-theme .content_tbox td > .checkbox {
+    margin-left: 13px;
+}
+
+.hodfilter.separator {
+    position: relative;
+}
+
+.hodfilter.separator:before {
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+
+}
+
+.hodfilter.gaifk_filter {
+    padding-top: 9px;
+    height: 210px;
+
+}
+
+.mw-1000 {
+    max-width: 1001px;
+}
+
+.hodfilter.gaifk_filter .hodfilter_box {
+    flex-wrap: wrap;
+    max-width: 990px;
+}
+
+.hodfilter.gaifk_filter .stselect {
+    margin-bottom: 33px;
+}
+
+.gaifk_filter .hodfilter_name {
+    margin-bottom: 44px;
+}
+
+.gaifk_filter .hodfilter_box {
+    height: 72px;
+    align-items: inherit;
+}
+
+.hodfilter.audact-theme .stselect:nth-child(1), .audact-theme .stselect:nth-child(1) ul {
+    width: 142px;
+}
+
+.gaifk_filter.hodfilter.audact-theme .stselect:nth-child(1) ul {
+    width: 100%;
+}
+
+.account_tabs.cretabs.gaifk_tab {
+    max-width: 1190px;
+}
+
+.gaifk_filter.hodfilter.audact-theme .stselect:nth-child(1),
+.gaifk_filter.hodfilter.audact-theme .stselect:nth-child(2) {
+    width: 142px;
+}
+
+.hodfilter.audact-theme .stselect.large, .hodfilter.audact-theme .stselect.large ul {
+    width: 309px;
+}
+
+.mw-642 {
+    max-width: 642px;
+    width: calc(100% - 332px);
+}
+
+.stselect.b-none {
+    border: none;
+}
+
+.mw-810 {
+    max-width: 810px;
+    width: calc(100% - 168px);
+}
+
+.hodinfo_subheaderbox.bighat {
+    width: 1333px;
+}
+
+.hodinfo_subheaderbox.bighat .afilter_name {
+    color: #000000;
+    font-family: 'Proxima Nova Semibold';
+    font-size: 16px;
+}
+
+.hodinfo_subheaderbox.bighat .stselect.one {
+    width: 274px;
+}
+
+.hodinfo_subheaderbox.bighat .stselect.two {
+    width: 249px;
+}
+
+.hodinfo_subheaderbox.bighat .stselect ul {
+    width: 100%;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(1),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 54px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(1),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 113px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(2),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 132px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(3),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 160px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(4),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 121px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(3),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 86px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(4),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(7) {
+    width: 80px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(5),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(8) {
+    width: 106px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(6),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(9) {
+    width: 92px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(6),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(10) {
+    width: 185px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(7),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(11) {
+    width: 117px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(8),
+.normabasetable.audacttable .tasks_table.stable.ver tbody td:nth-child(12) {
+    width: 150px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(2) {
+    width: 245px;
+}
+
+.normabasetable.audacttable .tasks_table.stable.ver tr:first-child th:nth-child(5) {
+    width: 364px;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th,
+.normabasetable .tasks_table.stable.ver tr:nth-child(2) th {
+    border-right: 2px solid #e2e2e2;
+}
+
+.normabasetable .tasks_table.stable.ver tr:first-child th:last-child {
+    border-right: 0;
+}
+
+.normabasetable .tasks_table.stable.ver tr:nth-child(2) th {
+    border: 2px solid #e2e2e2;
+    border-bottom: 0;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:first-child th:nth-child(1),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(1) {
+    width: 100px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(1),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 334px;
+}
+.normabasetable.audacttable.addataaudactable.addataaudactable3 .tasks_table.stable.ver tbody td:nth-child(2) {
+    width: 374px;
+}
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(2),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(3) {
+    width: 110px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(3),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 315px;
+}
+
+.normabasetable.audacttable.addataaudactable.addataaudactable3 .tasks_table.stable.ver tbody td:nth-child(4) {
+    width: 110px;
+}
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:nth-child(2) th:nth-child(4),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(5) {
+    width: 110px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:first-child th:nth-child(4),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(6) {
+    width: 110px;
+}
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:first-child th:nth-child(4) {
+
+}
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:first-child th:nth-child(5),
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody td:nth-child(7) {
+    width: 158px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:first-child th:nth-child(2) {
+    width: 444px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tr:first-child th:nth-child(3) {
+    width: 425px;
+}
+.normabasetable.audacttable.addataaudactable.addataaudactable3 .tasks_table.stable.ver tr:first-child th:nth-child(3) {
+    width: 325px;
+}
+
+.stselect.audactadd-theme {
+    display: inline-block;
+}
+
+.stselect.audactadd-theme, .stselect.audactadd-theme ul {
+    width: 274px;
+    text-align: left;
+}
+
+.stselect.audactadd-theme .head {
+    padding-left: 11px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody tr.subline td:first-child {
+    padding-left: 29px;
+}
+
+.rat_audit .tasks_table.stable.ver tbody tr.subline td:first-child {
+    padding-left: 29px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody tr.subline.subline2 td:first-child {
+    padding-left: 38px;
+}
+
+.rat_audit .tasks_table.stable.ver tbody tr.subline.subline2 td:first-child {
+    padding-left: 38px;
+}
+
+.normabasetable.audacttable.addataaudactable .tasks_table.stable.ver tbody tr.subline.subline3 td:first-child {
+    padding-left: 50px;
+}
+
+.rat_audit .tasks_table.stable.ver tbody tr.subline.subline3 td:first-child {
+    padding-left: 50px;
+}
+
+.addataaudactable .stable {
+    width: unset;
+    min-width: 1211px;
+}
+
+.disabled_text_block {
+    min-height: 150px;
+    text-align: center;
+    justify-content: center;
+    opacity: .3;
+    font-size: 19px;
+    pointer-events: none;
+}
+
+.table-filter_nav {
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
+    width: 25px;
+    height: 24px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 2px;
+    position: relative;
+    transition: .3s;
+}
+
+.table-filter_nav:hover {
+    background-color: #e2e2e2;
+}
+
+.table-filter_nav.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+
+.table-top-up:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd"  fill="rgb(19, 20, 25)" d="M-0.001,-0.000 L9.998,-0.000 L9.998,2.000 L-0.001,2.000 L-0.001,-0.000 ZM9.998,8.008 L-0.012,8.008 L4.991,3.006 L9.998,8.008 Z"/></svg>') no-repeat center;
+}
+
+.table-up:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" > <path fill-rule="evenodd"  fill="rgb(19, 20, 25)" d="M-0.012,5.008 L4.991,0.006 L9.998,5.008 L-0.012,5.008 Z"/> </svg>') no-repeat center;
+}
+
+.table-down:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" > <path fill-rule="evenodd"  fill="rgb(19, 20, 25)" d="M5.975,4.993 L0.968,-0.008 L10.977,-0.008 L5.975,4.993 Z"/> </svg>') no-repeat center;
+}
+
+.table-bottom-down:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <path fill-rule="evenodd"  fill="rgb(19, 20, 25)" d="M5.976,4.993 L0.968,-0.008 L10.977,-0.008 L5.976,4.993 ZM10.967,8.000 L0.967,8.000 L0.967,6.000 L10.967,6.000 L10.967,8.000 Z"/> </svg>') no-repeat center;
+}
+
+.gaifk_success_doc_table .tasks_table.stable.ver th:nth-child(1),
+.gaifk_success_doc_table .tasks_table.stable.ver tbody td:nth-child(1) {
+    padding-left: 19px;
+    width: 50px;
+}
+
+.gaifk_success_doc_table .tasks_table.stable.ver th:nth-child(2),
+.gaifk_success_doc_table .tasks_table.stable.ver tbody td:nth-child(2) {
+    padding-left: 10px;
+    width: 230px;
+}
+
+.gaifk_success_doc_table .tasks_table.stable.ver th:nth-child(3),
+.gaifk_success_doc_table .tasks_table.stable.ver tbody td:nth-child(3) {
+    padding-left: 10px;
+    width: 300px;
+}
+
+.gaifk_success_doc_table .tasks_table.stable.ver th:nth-child(4),
+.gaifk_success_doc_table .tasks_table.stable.ver tbody td:nth-child(4) {
+    padding-left: 10px;
+    width: 150px;
+}
+
+.gaifk_success_doc_table .tasks_table.stable.ver th:nth-child(5),
+.gaifk_success_doc_table .tasks_table.stable.ver tbody td:nth-child(5) {
+    padding-left: 5px;
+    width: 150px;
+
+}
+
+.gaifkAudit label {
+    width: calc(100% - 169px);
+}
+
+.gaifkAudit.creaform_line .crerinput > input {
+    width: 100%;
+}
+
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table th:nth-child(1),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table th:nth-child(1),
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(1),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 58px;
+    padding-right: 12px !important;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table th:nth-child(2),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table th:nth-child(2),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table tbody td:nth-child(2),
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 500px;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table th:nth-child(3),
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 132px;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(3) {
+    padding-right: 2.5%;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table th:nth-child(4),
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 150px;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table th:nth-child(5),
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 130px;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(5) {
+    padding-right: 2.5%;
+}
+
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table th:nth-child(6),
+.evaltable1.gaifk_teble_audit .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 236px;
+}
+
+.stable_box.ver.prepatable1.evaltable1.gaifk_teble_audit th,
+.stable_box.ver.prepatable1.evaltable2.gaifk_teble_audit th {
+    height: 62px;
+}
+
+.stable_box.ver.prepatable1.evaltable1.gaifk_teble_meaning th,
+.stable_box.ver.prepatable1.evaltable2.gaifk_teble_meaning th {
+    height: 43px;
+}
+
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table th:nth-child(3),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 190px;
+}
+
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table th:nth-child(4),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 75px;
+}
+
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table th:nth-child(5),
+.evaltable1.gaifk_teble_meaning .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 370px;
+}
+.gaifk_conclusion {
+    margin-top: 12px;
+    margin-bottom: 22px;
+}
+.gaifk_teble_meaning .stselect {
+    width: 172px;
+}
+.text_commen_gaifk {
+    padding-top: 5px;
+}
+
+.documentcreate_modal.UkrkDocumentcreate_modal .modal-dialog {
+    max-width: 850px;
+}

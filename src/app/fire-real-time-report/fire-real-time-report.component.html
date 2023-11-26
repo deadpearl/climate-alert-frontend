@@ -5,11 +5,10 @@
   <div class="">
     Выбрать нужные параметры
   </div>
-  <div class="">
-    Кнопка изменить и Просмотра
-  </div>
-  <div class="">
-    Просмотр документа
+  <div class="buttons">
+    <button class="button">Создать</button>
+    <button class="button" (click)="goToReadOnly();">Просмотр</button>
+    <button class="button">Изменить</button>
   </div>
   <div class="aisection_preview prepadoc">
     <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>

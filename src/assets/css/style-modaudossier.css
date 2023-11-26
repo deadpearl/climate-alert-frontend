@@ -1,0 +1,864 @@
+.account_input.dossierfilter_input {
+    width: 224px;
+    height: 40px;
+    margin-bottom: 0;
+}
+.account_input.dossierfilter_input input {
+    background-color: #fefefe;
+    width: 224px;
+    height: 40px;
+}
+.tidetails.modau_taskt .tidetails_table.objectdossier-theme:nth-child(1) {
+    margin-right: 122px;
+}
+.tidetails.modau_taskt .tidetails_table.objectdossier-theme td:nth-child(1){
+    width: 158px;
+}
+.tidetails.modau_taskt .tidetails_table.objectdossier-theme td:nth-child(2){
+    width: 240px;
+}
+.tidetails.modau_taskt .tidetails_table.objectdossier-theme {
+    width: auto !important;
+}
+.tidetails.modau_taskt .tidetails_table.objectdossier-theme .od-colname {
+    font-family: Montserrat;
+    font-size: 16px;
+}
+.odresultstable .stable.ver.auditinfo_table th:nth-child(1), .odresultstable .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: auto;
+}
+.odresultstable .stable.ver.auditinfo_table th:nth-child(2), .odresultstable .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 198px;
+}
+.odresultstable .stable.ver.auditinfo_table th:nth-child(3), .odresultstable .stable.ver.auditinfo_table tbody td:nth-child(3) {
+    width: 366px;
+}
+.odсontrolsystemtable .stable.ver.tasks_table th:nth-child(1), .odсontrolsystemtable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 439px;
+}
+.odсontrolsystemtable .stable.ver.tasks_table th:nth-child(2), .odсontrolsystemtable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: auto;
+}
+.odstrategicplantable .stable.ver.auditinfo_table th:nth-child(1), .odstrategicplantable .stable.ver.auditinfo_table tbody td:nth-child(1) {
+    width: auto;
+}
+.odstrategicplantable .stable.ver.auditinfo_table th:nth-child(2), .odstrategicplantable .stable.ver.auditinfo_table tbody td:nth-child(2) {
+    width: 295px;
+}
+.table-link {
+    color: #3b6dc0 !important;
+    font-family: "Proxima Nova Semibold" !important;
+    font-size: 15px !important;
+    text-decoration: underline !important;
+}
+.purchases_input, .purchases_input input {
+    width: 289px;
+    height: 40px;
+    margin-bottom: 0;
+}
+.purchases_smallinput, .purchases_smallinput input {
+    width: 126px;
+    height: 40px;
+    margin-bottom: 0;
+}
+.purchases_input input, .purchases_smallinput input{
+    background-color: #fefefe;
+
+}
+.hodfilter_line.objectdossier-theme {
+    width: 100%;
+}
+.stateprocurementstable .stable.ver.tasks_table th:nth-child(1), .stateprocurementstable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 151px;
+}
+.stateprocurementstable .stable.ver.tasks_table th:nth-child(2), .stateprocurementstable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 249px;
+}
+.stateprocurementstable .stable.ver.tasks_table th:nth-child(3), .stateprocurementstable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 125px;
+}
+.stateprocurementstable .stable.ver.tasks_table th:nth-child(4), .stateprocurementstable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 190px;
+}
+.stateprocurementstable .stable.ver.tasks_table th:nth-child(5), .stateprocurementstable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 129px;
+}
+.stateprocurementstable .stable.ver.tasks_table th:nth-child(6), .stateprocurementstable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 162px;
+}
+
+.arbitragepracticetable .stable.ver.tasks_table th:nth-child(1), .arbitragepracticetable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: auto;
+}
+.arbitragepracticetable .stable.ver.tasks_table th:nth-child(2), .arbitragepracticetable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 276px;
+}
+
+.odlicensetable .stable.ver.tasks_table th:nth-child(1), .odlicensetable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 275px;
+}
+.odlicensetable .stable.ver.tasks_table th:nth-child(2), .odlicensetable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 147px;
+}
+.odlicensetable .stable.ver.tasks_table th:nth-child(3), .odlicensetable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 135px;
+}
+.odlicensetable .stable.ver.tasks_table th:nth-child(4), .odlicensetable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 139px;
+}
+.odlicensetable .stable.ver.tasks_table th:nth-child(5), .odlicensetable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 160px;
+}
+.odlicensetable .stable.ver.tasks_table th:nth-child(6), .odlicensetable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 147px;
+}
+.audossier-theme {
+    height: auto;
+}
+.audossier-theme .subtitle {
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.audossier-theme .account_input.crerinput, .audossier-theme .account_input.crerinput input{
+    width: 260px;
+}
+.audossier-theme .account_input.crerinput input {
+    background-color: #fefefe;
+    height: 40px;
+}
+.audossier-theme .creaform_line .crerinput .graphfilter_calendar {
+    top:50%;
+}
+.audossier-theme .account_input.crerinput.purchases_smallinput, .account_input.crerinput.purchases_smallinput input {
+    width: 154px;
+}
+
+.details409table .stable.ver.tasks_table th:nth-child(1), .details409table .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 140px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(2), .details409table .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 159px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(3), .details409table .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 129px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(4), .details409table .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 88px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(5), .details409table .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 139px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(6), .details409table .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 94px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(7), .details409table .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 126px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(8), .details409table .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 86px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(9), .details409table .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 81px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(10), .details409table .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 106px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(11), .details409table .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 86px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(12), .details409table .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 89px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(13), .details409table .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 76px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(14), .details409table .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 82px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(15), .details409table .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 132px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(16), .details409table .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 108px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(17), .details409table .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 81px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(18), .details409table .stable.ver.tasks_table tbody td:nth-child(18) {
+    width: 135px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(19), .details409table .stable.ver.tasks_table tbody td:nth-child(19) {
+    width: 133px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(20), .details409table .stable.ver.tasks_table tbody td:nth-child(20) {
+    width: 96px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(21), .details409table .stable.ver.tasks_table tbody td:nth-child(21) {
+    width: 128px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(22), .details409table .stable.ver.tasks_table tbody td:nth-child(22) {
+    width: 78px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(23), .details409table .stable.ver.tasks_table tbody td:nth-child(23) {
+    width: 99px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(24), .details409table .stable.ver.tasks_table tbody td:nth-child(24) {
+    width: 112px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(25), .details409table .stable.ver.tasks_table tbody td:nth-child(25) {
+    width: 90px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(26), .details409table .stable.ver.tasks_table tbody td:nth-child(26) {
+    width: 107px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(27), .details409table .stable.ver.tasks_table tbody td:nth-child(27) {
+    width: 118px;
+}
+.details409table .stable.ver.tasks_table th:nth-child(28), .details409table .stable.ver.tasks_table tbody td:nth-child(28) {
+    width: 177px;
+}
+.audossierbigtable .stable.ver.tasks_table th, .audossierbigtable .stable.ver.tasks_table tbody td {
+    padding-right: 0 !important;
+}
+.audossierbigtable .stable.ver.tasks_table th{
+    height: 65px;
+    vertical-align: top;
+    padding-top: 7px;
+}
+.audossierbigtable .stable.ver.tasks_table tbody td {
+    height: 44px;
+}
+.audossierbigtable .stable.ver.tasks_table {
+    min-width: 3075px;
+    width: unset;
+}
+.audossier-theme.hodfilter .stselect .head{
+    height: 40px;
+    line-height: 40px;
+}
+.audossier-theme.hodfilter  .creaform_line .stselect .head:after {
+    height: 40px;
+}
+.audossier-theme .account_input.crerinput.intelligence420filter_input, .audossier-theme .account_input.crerinput.intelligence420filter_input input{
+    width:228px;
+    margin-bottom:0;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(1), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 85px;
+    padding-left: 33px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(2), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 69px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(3), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 73px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(4), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 84px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(5), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 102px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(6), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 143px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(7), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 80px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(8), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 128px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(9), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 96px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(10), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 137px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(11), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 108px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(12), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 128px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(13), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 112px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(14), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 170px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(15), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 196px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(16), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 187px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(17), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 192px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(18), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(18) {
+    width: 176px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(19), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(19) {
+    width: 164px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(20), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(20) {
+    width: 144px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(21), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(21) {
+    width: 157px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(22), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(22) {
+    width: 144px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th:nth-child(23), .intelegensedossiertable .stable.ver.tasks_table tbody td:nth-child(23) {
+    width: 200px;
+}
+.intelegensedossiertable .stable.ver.tasks_table th {
+    height: 80px;
+}
+
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(1), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 85px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(2), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 69px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(3), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 69px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(4), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 62px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(5), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 105px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(6), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 83px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(7), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 143px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(8), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 85px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(9), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 102px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(10), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 128px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(11), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 101px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(12), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 100px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(13), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 84px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(14), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 117px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(15), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 83px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(16), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 134px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(17), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 99px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(18), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(18) {
+    width: 70px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(19), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(19) {
+    width: 107px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(20), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(20) {
+    width: 133px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(21), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(21) {
+    width: 72px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(22), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(22) {
+    width: 65px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(23), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(23) {
+    width: 119px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(24), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(24) {
+    width: 120px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(25), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(25) {
+    width: 123px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(26), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(26) {
+    width: 124px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(27), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(27) {
+    width: 122px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(28), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(28) {
+    width: 171px;
+}
+.dossierdetailedreporttable .stable.ver.tasks_table th:nth-child(29), .dossierdetailedreporttable .stable.ver.tasks_table tbody td:nth-child(29) {
+    width: 200px;
+}
+
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(1), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 85px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(2), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 69px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(3), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 66px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(4), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 139px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(5), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 84px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(6), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 60px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(7), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 83px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(8), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 101px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(9), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 134px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(10), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 122px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(11), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 180px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(12), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 207px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(13), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 208px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(14), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 124px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(15), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 140px;
+}
+.dossierbudgetinfotable .stable.ver.tasks_table th:nth-child(16), .dossierbudgetinfotable .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 106px;
+}
+.audossierbigtable.dossierbudgetinfotable .stable.ver.tasks_table{
+    min-width: 1909px;
+}
+
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(1), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 84px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(2), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 69px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(3), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 67px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(4), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 143px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(5), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 66px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(6), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 83px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(7), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 108px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(8), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 176px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(9), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 289px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(10), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 157px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(11), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 142px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(12), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 105px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(13), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 135px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(14), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 153px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(15), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 219px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(16), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 149px;
+}
+.dossierindebtednesstable .stable.ver.tasks_table th:nth-child(17), .dossierindebtednesstable .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 218px;
+}
+.audossierbigtable.dossierindebtednesstable .stable.ver.tasks_table{
+    min-width: 2364px;
+}
+
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(1), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 140px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(2), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 105px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(3), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 93px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(4), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 96px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(5), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 167px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(6), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 121px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(7), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 120px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(8), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 165px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(9), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 159px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(10), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 134px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(11), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 138px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(12), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 137px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(13), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 173px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(14), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 85px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(15), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 122px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(16), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 141px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(17), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 122px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(18), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(18) {
+    width: 139px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(19), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(19) {
+    width: 69px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(20), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(20) {
+    width: 122px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(21), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(21) {
+    width: 99px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(22), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(22) {
+    width: 113px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(23), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(23) {
+    width: 63px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(24), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(24) {
+    width: 108px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(25), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(25) {
+    width: 147px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(26), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(26) {
+    width: 185px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(27), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(27) {
+    width: 171px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(28), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(28) {
+    width: 150px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(29), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(29) {
+    width: 198px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(30), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(30) {
+    width: 123px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(31), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(31) {
+    width: 70px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(32), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(32) {
+    width: 102px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(33), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(33) {
+    width: 98px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(34), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(34) {
+    width: 144px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(35), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(35) {
+    width: 121px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(36), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(36) {
+    width: 117px;
+}
+.dossierparticipantregister .stable.ver.tasks_table th:nth-child(37), .dossierparticipantregister .stable.ver.tasks_table tbody td:nth-child(37) {
+    width: 158px;
+}
+.audossierbigtable.dossierparticipantregister .stable.ver.tasks_table{
+    min-width: 4709px;
+}
+
+.dossieraddresses .stable.ver.tasks_table th:nth-child(1), .dossieraddresses .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 140px;
+}
+.dossieraddresses .stable.ver.tasks_table th:nth-child(2), .dossieraddresses .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 105px;
+}
+.dossieraddresses .stable.ver.tasks_table th:nth-child(3), .dossieraddresses .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 94px;
+}
+.dossieraddresses .stable.ver.tasks_table th:nth-child(4), .dossieraddresses .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 95px;
+}
+.dossieraddresses .stable.ver.tasks_table th:nth-child(5), .dossieraddresses .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 118px;
+}
+.dossieraddresses .stable.ver.tasks_table th:nth-child(6), .dossieraddresses .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 132px;
+}
+.dossieraddresses .stable.ver.tasks_table {
+    width: 684px;
+}
+.dossieraddresses .stable.ver.tasks_table th {
+    vertical-align: top;
+    padding-top: 7px;
+    height: 80px;
+
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(1), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 110px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(2), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 91px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(3), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 125px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(4), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 236px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(5), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 182px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(6), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 136px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(7), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 134px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(8), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 117px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(9), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 117px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(10), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 105px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(11), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 106px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(12), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 164px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(13), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 128px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(14), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 127px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(15), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 88px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(16), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 86px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(17), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 139px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(18), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(18) {
+    width: 97px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(19), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(19) {
+    width: 144px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(20), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(20) {
+    width: 178px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(21), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(21) {
+    width: 97px;
+}
+.dossierplanitemregister .stable.ver.tasks_table th:nth-child(22), .dossierplanitemregister .stable.ver.tasks_table tbody td:nth-child(22) {
+    width: 139px;
+}
+.audossierbigtable.dossieraddresses .stable.ver.tasks_table{
+    min-width: 2846px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(1), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 147px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(2), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 136px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(3), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 142px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(4), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 202px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(5), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 136px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(6), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 121px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(7), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 97px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(8), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 102px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(9), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 103px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(10), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 105px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(11), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 140px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(12), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 194px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(13), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 249px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(14), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 145px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(15), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(15) {
+    width: 129px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(16), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(16) {
+    width: 125px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(17), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(17) {
+    width: 105px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(18), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(18) {
+    width: 125px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(19), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(19) {
+    width: 146px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(20), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(20) {
+    width: 124px;
+}
+.dossiernotice .stable.ver.tasks_table th:nth-child(21), .dossiernotice .stable.ver.tasks_table tbody td:nth-child(21) {
+    width: 113px;
+}
+.audossierbigtable.dossiernotice .stable.ver.tasks_table{
+    min-width: 2886px;
+}
+
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(1), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 112px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(2), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 129px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(3), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 142px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(4), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 111px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(5), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 92px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(6), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 136px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(7), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 152px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(8), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(8) {
+    width: 100px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(9), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(9) {
+    width: 113px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(10), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(10) {
+    width: 105px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(11), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(11) {
+    width: 90px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(12), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(12) {
+    width: 198px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(13), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(13) {
+    width: 114px;
+}
+.dossierlotregistertable .stable.ver.tasks_table th:nth-child(14), .dossierlotregistertable .stable.ver.tasks_table tbody td:nth-child(14) {
+    width: 131px;
+}
+.audossierbigtable.dossierlotregistertable .stable.ver.tasks_table{
+    min-width: 1725px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(1), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(1) {
+    width: 131px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(2), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(2) {
+    width: 110px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(3), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(3) {
+    width: 142px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(4), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(4) {
+    width: 162px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(5), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(5) {
+    width: 105px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(6), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(6) {
+    width: 127px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(7), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(7) {
+    width: 167px;
+}
+.dossierregisterdisparticipantstable .stable.ver.tasks_table th:nth-child(8), .dossierregisterdisparticipantstable .stable.ver.tasks_table tbody td:nth-child(8) {
+    width:auto;
+}
+.audossierbigtable.dossierregisterdisparticipantstable .stable.ver.tasks_table{
+    min-width: 1725px;
+}
