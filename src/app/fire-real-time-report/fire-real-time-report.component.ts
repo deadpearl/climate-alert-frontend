@@ -35,4 +35,15 @@ export class FireRealTimeReportComponent implements OnInit {
       queryParamsHandling: 'merge'
     });
   }
+
+  goToEdit() {
+    console.log('gotoreadonly');
+    this.router.navigate(['fire/report/real-time/form'], {
+      queryParams: {
+        reportId: 2,
+        readonly: false,
+      },
+      queryParamsHandling: 'merge'
+    });
+  }
 }
