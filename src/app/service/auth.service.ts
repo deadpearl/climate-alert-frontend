@@ -1,0 +1,62 @@
+import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs';
+import {UserService} from './user.service';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+
+  private readonly loggedInKey = 'au-base-loggedIn';
+  private readonly authKey = 'au-base-token';
+  private logined = new Subject<string>();
+  private logouted = new Subject<string>();
+
+  logined$ = this.logined.asObservable();
+  loguoted$ = this.logouted.asObservable();
+  responsse: any = null;
+
+  get loggedIn() {
+    return sessionStorage.getItem(this.loggedInKey) !== null;
+  }
+
+  get currentToken() {
+    return sessionStorage.getItem(this.authKey);
+  }
+
+  constructor(private usersService: UserService, private http: HttpClient, private router: Router) {
+  }
+
+  getCurrentUser() {
+    return this.http.get('/internal/api/public/user/v1/token/' + this.currentToken).toPromise();
+  }
+  public registerData(data) {
+    return this.http.post('/auth/register_data', data).subscribe(response => {
+      this.responsse = response;
+      sessionStorage.setItem(this.loggedInKey, 'true');
+      sessionStorage.setItem(this.authKey, this.responsse.token);
+      this.router.navigate(['fire/report/real-time']);
+    });
+  }
+
+  public loginData(data) {
+    return this.http.post('/internal/api/public/user/v1/login', data).subscribe(response => {
+        this.responsse = response;
+        sessionStorage.setItem(this.loggedInKey, 'true');
+        sessionStorage.setItem(this.authKey, this.responsse.token);
+        this.router.navigate(['fire/report/real-time']);
+      });
+  }
+
+
+  public logout() {
+    sessionStorage.removeItem(this.authKey);
+    sessionStorage.removeItem(this.loggedInKey);
+    this.usersService.reloadUser();
+    // Дёргаешь собитие
+    this.logouted.next('disconnect');
+  }
+
+}
