@@ -1,0 +1,21 @@
+<header>
+
+  <div class="container-fluids">
+    <a class="link"  [class.active]=""  href="#kaz" (click)="$event.preventDefault(); ">Қаз</a>
+    <a class="link"  [class.active]=""  href="#rus"  (click)="$event.preventDefault(); ">Рус</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+      <path d="M5.25 21C5.25 12.3015 12.3015 5.25 21 5.25C29.6985 5.25 36.75 12.3015 36.75 21C36.75 29.6985 29.6985 36.75 21 36.75C12.3015 36.75 5.25 29.6985 5.25 21Z" fill="#B5BED2"/>
+      <circle cx="21" cy="17.5" r="7" fill="#04092A"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9597 32.0538C32.0165 32.151 31.9988 32.2741 31.9177 32.3521C29.0865 35.0756 25.2389 36.75 21.0001 36.75C16.7615 36.75 12.9139 35.0756 10.0827 32.3522C10.0016 32.2742 9.9839 32.1511 10.0407 32.054C12.0517 28.6125 16.2041 26.25 21.0002 26.25C25.7963 26.25 29.9487 28.6125 31.9597 32.0538Z" fill="#04092A"/>
+    </svg>
+    <a href="#" class="user-name" *ngIf="currentUser" (click)="$event.preventDefault()"
+       (mouseenter)="showOptions = true" (mouseleave)="showOptions = false">
+      {{currentUser.__zone_symbol__value.user.firstName}} <br>{{currentUser.__zone_symbol__value.user.lastName}}
+      <ul class="options" *ngIf="showOptions">
+        <li class="active-li"><a class="active-profile" href="#" [routerLink]="['']" (click)="$event.preventDefault()" >Личный профиль</a></li>
+        <li class="notactive-li"><a class="logout" href="#" (click)="$event.preventDefault(); logout()">Выйти</a></li>
+      </ul>
+    </a>
+
+  </div>
+</header>
