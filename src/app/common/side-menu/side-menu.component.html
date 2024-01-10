@@ -6,7 +6,7 @@
       <p><b>{{'KazGeoWarning'  }}</b></p>
     </div>
   </div>
-  <ng-container >
+  <ng-container *ngIf="activeSubmenu === null">
 
     <div class="menus_item one svg-problem" (click)="$event.preventDefault();  submenus.analysis = !submenus.analysis" [ngClass]="{expanded: submenus.analysis ||  getUrlPosition('risk-analysis')}"
     >
@@ -44,10 +44,10 @@
         <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="white"/>
       </svg>
       <div class="submenus">
-        <div class="submenu_items" [routerLink]="['/planning/objects']  " routerLinkActive="active"
+        <div class="submenu_items" [routerLink]="['/fire/real-time/catalogue']  " routerLinkActive="active"
              (click)="$event.preventDefault()">
           <a class="" href="#"
-          >{{"Перечень объектов государственного аудита"  }}</a>
+          >{{"Перечень пожаров в реальном времени"  }}</a>
         </div><br>
         <div class="submenu_items" [routerLink]="['/planning/application']  " routerLinkActive="active"
              (click)="$event.preventDefault()">
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <div class="menus_item three"  (click)="$event.preventDefault(); submenus.audits=!submenus.audits" [ngClass]="{expanded: submenus.audits ||  getUrlPosition('fire/report/real-time')}"
+    <div class="menus_item three"  (click)="$event.preventDefault(); submenus.audits=!submenus.audits" [ngClass]="{expanded: submenus.audits ||  getUrlPosition('fire/report')}"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M8 10L8 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,12 +78,18 @@
       </svg>
       <div class="submenus">
         <!--<perfect-scrollbar style="max-height: 200px; max-width: 100%;">-->
-        <div class="submenu_items bigger" [routerLink]="['/fire/report/real-time']  " routerLinkActive="active"
-             (click)="$event.preventDefault()">
-          <a class="" >{{"Пожары"  }}</a>
+        <div class="submenu_items bigger" (click)="$event.preventDefault(); activeSubmenu = realtime"
+             >
+          <a class="" >{{"Пожарные происшествия в реальном времени"  }}</a>
         </div>
 
+        <!--<perfect-scrollbar style="max-height: 200px; max-width: 100%;">-->
+        <div class="submenu_items bigger"
+             (click)="$event.preventDefault(); activeSubmenu = prediction">
+          <a class="" >{{"Предсказания пожарных событий"  }}</a>
+        </div>
       </div>
+
     </div>
 
 
@@ -92,10 +98,83 @@
 
 
   </ng-container>
-
+  <ng-container *ngIf="activeSubmenu">
+    <ng-container *ngTemplateOutlet="activeSubmenu"></ng-container>
+  </ng-container>
 
 </div>
 
 
 
+<ng-template #realtime>
+  <div class="ngcontainer-obj">
+    <div class="menus_item menus_item-left" (click)="$event.preventDefault(); activeSubmenu = null; savePosition();">
+      <div class="back-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16" id="IconChangeColor">
+          <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" id="mainIconPathAttribute">
+          </path>
+        </svg>
+        <div class="back-text">{{ "Назад" }}</div>
+      </div>
+    </div>
+    <div class="menus_item"  [ngClass]="{expanded: true}">
 
+      <div class="menu-head">
+        <a class="" >
+          {{"Генерация отчетов" }}
+        </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+          <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="white"/>
+        </svg>
+      </div>
+
+      <div class="submenus padding-sub">
+        <div class="submenu_items"  [routerLink]="['/fire/report/real-time']  " routerLinkActive="active" >
+          <br>
+          {{"Обзорные отчеты о пожарах" }}
+        </div>
+        <div class="submenu_items">
+          <br><a class="" [routerLink]="['/fire/report/prediction']  " routerLinkActive="active">{{"Сводный реестр отчетов об экономических потерях от пожаров" }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #prediction>
+  <div class="ngcontainer-obj">
+    <div class="menus_item menus_item-left" (click)="$event.preventDefault(); activeSubmenu = null; savePosition();">
+      <div class="back-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16" id="IconChangeColor">
+          <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" id="mainIconPathAttribute">
+          </path>
+        </svg>
+        <div class="back-text">{{ "Назад" }}</div>
+      </div>
+    </div>
+    <div class="menus_item"  [ngClass]="{expanded: true}">
+
+      <div class="menu-head">
+        <a class="" >
+          {{"Формирование итогов" }}
+        </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none">
+          <path d="M4 5L7.4641 0.5H0.535898L4 5Z" fill="white"/>
+        </svg>
+      </div>
+
+      <div class="submenus padding-sub">
+        <div class="submenu_items">
+          <br><a class="" [routerLink]="['/fire/report/prediction']  " routerLinkActive="active">{{"Аудиторский отчет" }}</a>
+        </div>
+        <div class="submenu_items">
+          <br><a class="" href="#"
+                 [routerLink]="['/fire/report/real-time']  " routerLinkActive="active" >
+          {{"Реестр выявленных нарушений и недостатков по результатам аудиторского мероприятия" }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

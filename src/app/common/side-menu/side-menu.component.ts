@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -38,11 +38,15 @@ export class SideMenuComponent implements OnInit {
   constructor(
     private router: Router,
   ) { }
-
+  activeSubmenu: TemplateRef<any> = null;
+  @ViewChild('divscroll', {read: ElementRef, static: false}) public panel: ElementRef<any>;
   ngOnInit() {
   }
   getUrlPosition(url) {
     return this.router.url.includes(url);
+  }
+  savePosition() {
+    this.panel.nativeElement.scrollTop = Number(localStorage.getItem('position'));
   }
 
 
