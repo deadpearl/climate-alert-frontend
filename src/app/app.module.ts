@@ -16,6 +16,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   FireFormRealTimeReadonlyComponent
 } from './fire-real-time-report/fire-form-real-time-readonly/fire-form-real-time-readonly.component';
+import { MapVisualComponent } from './map-visual/map-visual.component';
+import { FireRtIncidentCatologueComponent } from './fire-rt-incident-catologue/fire-rt-incident-catologue.component';
+import { FireRtIcFormComponent } from './fire-rt-incident-catologue/fire-rt-ic-form/fire-rt-ic-form.component';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {AuthInterceptor} from './http-interceptors/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,9 @@ import {
     FireRealTimeReportComponent,
     CommonInternalTemplateComponent,
     FireFormRealTimeReadonlyComponent,
+    MapVisualComponent,
+    FireRtIncidentCatologueComponent,
+    FireRtIcFormComponent,
   ],
     imports: [
         BrowserModule,
@@ -37,7 +45,13 @@ import {
         FormsModule,
       ReactiveFormsModule
     ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
