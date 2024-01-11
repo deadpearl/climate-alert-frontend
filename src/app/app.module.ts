@@ -21,6 +21,8 @@ import { FireRtIncidentCatologueComponent } from './fire-rt-incident-catologue/f
 import { FireRtIcFormComponent } from './fire-rt-incident-catologue/fire-rt-ic-form/fire-rt-ic-form.component';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from './http-interceptors/auth-interceptor';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import {AuthInterceptor} from './http-interceptors/auth-interceptor';
     MapVisualComponent,
     FireRtIncidentCatologueComponent,
     FireRtIcFormComponent,
+    UserProfileComponent,
+    UserManagementComponent,
   ],
     imports: [
         BrowserModule,
