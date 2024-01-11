@@ -1,0 +1,82 @@
+<app-header></app-header> <head>
+  <title>Create interactive hover effects with Mapbox GL JS</title>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    /*body {*/
+    /*  margin: 0;*/
+    /*  padding: 0;*/
+    /*}*/
+
+    /*#map {*/
+    /*  !*position: absolute;*!*/
+    /*  !*top: 0;*!*/
+    /*  !*bottom: 0;*!*/
+    /*  width: 100%;*/
+    /*}*/
+    /*.quake-info {*/
+    /*  !*position: absolute;*!*/
+    /*  font-family: sans-serif;*/
+    /*  margin-top: 5px;*/
+    /*  margin-left: 5px;*/
+    /*  padding: 5px;*/
+    /*  width: 30%;*/
+    /*  border: 2px solid black;*/
+    /*  font-size: 14px;*/
+    /*  color: #222;*/
+    /*  background-color: #fff;*/
+    /*  border-radius: 3px;*/
+    /*}*/
+
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map-container {
+      position: relative;
+      margin-left: 350px;
+    }
+
+    #map {
+      width: 100%;
+    }
+
+    .fire {
+      position: absolute;
+      top: 10px; /* расположение от верхнего края */
+      left: 10px; /* расположение от левого края */
+      font-family: sans-serif;
+      padding: 5px;
+      width: 20%;
+      border: 2px solid black;
+      font-size: 14px;
+      color: #222;
+      background-color: #fff;
+      border-radius: 3px;
+      z-index: 2000;
+    }
+
+  </style>
+</head>
+<main>
+
+
+<!--  <div class='quake-info'>-->
+<!--    <div><strong>Magnitude:</strong> <span id='mag'></span></div>-->
+<!--    <div><strong>Location:</strong> <span id='loc'></span></div>-->
+<!--    <div><strong>Date:</strong> <span id='date'></span></div>-->
+<!--  </div>-->
+<!--  <div id='map' style='width: 800px; height: 600px; margin-left: 350px'></div>-->
+
+  <div #mapContainer style='position: relative;'>
+<!--    <div class='fire'>-->
+<!--      <div><strong>Date:</strong> <span id='acqDate'></span></div>-->
+<!--      <div><strong>Time:</strong> <span id='acqTime'></span></div>-->
+<!--    </div>-->
+    <div id='map' style='width: 800px; height: 600px;'></div>
+  </div>
+
+</main>
+<app-footer></app-footer>
