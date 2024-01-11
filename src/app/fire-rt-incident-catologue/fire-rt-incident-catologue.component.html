@@ -1,0 +1,91 @@
+
+<div class="cont">
+  <h2 class="audit_hdr">{{"Перечень пожаров в реальном времени" }}</h2>
+  <div class="content-body">
+    <div class="meeting_header">
+      <h3 class="aisection_hdr">{{"Перечень"  | uppercase}}</h3>
+
+    </div>
+    <div class="search-filter d-flex justify-content-between align-items-center">
+      <div class="filter-item d-flex align-items-center">
+        <span class="mr-2">{{"Год" }}:</span>
+
+        <select class="selectinput" [(ngModel)]="yearId">
+          <option *ngFor="let year of years" [value]="year.value">{{year.label}}</option>
+        </select>
+      </div>
+      <div class="filter-item d-flex align-items-center">
+        <span class="mr-2">{{"Месяц" }}:</span>
+        <select class="selectinput" [(ngModel)]="monthId">
+          <option *ngFor="let month of months" [value]="month.value">{{month.label}}</option>
+        </select>
+      </div>
+      <button class="account_btn" (click)="findFire()">{{"Найти" }}</button>
+    </div>
+<!--    <ng-container *ngIf="planIsEmpty">-->
+<!--      <div class="text-info">{{"План ещё не создан. Создайте план для работы с мероприятиями"  }}</div>-->
+<!--    </ng-container>-->
+
+    <div class="search-result d-flex justify-content-between" *ngIf="!listIsEmpty">
+      <h3 class="aisection_hdr">{{"Пожары"  | uppercase}}</h3>
+      <div class="d-flex">
+        <button class="account_btn mr-1" (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
+          {{"Добавить" }}
+        </button>
+        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
+          {{"Изменить" }}
+        </button>
+<!--        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire" (click)="this.modalService.open(removeAuditDia)">-->
+<!--          {{"Удалить" }}-->
+<!--        </button>-->
+      </div>
+    </div>
+
+    <div class="content_tbox auditinfo_tbox stable_box ver" *ngIf="!listIsEmpty">
+      <table class="stable ver auditinfo_table meetingusers_table">
+        <thead>
+        <tr>
+          <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">№</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Наименование" }}</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Член СК/РК" }}</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Тип мероприятия" }} </a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Автор" }}</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Период проведения" }} </a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Дата заседания" }} </a>
+          </th>
+        </tr>
+        </thead>
+        <tbody *ngIf="listFires && listFires.length === 0">
+        <tr>
+          <td colspan="7" class="text-center">{{"В перечне ещё нет аудиторских мероприятий" }}</td>
+        </tr>
+        </tbody>
+        <tbody *ngIf="listFires && listFires.length">
+        <tr *ngFor="let item of listFires; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentFire && currentFire.id === item.id">
+          <td>{{i + 1}}</td>
+          <td>
+            {{item.latitude}}
+          </td>
+
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
