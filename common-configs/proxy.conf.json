@@ -1,19 +1,10 @@
 {
-    "/api/auth/*": {
-        "target": "http://localhost:8083/api/auth",
+    "/internal/*": {
+        "target": "http://localhost:8011/internal",
         "secure": false,
         "pathRewrite": {
-            "^/api/auth": ""
+            "^/internal": ""
         },
         "changeOrigin": true
-    },
-    "/report/*": {
-      "target": "http://localhost:8086/report",
-      "secure": false,
-      "pathRewrite": {
-        "^/report": ""
-      },
-      "changeOrigin": true
     }
-
 }
