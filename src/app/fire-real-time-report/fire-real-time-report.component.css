@@ -12,3 +12,25 @@
   flex-direction: row;
   margin-top: 25px;
 }
+label p {
+  height: 40px;
+  width: 64%;
+  padding-left: 9px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: "Proxima Nova Rg";
+  font-size: 18px;
+  border: 2px solid #e2e2e2;
+  background-color: transparent;
+  border-radius: 4px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.title-langname {
+  color: #000000;
+  font-weight: 500;
+}

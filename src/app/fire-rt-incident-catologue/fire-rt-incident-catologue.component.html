@@ -6,7 +6,7 @@
       <h3 class="aisection_hdr">{{"Перечень"  | uppercase}}</h3>
 
     </div>
-    <div class="search-filter d-flex justify-content-between align-items-center">
+    <div class="filter-row">
       <div class="filter-item d-flex align-items-center">
         <span class="mr-2">{{"Год" }}:</span>
 
@@ -20,7 +20,7 @@
           <option *ngFor="let month of months" [value]="month.value">{{month.label}}</option>
         </select>
       </div>
-      <button class="account_btn" (click)="findFire()">{{"Найти" }}</button>
+      <button class="button left" (click)="findFire()">{{"Найти" }}</button>
     </div>
 <!--    <ng-container *ngIf="planIsEmpty">-->
 <!--      <div class="text-info">{{"План ещё не создан. Создайте план для работы с мероприятиями"  }}</div>-->
@@ -32,7 +32,7 @@
         <button class="account_btn mr-1" (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
           {{"Добавить" }}
         </button>
-        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
+        <button class="button"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
           {{"Изменить" }}
         </button>
 <!--        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire" (click)="this.modalService.open(removeAuditDia)">-->
@@ -50,22 +50,16 @@
             <a href="#" (click)="$event.preventDefault();">№</a>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Наименование" }}</a>
+            <a href="#" (click)="$event.preventDefault();">{{"Дата" }}</a>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Член СК/РК" }}</a>
+            <a href="#" (click)="$event.preventDefault();">{{"Время" }}</a>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Тип мероприятия" }} </a>
+            <a href="#" (click)="$event.preventDefault();">{{"Ширина" }} </a>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Автор" }}</a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Период проведения" }} </a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Дата заседания" }} </a>
+            <a href="#" (click)="$event.preventDefault();">{{"Долгота" }}</a>
           </th>
         </tr>
         </thead>
@@ -78,7 +72,16 @@
         <tr *ngFor="let item of listFires; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentFire && currentFire.id === item.id">
           <td>{{i + 1}}</td>
           <td>
+            {{item.acqDate}}
+          </td>
+          <td>
+            {{item.acqTime}}
+          </td>
+          <td>
             {{item.latitude}}
+          </td>
+          <td>
+            {{item.longitude}}
           </td>
 
         </tr>

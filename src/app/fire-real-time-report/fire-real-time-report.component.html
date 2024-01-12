@@ -2,16 +2,77 @@
   <div class="mini-header">
     <h1>Отчет о пожаре</h1>
   </div>
-  <div class="">
-    Выбрать нужные параметры
+  <div class="filter-row">
+    <div class="filter-item d-flex align-items-center">
+      <span class="mr-2">{{"Год" }}:</span>
+
+      <select class="selectinput" [(ngModel)]="yearId">
+        <option *ngFor="let year of years" [value]="year.value">{{year.label}}</option>
+      </select>
+    </div>
+    <div class="filter-item d-flex align-items-center">
+      <span class="mr-2">{{"Месяц" }}:</span>
+      <select class="selectinput" [(ngModel)]="monthId">
+        <option *ngFor="let month of months" [value]="month.value">{{month.label}}</option>
+      </select>
+    </div>
+    <button class="button left" (click)="findFire()">{{"Найти" }}</button>
   </div>
-  <div class="buttons">
-    <button class="button">Создать</button>
-    <button class="button" (click)="goToReadOnly();">Просмотр</button>
-    <button class="button" (click)="goToEdit();">Изменить</button>
-  </div>
-  <div class="aisection_preview prepadoc">
-    <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
-  </div>
+  <ng-container *ngIf="!listIsEmpty">
+    <table class="stable ver auditinfo_table meetingusers_table">
+      <thead>
+      <tr>
+        <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">№</a>
+        </th>
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">{{"Наименование" }}</a>
+        </th>
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">{{"Член СК/РК" }}</a>
+        </th>
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">{{"Тип мероприятия" }} </a>
+        </th>
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">{{"Автор" }}</a>
+        </th>
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">{{"Период проведения" }} </a>
+        </th>
+        <th class="stable_hdr">
+          <a href="#" (click)="$event.preventDefault();">{{"Дата заседания" }} </a>
+        </th>
+      </tr>
+      </thead>
+      <tbody *ngIf="listFires && listFires.length === 0">
+      <tr>
+        <td colspan="7" class="text-center">{{"В перечне ещё нет аудиторских мероприятий" }}</td>
+      </tr>
+      </tbody>
+      <tbody *ngIf="listFires && listFires.length">
+      <tr *ngFor="let item of listFires; let i = index;" (click)="selectEvent(item); getDocumentPreview()" class="object-row" [class.selected-object]="currentFire && currentFire.id === item.id">
+        <td>{{i + 1}}</td>
+        <td>
+          {{item.latitude}}
+        </td>
+
+      </tr>
+      </tbody>
+
+    </table>
+  </ng-container>
+  <ng-container *ngIf="currentFire">
+    <div class="buttons">
+      <button class="button">Создать</button>
+      <button class="button" (click)="goToReadOnly();">Просмотр</button>
+      <button class="button" (click)="goToEdit();">Изменить</button>
+    </div>
+    <div class="aisection_preview prepadoc">
+      <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+    </div>
+  </ng-container>
+
 
 </div>
