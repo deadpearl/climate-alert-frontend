@@ -1,0 +1,90 @@
+<div class="cont">
+  <div class="row">
+    <div class="audit_header auditinfo_header modau_header">
+      <a href="#2" class="mfilter_link" [routerLink]="'/fire/real-time/catalogue'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10">
+          <g>
+            <g>
+              <path fill="#303030" d="M4.998.007v10.006l-5-5.002z"/>
+            </g>
+          </g>
+        </svg>
+        {{'Назад'}}
+      </a>
+      <h2 class="audit_hdr">{{'Формирование и просмотр информации'}}</h2>
+    </div>
+
+    <div *ngIf="createButtonTouched===0">
+      <button class="button" (click)="buttonCreateReport()">Создать</button>
+    </div>
+
+    <ng-container *ngIf="createButtonTouched===1">
+      <div class="row">
+        <h3>Добавьте редактирующий персонал для отчетов</h3>
+        <select class="selectinput" [(ngModel)]="selectEditorEmail">
+          <option *ngFor="let editor of editors" [value]="editor.email">{{editor.firstName }} {{editor.lastName }}</option>
+        </select>
+        <button class="button" (click)="addEditor()">Добавить редактора</button>
+      </div>
+      <div class="">
+        <ng-container *ngFor="let a of editorsForm">
+          <div>{{ a.firstName}} {{ a.lastName}}</div>
+        </ng-container>
+      </div>
+      <button class="button" (click)="createReport()">Создать Отчет</button>
+    </ng-container>
+
+    <ng-container *ngIf="realTimeReportList.length">
+      <div class="content_tbox auditinfo_tbox stable_box ver">
+        <table class="stable ver auditinfo_table meetingusers_table">
+          <thead>
+          <tr>
+            <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+            <th class="stable_hdr">
+              <a href="#" (click)="$event.preventDefault();">№</a>
+            </th>
+            <th class="stable_hdr">
+              <a href="#" (click)="$event.preventDefault();">{{"Дата" }}</a>
+            </th>
+            <th class="stable_hdr">
+              <a href="#" (click)="$event.preventDefault();">{{"Время" }}</a>
+            </th>
+            <th class="stable_hdr">
+              <a href="#" (click)="$event.preventDefault();">{{"Ширина" }} </a>
+            </th>
+            <th class="stable_hdr">
+              <a href="#" (click)="$event.preventDefault();">{{"Долгота" }}</a>
+            </th>
+          </tr>
+          </thead>
+          <tbody *ngIf="realTimeReportList && realTimeReportList.length === 0">
+          <tr>
+            <td colspan="7" class="text-center">{{"В перечне ещё нет отчетов" }}</td>
+          </tr>
+          </tbody>
+          <tbody *ngIf="realTimeReportList && realTimeReportList.length">
+          <tr *ngFor="let item of realTimeReportList; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentRealTimeFire && currentRealTimeFire.id === item.id">
+            <td>{{i + 1}}</td>
+            <td>
+              {{item.acqDate}}
+            </td>
+            <td>
+              {{item.acqTime}}
+            </td>
+            <td>
+              {{item.latitude}}
+            </td>
+            <td>
+              {{item.longitude}}
+            </td>
+
+          </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </ng-container>
+
+
+  </div>
+</div>
