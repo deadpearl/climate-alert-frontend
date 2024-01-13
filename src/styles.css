@@ -31,7 +31,7 @@
   line-height: normal;
   border: none;
   padding: 0;
-  box-shadow: 1 3px 17px 2px rgba(0, 0, 0, 0.11);
+  box-shadow: 1px 3px 17px 2px rgba(0, 0, 0, 0.11);
 }
 
 .button:hover, .button:focus, .button:active {
@@ -2192,7 +2192,7 @@ a.stable_link:hover {
   color: #ffffff;
 }
 
-.account_btn.disabled, .account_btn.disabled:hover, .account_btn.disabled:focus, .account_btn.disabled:active, .account_btn.blue.disabled {
+.button.disabled, .button.disabled:hover, .button.disabled:focus, .button.disabled:active, .button.blue.disabled {
   background-color: #C0C0C0;
   pointer-events: none;
 }
@@ -2872,7 +2872,7 @@ a.stable_link:hover {
   color: #000000;
 }
 
-.auditinfo_table .account_btn:hover {
+.auditinfo_table .button:hover {
   opacity: 0.85;
 }
 
@@ -4433,3 +4433,20 @@ table{
   border-color: #7cc2dc;
 }
 
+.selectinput{
+  width: 200px;
+  padding: 5px;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.filter-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.left {
+  margin-left: 50px;
+}

@@ -22,7 +22,7 @@ export class MapVisualComponent implements OnInit {
   markers: mapboxgl.Marker[] = [];
 
   ngOnInit() {
-    this.getData('2023-12-07').then(resp => {
+    this.getData('2024-01-07').then(resp => {
       this.markersData = resp;
       console.log(this.markersData[0].latitude);
       const markers = []; // массив для хранения маркеров
@@ -218,7 +218,8 @@ export class MapVisualComponent implements OnInit {
   }
 
   getData(data) {
-    return this.api.get(`/api/data/RTData/date/${data}`).toPromise();
+    return this.api.get(`/internal/api/data/RTData/date/${data}`).toPromise();
+    // return this.api.get(`/internal/api/data/RTData/search?year=${year}&month=${month}`).toPromise();
   }
 }
 

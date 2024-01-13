@@ -23,6 +23,10 @@ import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from './http-interceptors/auth-interceptor';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { UserManagementFormComponent } from './user-management/user-management-form/user-management-form.component';
+import { UserProfileFormComponent } from './user-profile/user-profile-form/user-profile-form.component';
+import { FireRealTimeEconomicDamageReportComponent } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report.component';
+import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { UserManagementComponent } from './user-management/user-management.compo
     FireRtIcFormComponent,
     UserProfileComponent,
     UserManagementComponent,
+    UserManagementFormComponent,
+    UserProfileFormComponent,
+    FireRealTimeEconomicDamageReportComponent,
+    FireRealTimeEconomicDamageReportFormComponent,
   ],
     imports: [
         BrowserModule,

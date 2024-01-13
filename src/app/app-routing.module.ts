@@ -9,6 +9,16 @@ import {
 import {MapVisualComponent} from './map-visual/map-visual.component';
 import {FireRtIncidentCatologueComponent} from './fire-rt-incident-catologue/fire-rt-incident-catologue.component';
 import {FireRtIcFormComponent} from './fire-rt-incident-catologue/fire-rt-ic-form/fire-rt-ic-form.component';
+import {UserProfileComponent} from './user-profile/user-profile.component';
+import {UserProfileFormComponent} from './user-profile/user-profile-form/user-profile-form.component';
+import {UserManagementComponent} from './user-management/user-management.component';
+import {UserManagementFormComponent} from './user-management/user-management-form/user-management-form.component';
+import {
+  FireRealTimeEconomicDamageReportComponent
+} from "./fire-real-time-economic-damage-report/fire-real-time-economic-damage-report.component";
+import {
+  FireRealTimeEconomicDamageReportFormComponent
+} from "./fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component";
 
 
 const routes: Routes = [
@@ -44,6 +54,30 @@ const routes: Routes = [
       {
         path: 'fire/real-time/catalogue/form',
         component: FireRtIcFormComponent
+      },
+      {
+        path: 'user/profile',
+        component: UserProfileComponent
+      },
+      {
+        path: 'user/profile/form',
+        component: UserProfileFormComponent
+      },
+      {
+        path: 'user/management',
+        component: UserManagementComponent
+      },
+      {
+        path: 'user/management/form',
+        component: UserManagementFormComponent
+      },
+      {
+        path: 'fire/report/real-time-economic-damage',
+        component: FireRealTimeEconomicDamageReportComponent
+      },
+      {
+        path: 'fire/report/real-time-economic-damage/form',
+        component: FireRealTimeEconomicDamageReportFormComponent
       },
     ]
   }

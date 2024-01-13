@@ -1,8 +1,8 @@
-.container {
+.cont {
   margin:20px 100px 20px 100px;
 }
 
-.logo, .menus, .container{
+.logo, .menus, .cont{
   display: flex;
   flex-direction: row;
 }
@@ -12,10 +12,12 @@
 }
 
 .logo-item:last-child{
+  margin-top: 15px;
   margin-left: 18px;
   font-size: 19px;
 }
 .menu-item {
+  margin-top: 15px;
   margin-left: 36px;
   width: 80px;
 }
@@ -23,13 +25,4 @@
   margin-top: 6px;
 }
 
-.button {
-  display: flex;
-  border: 2px solid #475F45;
-  width: 130px;
-  margin-left: 36px;
-  padding-left: 22px;
-  align-items: center;
-  text-align: center;
-}
 
