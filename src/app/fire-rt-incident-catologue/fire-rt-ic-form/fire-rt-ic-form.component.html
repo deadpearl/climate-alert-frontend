@@ -22,7 +22,7 @@
       <div class="row">
         <h3>Добавьте редактирующий персонал для отчетов</h3>
         <select class="selectinput" [(ngModel)]="selectEditorEmail">
-          <option *ngFor="let editor of editors" [value]="editor.email">{{editor.firstName }} {{editor.lastName }}</option>
+          <option *ngFor="let editor of editors" [value]="editor.employeeEmail">{{editor.firstName }} {{editor.lastName }}</option>
         </select>
         <button class="button" (click)="addEditor()">Добавить редактора</button>
       </div>
@@ -47,9 +47,6 @@
               <a href="#" (click)="$event.preventDefault();">{{"Дата" }}</a>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Время" }}</a>
-            </th>
-            <th class="stable_hdr">
               <a href="#" (click)="$event.preventDefault();">{{"Ширина" }} </a>
             </th>
             <th class="stable_hdr">
@@ -66,10 +63,7 @@
           <tr *ngFor="let item of realTimeReportList; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentRealTimeFire && currentRealTimeFire.id === item.id">
             <td>{{i + 1}}</td>
             <td>
-              {{item.acqDate}}
-            </td>
-            <td>
-              {{item.acqTime}}
+              {{formatRegisterDate(item.startDate)}}
             </td>
             <td>
               {{item.latitude}}

@@ -32,14 +32,6 @@ export class AuthService {
   getCurrentUser() {
     return this.http.get('/internal/api/public/user/v1/token/' + this.currentToken).toPromise();
   }
-  public registerData(data) {
-    return this.http.post('/auth/register_data', data).subscribe(response => {
-      this.responsse = response;
-      sessionStorage.setItem(this.loggedInKey, 'true');
-      sessionStorage.setItem(this.authKey, this.responsse.token);
-      this.router.navigate(['fire/report/real-time']);
-    });
-  }
 
   public loginData(data) {
     return this.http.post('/internal/api/public/user/v1/login', data).subscribe(response => {

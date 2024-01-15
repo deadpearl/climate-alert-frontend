@@ -3,6 +3,7 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {RealTimeReportService} from '../../service/real-time-report.service';
 import {UserService} from '../../service/user.service';
+import {AuthService} from "../../service/auth.service";
 
 @Component({
   selector: 'app-fire-rt-ic-form',
@@ -22,8 +23,10 @@ export class FireRtIcFormComponent implements OnInit {
   editorsPostData: any = [];
   editorsForm: any = [[]];
   currentRealTimeFire: boolean;
+  currentUser: any = null;
   constructor(private activatedRoute: ActivatedRoute, private api: HttpClient, private router: Router,
-              private rtReportService: RealTimeReportService, private userService: UserService) { }
+              private rtReportService: RealTimeReportService, private userService: UserService,
+              private authService: AuthService) { }
 
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe((paramMap: ParamMap) => {
@@ -52,13 +55,18 @@ export class FireRtIcFormComponent implements OnInit {
   }
 
   getUsers() {
-    this.userService.getAllUsers().then(resp => {
-      this.editors = resp;
+    this.authService.getCurrentUser().then(resp => {
+      this.currentUser = resp;
+      this.userService.getRegisteredAdminEmployees(this.currentUser.user.email).then(resps => {
+        this.editors = resps;
+      });
     });
   }
 
   addEditor() {
-    const selectedEditor = this.editors.find(editor => editor.email === this.selectEditorEmail);
+    const selectedEditor = this.editors.find(editor => editor.employeeEmail === this.selectEditorEmail);
+    console.log('selectedEditor', selectedEditor);
+    console.log('editors', this.editors);
     const newEditor = {
       email: this.selectEditorEmail,
       reportId: this.fireId,
@@ -82,8 +90,19 @@ export class FireRtIcFormComponent implements OnInit {
       fireRTDataId: this.fireId
     };
     this.rtReportService.createNewReport(data).then(resp => {});
+    this.createButtonTouched = 0;
   }
+  formatRegisterDate(inputDate) {
+    const date = new Date(inputDate);
 
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');  // Добавляем 1, так как месяцы в JavaScript начинаются с 0
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
+  }
   selectEvent(item: any) {
 
   }

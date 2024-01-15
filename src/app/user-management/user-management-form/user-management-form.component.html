@@ -1,0 +1,180 @@
+<div class="cont">
+  <ng-container *ngIf="action==='update'">
+    <div class="account_tabs cretabs">
+      <div (click)="goBack()">Назад</div>
+      <form class="form">
+        <div class="row">
+          <label> Имя <br>
+            <input type="text" placeholder="Имя" [(ngModel)]="updateFormData.firstName" name="firstName">
+          </label>
+
+          <label> Фамилия <br>
+            <input type="text" placeholder="Фамилия" [(ngModel)]="updateFormData.lastName" name="lastName">
+          </label>
+        </div>
+
+        <div class="row">
+          <label> Отчество <br>
+            <input type="text" placeholder="Отчество" [(ngModel)]="updateFormData.middleName" name="middleName">
+          </label>
+
+          <label> Е-мэйл <br>
+            <input type="text" placeholder="Е-мэйл" [(ngModel)]="updateFormData.email" name="email">
+          </label>
+        </div>
+
+        <div class="row">
+          <label> Роль <br>
+            <select class="selectinput" [(ngModel)]="updateFormData.role" name="role">
+              <option *ngFor="let role of roles" [value]="role.name">{{role.nameRu}}</option>
+            </select>
+          </label>
+
+          <label> День Рождения <br>
+            <input type="date" placeholder="День Рождения" [(ngModel)]="updateFormData.birthDate" name="birthDate">
+          </label>
+        </div>
+
+        <div class="row">
+          <label> Номер Телефона <br>
+            <input type="text" placeholder="Номер Телефона" [(ngModel)]="updateFormData.phoneNumber" name="phoneNumber">
+          </label>
+          <label> Город <br>
+            <input type="text" placeholder="Город" [(ngModel)]="updateFormData.city" name="city">
+          </label>
+        </div>
+        <button class="button" type="submit" (click)="updateUser()">Сохранить</button>
+      </form>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="action==='create'">
+    <div class="account_tabs cretabs">
+      <div (click)="goBack()">Назад</div>
+            <form class="form">
+              <div class="row">
+                <label> Имя <br>
+                  <input type="text" placeholder="Имя" [(ngModel)]="createFormData.firstName" name="firstName">
+                </label>
+
+                <label> Фамилия <br>
+                  <input type="text" placeholder="Фамилия" [(ngModel)]="createFormData.lastName" name="lastName">
+                </label>
+              </div>
+
+              <div class="row">
+                <label> Отчество <br>
+                  <input type="text" placeholder="Отчество" [(ngModel)]="createFormData.middleName" name="middleName">
+                </label>
+
+                <label> Е-мэйл <br>
+                  <input type="text" placeholder="Е-мэйл" [(ngModel)]="createFormData.email" name="email">
+                </label>
+              </div>
+
+              <div class="row">
+                <label> Роль <br>
+                  <select class="selectinput" [(ngModel)]="createFormData.role" name="role">
+                    <option *ngFor="let role of roles" [value]="role.name">{{role.nameRu}}</option>
+                  </select>
+                </label>
+
+                <label> День Рождения <br>
+                  <input type="date" placeholder="День Рождения" [(ngModel)]="createFormData.birthDate" name="birthDate">
+                </label>
+              </div>
+
+              <div class="row">
+                <label> Номер Телефона <br>
+                  <input type="text" placeholder="Номер Телефона" [(ngModel)]="createFormData.phoneNumber" name="phoneNumber">
+                </label>
+
+                <label> Пароль <br>
+                  <input type="text" placeholder="Пароль" [(ngModel)]="createFormData.password" name="password">
+                </label>
+              </div>
+              <div class="row">
+                <label> Город <br>
+                  <input type="text" placeholder="Город" [(ngModel)]="createFormData.city" name="city">
+                </label>
+              </div>
+
+              <button class="button" type="submit" (click)="createUser()">Сохранить</button>
+            </form>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="action==='addEmployee'">
+    <div class="content_tbox auditinfo_tbox stable_box ver" *ngIf="userEmployeeRoleList">
+      <div class="search-result d-flex justify-content-between">
+        <div class="row">
+          <button class="button" (click)="addAdminEmployee()" [class.disabled]="!currentEmployee" [disabled]="!currentEmployee">
+            {{"Добавить" }}
+          </button>
+        </div>
+      </div>
+
+      <table class="stable ver auditinfo_table meetingusers_table">
+        <thead>
+        <tr>
+          <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">№</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Имя" }}</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Фамилия" }}</a>
+          </th>
+        </tr>
+        </thead>
+        <tbody *ngIf="userEmployeeRoleList && userEmployeeRoleList.length === 0">
+        <tr>
+          <td colspan="7" class="text-center">{{"Нет сотрудников" }}</td>
+        </tr>
+        </tbody>
+        <tbody *ngIf="userEmployeeRoleList && userEmployeeRoleList.length">
+        <tr *ngFor="let item of userEmployeeRoleList; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentEmployee && currentEmployee.id === item.id">
+          <td>{{i + 1}}</td>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+        </tr>
+        </tbody>
+
+      </table>
+      <h2 class="audit_header">Прикрепленные сотрудники</h2>
+      <table class="stable ver auditinfo_table meetingusers_table">
+        <thead>
+        <tr>
+          <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">№</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Имя" }}</a>
+          </th>
+          <th class="stable_hdr">
+            <a href="#" (click)="$event.preventDefault();">{{"Фамилия" }}</a>
+          </th>
+        </tr>
+        </thead>
+        <tbody *ngIf="adminEmployeeList && adminEmployeeList.length === 0">
+        <tr>
+          <td colspan="7" class="text-center">{{"Нет сотрудников" }}</td>
+        </tr>
+        </tbody>
+        <tbody *ngIf="adminEmployeeList && adminEmployeeList.length">
+        <tr *ngFor="let item of adminEmployeeList; let i = index;">
+          <td>{{i + 1}}</td>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+        </tr>
+        </tbody>
+
+      </table>
+
+      <button class="button" (click)="saveAdminEmployee()">
+        {{"Сохранить" }}
+      </button>
+    </div>
+  </ng-container>
+</div>
