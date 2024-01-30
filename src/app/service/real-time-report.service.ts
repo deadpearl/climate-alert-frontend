@@ -16,8 +16,8 @@ export class RealTimeReportService {
     return this.http.get(`/internal/report/get-all/fire-real-time/by-rt-data-id?rtDataId=${id}`).toPromise();
   }
 
-  getRTReportSearch(year, month) {
-    return this.http.get(`/internal/api/data/RTData/search?year=${year}&month=${month}`).toPromise();
+  getRTReportSearch(year, month, email) {
+    return this.http.get(`/internal/api/data/RTData/search?year=${year}&month=${month}&email=${email}`).toPromise();
   }
 
   getRTReportPdf(requirementId, type = 'pdf', language =   'ru') {
@@ -27,6 +27,9 @@ export class RealTimeReportService {
 
   createNewReport(data) {
     return this.http.post(`/internal/report/create/fire-real-time`, data).toPromise();
+  }
+  getListEmployeesByEmployee(email) {
+    return this.http.get(`/internal/api/public/user/v1/users/get/admin-employees/by-employee?email=${email}`).toPromise();
   }
 }
 

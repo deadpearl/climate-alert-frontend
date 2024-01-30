@@ -19,9 +19,9 @@ export class FireRtIcFormComponent implements OnInit {
   realTimeReportList: any = null;
   createButtonTouched: any = 0;
   selectEditorEmail: any = '';
-  editors: any = [[]];
+  editors: any = [];
   editorsPostData: any = [];
-  editorsForm: any = [[]];
+  editorsForm: any = [];
   currentRealTimeFire: boolean;
   currentUser: any = null;
   constructor(private activatedRoute: ActivatedRoute, private api: HttpClient, private router: Router,

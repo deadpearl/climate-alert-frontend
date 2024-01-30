@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="menus_item two" (click)="$event.preventDefault(); submenus.planing = !submenus.planing" [ngClass]="{expanded: submenus.planing  ||  getUrlPosition('planning')}"
+    <div class="menus_item four" (click)="$event.preventDefault(); submenus.planing = !submenus.planing" [ngClass]="{expanded: submenus.planing  ||  getUrlPosition('planning')}"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M21 6L15.7071 11.2929C15.3166 11.6834 14.6834 11.6834 14.2929 11.2929L12.7071 9.70711C12.3166 9.31658 11.6834 9.31658 11.2929 9.70711L7 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -49,16 +49,7 @@
           <a class="" href="#"
           >{{"Перечень пожаров в реальном времени"  }}</a>
         </div><br>
-        <div class="submenu_items" [routerLink]="['/planning/application']  " routerLinkActive="active"
-             (click)="$event.preventDefault()">
-          <a class="" href="#"
-          >{{"Заявки на аудиторское мероприятие"  }}</a>
-        </div><br>
-        <div class="submenu_items" [routerLink]="['/planning/assesment-events'] " routerLinkActive="active"
-             (click)="$event.preventDefault()">
-          <a class="" href="#"
-          >{{"Мероприятия по проведению оценки деятельности органов государственного аудита в плановом порядке"  }}</a>
-        </div>
+
       </div>
     </div>
 

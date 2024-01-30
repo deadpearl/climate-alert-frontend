@@ -16,6 +16,12 @@
         <option *ngFor="let month of months" [value]="month.value">{{month.label}}</option>
       </select>
     </div>
+    <div class="filter-item d-flex align-items-center">
+      <span class="mr-2">{{"Сотрудник" }}:</span>
+      <select class="selectinput" [(ngModel)]="employeeId">
+        <option *ngFor="let employee of employeeList" [value]="employee.employeeEmail">{{employee.firstName}} {{employee.lastName}}</option>
+      </select>
+    </div>
     <button class="button left" (click)="findFire()">{{"Найти" }}</button>
   </div>
   <ng-container *ngIf="!listIsEmpty">

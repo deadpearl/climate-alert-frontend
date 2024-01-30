@@ -29,10 +29,10 @@
     <div class="search-result d-flex justify-content-between" *ngIf="!listIsEmpty">
       <h3 class="aisection_hdr">{{"Пожары"  | uppercase}}</h3>
       <div class="d-flex">
-        <button class="account_btn mr-1" (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
+        <button class="button" (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
           {{"Добавить" }}
         </button>
-        <button class="button"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
+        <button class="button" style="margin-top: 10px" type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
           {{"Изменить" }}
         </button>
 <!--        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire" (click)="this.modalService.open(removeAuditDia)">-->

@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {RealTimeReportService} from '../service/real-time-report.service';
+import {AuthService} from '../service/auth.service';
+import {UserService} from '../service/user.service';
 
 @Component({
   selector: 'app-fire-real-time-report',
@@ -11,7 +13,9 @@ import {RealTimeReportService} from '../service/real-time-report.service';
 export class FireRealTimeReportComponent implements OnInit {
   constructor(private http: HttpClient,
               private router: Router,
-              private rtReportService: RealTimeReportService
+              private rtReportService: RealTimeReportService,
+              private authService: AuthService,
+              private userService: UserService
   ) { }
   reportPdf: Blob = null;
   years = [
@@ -36,10 +40,25 @@ export class FireRealTimeReportComponent implements OnInit {
     { value: 12, label: 'Декабрь' }
   ];
   yearId: any = 2024;
+  employeeId: any = null;
+  employeeList: any = null;
   monthId: any = 1;
   listFires: any = null;
   currentFire: any = false;
+  currentUser: any = null;
   ngOnInit() {
+    this.authService.getCurrentUser().then(resp => {
+      this.currentUser = resp;
+      if (this.currentUser.user.role === 'ROLE_ADMIN') {
+        this.userService.getRegisteredAdminEmployees(this.currentUser.user.email).then(response => {
+          this.employeeList = response;
+        });
+      } else {
+        this.rtReportService.getListEmployeesByEmployee(this.currentUser.user.email).then(response => {
+          this.employeeList = response;
+        });
+      }
+    });
   }
 
   async getDocumentPreview() {
@@ -48,7 +67,7 @@ export class FireRealTimeReportComponent implements OnInit {
   findFire() {
     console.log(this.yearId);
     console.log(this.monthId);
-    this.rtReportService.getRTReportSearch(this.yearId, this.monthId).then((resp: any) => {
+    this.rtReportService.getRTReportSearch(this.yearId, this.monthId, this.employeeId).then((resp: any) => {
         this.listFires = resp;
       }
     );

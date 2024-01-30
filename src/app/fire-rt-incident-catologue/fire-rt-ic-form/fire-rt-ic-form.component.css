@@ -3,3 +3,11 @@
   height: 650px;
   margin: 50px 20px 20px 350px;
 }
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.abitleft {
+  margin-left: 20px;
+}

@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
 import {RealTimeReportService} from '../service/real-time-report.service';
+import {AuthService} from '../service/auth.service';
 
 @Component({
   selector: 'app-fire-rt-incident-catologue',
@@ -13,7 +14,8 @@ export class FireRtIncidentCatologueComponent implements OnInit {
 
   constructor(private api: HttpClient, public modalService: NgbModal,
               private router: Router,
-              private rtReportService: RealTimeReportService) { }
+              private rtReportService: RealTimeReportService,
+              private authService: AuthService) { }
   years = [
     { value: 2020, label: '2020' },
     { value: 2021, label: '2021' },
@@ -39,13 +41,16 @@ export class FireRtIncidentCatologueComponent implements OnInit {
   monthId: any = 1;
   listFires: any = null;
   currentFire: any = false;
+  currentUser: any;
   ngOnInit() {
+    this.currentUser = this.authService.getCurrentUser();
   }
 
   findFire() {
     console.log(this.yearId);
     console.log(this.monthId);
-    this.rtReportService.getRTReportSearch(this.yearId, this.monthId).then((resp: any) => {
+    this.rtReportService.getRTReportSearch(this.yearId, this.monthId, this.currentUser.__zone_symbol__value.user.email).
+    then((resp: any) => {
         this.listFires = resp;
       }
     );
