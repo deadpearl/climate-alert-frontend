@@ -1,28 +1,11 @@
-.cont {
-  margin:20px 100px 20px 100px;
+.container {
+  position: relative;
+  margin: 0 80px 20px 70px;
 }
-
-.logo, .menus, .cont{
-  display: flex;
-  flex-direction: row;
+.heading {
+  height: 120px;
 }
-
-.logo {
-  padding-right: 380px;
+.menu {
+  position: relative;
+  margin: 30px 180px 20px 180px;
 }
-
-.logo-item:last-child{
-  margin-top: 15px;
-  margin-left: 18px;
-  font-size: 19px;
-}
-.menu-item {
-  margin-top: 15px;
-  margin-left: 36px;
-  width: 80px;
-}
-.menus {
-  margin-top: 6px;
-}
-
-
