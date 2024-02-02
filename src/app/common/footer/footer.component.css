@@ -1,29 +1,4 @@
-
-.objects_footer{
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 17px;
-  font-weight: normal;
-  padding: 48px 99px 50px;
-}
-
-.object_footer {
-
-  max-width: 280px;
-}
-.logo{
-  display: flex;
-  flex-direction: row;
-}
-
-
-.logo-item:last-child{
-  margin-left: 18px;
-  font-size: 19px;
-}
-* {
-  background: #414840;
-  color:white;
+.container {
+  margin: 0 100px 0 100px;
+  padding: 50px 0 50px 0;
 }

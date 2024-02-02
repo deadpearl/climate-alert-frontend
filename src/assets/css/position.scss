@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: row;
 }
-
+.column {
+  display: flex;
+  flex-direction: column;
+}
 .space-between {
   display: flex;
   justify-content: space-between;
@@ -60,6 +63,13 @@
 
 
 
+.h-150 {
+  height: 150px;
+}
+.h-70 {
+  height: 70px;
+}
+
 
 .ml-5 {
   margin-left: 5px;
@@ -75,4 +85,12 @@
 
 .mt-20 {
   margin-top: 20px;
+}
+
+
+
+
+
+.pb-10 {
+  padding-bottom: 10px;
 }
