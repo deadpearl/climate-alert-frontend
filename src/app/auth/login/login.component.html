@@ -1,29 +1,58 @@
-<div class="container">
-  <div class="header">
-    <h1>Login</h1>
-  </div>
-  <form (ngSubmit)="submitForm()">
-    <div class="cont-form">
+<div class="light-gray center pb-80">
+  <div class="dark-gray item-1000 h-800 center">
+    <div class="h-700 column space-between">
+      <h1>Login</h1>
 
-      <div class="input-form">
+      <a class="" [routerLink]="['/signup']">Not registered yet? Sign up here.</a>
 
-        <div class="row">
-          <div class="row-input-item">
-            <span class="descr"><b>Email</b></span><br>
-            <input class="login_input" type="text" name="email"  [(ngModel)]="form.email"  placeholder="example@gmail.com">
-          </div>
-          <div class="row-input-item" style="margin-top: 25px">
-            <span class="descr"><b>Password</b></span><br>
-            <input class="login_input" type="password" [(ngModel)]="form.password" name="password"  placeholder="Password">
-          </div>
+
+        <div class="background-white item-650 h-500 form center">
+          <form (ngSubmit)="submitForm()">
+            <div class="cont-form center">
+
+              <div class="center">
+
+                <div class="h-220 space-between column">
+                  <div class="inputs center">
+                    <div class="mr-30">
+                      <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1453 13.6811C14.6471 13.6811 17.4858 10.8424 17.4858 7.34057C17.4858 3.83877 14.6471 1 11.1453 1C7.64346 1 4.80469 3.83877 4.80469 7.34057C4.80469 10.8424 7.64346 13.6811 11.1453 13.6811Z" stroke="#A0A3BD" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 26.8256C1 24.135 2.06884 21.5546 3.97138 19.652C5.87392 17.7495 8.45432 16.6807 11.1449 16.6807C13.8355 16.6807 16.4159 17.7495 18.3185 19.652C20.221 21.5546 21.2898 24.135 21.2898 26.8256" stroke="#A0A3BD" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+
+                    <input class="" type="text" name="email"  [(ngModel)]="form.email"  placeholder="Email">
+                  </div>
+                  <div class="inputs center">
+                    <div class="mr-30">
+                    <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.0004 16.8533C16.4944 16.8552 16.0031 17.0134 15.602 17.3036C15.2008 17.5938 14.9121 18 14.7801 18.4598C14.6482 18.9195 14.6803 19.4073 14.8715 19.8481C15.0628 20.289 15.4026 20.6586 15.8387 20.9V24H18.1904V20.9C18.5354 20.7079 18.8218 20.435 19.0216 20.1079C19.2215 19.7808 19.328 19.4106 19.3308 19.0333C19.3308 18.7459 19.2704 18.4613 19.1531 18.196C19.0358 17.9306 18.864 17.6897 18.6474 17.4871C18.4308 17.2845 18.1738 17.1242 17.8911 17.0154C17.6085 16.9066 17.3057 16.8516 17.0004 16.8533Z" stroke="#A0A3BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M25.7055 11.8467H8.28754C6.59755 11.8467 5.22754 13.1361 5.22754 14.7267V26.12C5.22754 27.7106 6.59755 29 8.28754 29H25.7055C27.3954 29 28.7655 27.7106 28.7655 26.12V14.7267C28.7655 13.1361 27.3954 11.8467 25.7055 11.8467Z" stroke="#A0A3BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.45605 11.8467V10.1067C9.45605 8.22186 10.2516 6.41425 11.6676 5.08149C13.0837 3.74874 15.0043 3 17.0069 3C19.0095 3 20.9301 3.74874 22.3461 5.08149C23.7622 6.41425 24.5577 8.22186 24.5577 10.1067V11.8467" stroke="#A0A3BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </div>
+                    <input class="" type="password" [(ngModel)]="form.password" name="password"  placeholder="Password">
+                  </div>
+                  <div class="">
+                    <button class="item-150 h-40 white dark-green1-button" >LOGIN</button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </form>
         </div>
 
+          <div class="">- OR -</div>
+          <div class="center">
+            <div class="row background-white item-250 center">
+              <img class="" src="assets/img/Google__G__Logo%202.svg" alt="google">
+              <div class="">Sign up with Google</div>
+            </div>
+          </div>
 
-      </div>
-      <button class="submit-btn" >LOGIN</button>
+
     </div>
-  </form>
-
-
-
+  </div>
 </div>

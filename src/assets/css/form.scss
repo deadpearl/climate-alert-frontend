@@ -1,0 +1,19 @@
+
+input {
+  border: none;
+  padding: 10px;
+  border-radius: 34px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+button {
+  border: none;
+  text-align: center;
+  gap: 10px;
+  border-radius: 22px;
+}
+
+button:hover {
+  cursor: pointer;
+}

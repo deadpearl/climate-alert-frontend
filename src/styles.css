@@ -1,6 +1,7 @@
 @import "assets/css/position.scss";
 @import "assets/css/color.scss";
 @import "assets/css/font.scss";
+@import "assets/css/form.scss";
 
 * {
   margin: 0;
