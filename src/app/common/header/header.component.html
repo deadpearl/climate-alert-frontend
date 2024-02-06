@@ -32,7 +32,8 @@
       <div class="item-100">LIVE MAP</div>
       <div class="item-150">FORECAST MAP</div>
       <div class="item-200">REPORTS & STATISTICS</div>
-      <div class="item-100">SIGN UP</div>
+      <div *ngIf="!currentUser" class="item-100">SIGN UP</div>
+      <div *ngIf="currentUser" class="item-250">WELCOME BACK, {{currentUser.__zone_symbol__value.user.firstName.toUpperCase()}}!</div>
     </div>
     <svg width="1100" height="1" viewBox="0 0 1100 1" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line y1="0.5" x2="1100" y2="0.5" stroke="#374231"/>

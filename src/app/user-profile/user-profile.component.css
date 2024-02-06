@@ -1,0 +1,10 @@
+.cont-form {
+  border-radius: 34px;
+  border: 6px solid #EFF0F6;
+  box-shadow: 0 5px 16px 0 rgba(8, 15, 52, 0.06);
+  flex-shrink: 0;
+}
+.div {
+  border: 1px solid #afacac;
+  border-radius: 10px;
+}
