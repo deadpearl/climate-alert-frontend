@@ -9,3 +9,7 @@
   position: relative;
   margin: 30px 180px 0 180px;
 }
+.link:hover {
+  color: #A0A3BD;
+  cursor: pointer;
+}
