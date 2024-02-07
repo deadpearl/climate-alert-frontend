@@ -1,0 +1,15 @@
+table tr {
+  border-bottom: 1px solid #000000;
+}
+tr:hover {background-color: #e5e5e5;}
+th, td {
+  padding: 15px;
+  border: none;
+}
+table {
+  border: none;
+}
+
+th {
+  font-weight: bold;
+}

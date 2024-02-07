@@ -42,6 +42,11 @@ export class FireRtIncidentCatologueComponent implements OnInit {
   listFires: any = null;
   currentFire: any = false;
   currentUser: any;
+  activeTab: any = 1;
+
+  activateTab(tabNumber: number): void {
+    this.activeTab = tabNumber;
+  }
   ngOnInit() {
     this.currentUser = this.authService.getCurrentUser();
   }
