@@ -1,5 +1,5 @@
 table tr {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1pt  solid #585858;
 }
 tr:hover {background-color: #e5e5e5;}
 th, td {
@@ -7,7 +7,7 @@ th, td {
   border: none;
 }
 table {
-  border: none;
+  border-collapse: collapse;
 }
 
 th {

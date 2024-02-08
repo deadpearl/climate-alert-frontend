@@ -1,71 +1,75 @@
-<div class="cont">
-  <h2 class="audit_hdr">{{"Управление Пользователями" }}</h2>
-  <div class="content-body">
-    <div class="meeting_header">
-      <h3 class="aisection_hdr">{{"Пользователи"  | uppercase}}</h3>
-    </div>
-
-    <div class="search-result d-flex justify-content-between" *ngIf="!listIsEmpty">
-      <div class="row">
-        <button class="button" (click)="addUser()" [class.disabled]="currentUser" [disabled]="currentUser">
-          {{"Добавить" }}
-        </button>
-        <button class="button"  type="button" [class.disabled]="!currentUser" [disabled]="!currentUser " (click)="changeUser()">
-          {{"Изменить" }}
-        </button>
-        <button *ngIf="currentUser && currentUser.role === 'ROLE_ADMIN'" class="button bigger"  type="button" [class.disabled]="!currentUser && currentUser.role === 'ROLE_ADMIN'" [disabled]="!currentUser && currentUser.role === 'ROLE_ADMIN'" (click)="addEmployeeToAdmin()">
-          {{"Прикрепить Сотрудников" }}
-        </button>
-        <!--        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire" (click)="this.modalService.open(removeAuditDia)">-->
-        <!--          {{"Удалить" }}-->
-        <!--        </button>-->
+<div class="dark-gray center-content">
+  <div class=" ">
+    <h2 class="">{{"Users Management" }}</h2>
+    <div class="content-body mt-20">
+      <div class="" *ngIf="!listIsEmpty">
+        <div class="row item-500">
+          <button class="item-90 h-40 dark-green1 white"  (click)="addUser()" [class.disabled]="currentUser" [disabled]="currentUser">
+            {{"Добавить" }}
+          </button>
+          <button class="ml-10 item-90 h-40 dark-green1 white"  type="button" [class.disabled]="!currentUser" [disabled]="!currentUser " (click)="changeUser()">
+            {{"Изменить" }}
+          </button>
+          <button *ngIf="currentUser && currentUser.role === 'ROLE_ADMIN'" class="ml-10 item-200 h-40 dark-green1 white"  type="button" [class.disabled]="!currentUser && currentUser.role === 'ROLE_ADMIN'" [disabled]="!currentUser && currentUser.role === 'ROLE_ADMIN'" (click)="addEmployeeToAdmin()">
+            {{"Прикрепить Сотрудников" }}
+          </button>
+          <!--        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire" (click)="this.modalService.open(removeAuditDia)">-->
+          <!--          {{"Удалить" }}-->
+          <!--        </button>-->
+        </div>
       </div>
+
+      <div class="mt-20" *ngIf="!listIsEmpty">
+        <table class="item-1000 center-text">
+          <thead>
+          <tr class="border">
+            <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+            <th class="stable_hdr">
+              №
+            </th>
+            <th class="stable_hdr">
+              {{"Имя" }}
+            </th>
+            <th class="stable_hdr">
+              {{"Фамилия" }}
+            </th>
+            <th class="stable_hdr">
+              {{"Е-мэйл" }}
+            </th>
+            <th class="stable_hdr">
+              {{"Роль" }}
+            </th>
+            <th class="stable_hdr">
+              {{"Дата Регистрации" }}
+            </th>
+
+          </tr>
+
+          </thead>
+
+          <tbody *ngIf="usersList && usersList.length === 0">
+          <tr>
+            <td colspan="7" class="text-center">{{"В перечне ещё нет аудиторских мероприятий" }}</td>
+          </tr>
+          </tbody>
+
+          <tbody *ngIf="usersList && usersList.length">
+
+          <tr *ngFor="let item of usersList; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentUser && currentUser.id === item.id">
+            <td>{{i + 1}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.role}}</td>
+            <td>{{formatRegisterDate(item.registerDate)}}</td>
+
+          </tr>
+          </tbody>
+
+        </table>
+      </div>
+
     </div>
-
-    <div class="content_tbox auditinfo_tbox stable_box ver" *ngIf="!listIsEmpty">
-      <table class="stable ver auditinfo_table meetingusers_table">
-        <thead>
-        <tr>
-          <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">№</a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Имя" }}</a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Фамилия" }}</a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Е-мэйл" }} </a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Роль" }}</a>
-          </th>
-          <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Дата Регистрации" }} </a>
-          </th>
-        </tr>
-        </thead>
-        <tbody *ngIf="usersList && usersList.length === 0">
-        <tr>
-          <td colspan="7" class="text-center">{{"В перечне ещё нет аудиторских мероприятий" }}</td>
-        </tr>
-        </tbody>
-        <tbody *ngIf="usersList && usersList.length">
-        <tr *ngFor="let item of usersList; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentUser && currentUser.id === item.id">
-          <td>{{i + 1}}</td>
-          <td>{{item.firstName}}</td>
-          <td>{{item.lastName}}</td>
-          <td>{{item.email}}</td>
-          <td>{{item.role}}</td>
-          <td>{{formatRegisterDate(item.registerDate)}}</td>
-
-        </tr>
-        </tbody>
-
-      </table>
-    </div>
-
   </div>
+
 </div>
