@@ -40,7 +40,7 @@ export class FireRealTimeReportComponent implements OnInit {
     { value: 12, label: 'Декабрь' }
   ];
   yearId: any = 2024;
-  employeeId: any = null;
+  employeeId: any = 'defaultEmployeeValue';
   employeeList: any = null;
   monthId: any = 1;
   listFires: any = null;

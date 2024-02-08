@@ -15,10 +15,11 @@ import {UserManagementComponent} from './user-management/user-management.compone
 import {UserManagementFormComponent} from './user-management/user-management-form/user-management-form.component';
 import {
   FireRealTimeEconomicDamageReportComponent
-} from "./fire-real-time-economic-damage-report/fire-real-time-economic-damage-report.component";
+} from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report.component';
 import {
   FireRealTimeEconomicDamageReportFormComponent
-} from "./fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component";
+// tslint:disable-next-line:max-line-length
+} from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,10 @@ const routes: Routes = [
       },
       {
         path: 'fire/real-time/catalogue',
+        component: FireRtIncidentCatologueComponent
+      },
+      {
+        path: 'admin/fire/real-time/catalogue',
         component: FireRtIncidentCatologueComponent
       },
       {
