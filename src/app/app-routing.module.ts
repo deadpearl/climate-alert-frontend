@@ -60,6 +60,14 @@ const routes: Routes = [
         component: UserProfileComponent
       },
       {
+        path: 'admin/user/profile',
+        component: UserProfileComponent
+      },
+      {
+        path: 'employee/user/profile',
+        component: UserProfileComponent
+      },
+      {
         path: 'user/profile/form',
         component: UserProfileFormComponent
       },

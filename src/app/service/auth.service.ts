@@ -38,7 +38,13 @@ export class AuthService {
         this.responsse = response;
         sessionStorage.setItem(this.loggedInKey, 'true');
         sessionStorage.setItem(this.authKey, this.responsse.token);
-        this.router.navigate(['fire/report/real-time']);
+        if (this.responsse.role === 'ROLE_ADMIN') {
+          this.router.navigate(['admin/user/profile']);
+        } else if (this.responsse.role === 'ROLE_EMPLOYEE') {
+          this.router.navigate(['employee/user/profile']);
+        } else {
+          this.router.navigate(['user/profile']);
+        }
       });
   }
 

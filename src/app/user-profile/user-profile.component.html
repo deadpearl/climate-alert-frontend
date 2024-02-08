@@ -1,4 +1,4 @@
-<div class="light-gray center-content center-item pb-80">
+<div [ngClass]="{'light-gray': !getUrlPosition('admin'), 'dark-gray': getUrlPosition('admin')}" class="center-content center-item pb-80">
   <div class="dark-gray item-1000 h-800 column center-item">
       <div class="h-700 space-between column mt-20">
         <h2 class="">USER PROFILE</h2>

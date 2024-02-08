@@ -24,4 +24,7 @@ export class HeaderComponent implements OnInit {
   }
   changeLanguage(lang) {
   }
+  getUrlPosition(url) {
+    return this.router.url.includes(url);
+  }
 }
