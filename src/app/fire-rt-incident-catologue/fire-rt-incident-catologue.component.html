@@ -26,6 +26,7 @@
                   <div class="filter-item d-flex align-items-center">
                     <span class="mr-2">{{"Месяц" }}:</span>
                     <select class="ml-10" [(ngModel)]="monthId">
+
                       <option *ngFor="let month of months" [value]="month.value">{{month.label}}</option>
                     </select>
                   </div>

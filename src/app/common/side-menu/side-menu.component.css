@@ -34,9 +34,26 @@ html {
   scroll-behavior: smooth;
   padding-bottom: 50px;
 }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: flex-end; /* Align content to the right */
+  padding: 0 20px; /* Add some padding if needed */
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%; /* Set a specific height, adjust as needed */
+}
 .name {
   margin-top: 18px;
   margin-right: 28px;
+}
+
+.item:hover {
+  cursor: pointer;
+  background: #3f5936;
 }
 .mini-header {
   display: flex;

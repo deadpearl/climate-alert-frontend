@@ -77,11 +77,11 @@ const routes: Routes = [
         component: UserProfileFormComponent
       },
       {
-        path: 'user/management',
+        path: 'admin/user/management',
         component: UserManagementComponent
       },
       {
-        path: 'user/management/form',
+        path: 'admin/user/management/form',
         component: UserManagementFormComponent
       },
       {

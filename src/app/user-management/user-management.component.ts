@@ -49,7 +49,7 @@ export class UserManagementComponent implements OnInit {
 
 
   changeUser() {
-    this.router.navigate(['user/management/form'], {
+    this.router.navigate(['admin/user/management/form'], {
       queryParams: {
         id: this.currentUser.id,
         action: 'update'
@@ -58,7 +58,7 @@ export class UserManagementComponent implements OnInit {
     });
   }
   addUser() {
-    this.router.navigate(['user/management/form'], {
+    this.router.navigate(['admin/user/management/form'], {
       queryParams: {
         action: 'create'
       },
@@ -67,7 +67,7 @@ export class UserManagementComponent implements OnInit {
   }
 
   addEmployeeToAdmin() {
-    this.router.navigate(['user/management/form'], {
+    this.router.navigate(['admin/user/management/form'], {
       queryParams: {
         action: 'addEmployee',
         adminUserId: this.currentUser.id
