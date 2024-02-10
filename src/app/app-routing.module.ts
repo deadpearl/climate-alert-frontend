@@ -45,7 +45,15 @@ const routes: Routes = [
         component: FireRealTimeReportComponent
       },
       {
+        path: 'admin/fire/report/real-time',
+        component: FireRealTimeReportComponent
+      },
+      {
         path: 'fire/report/real-time/form',
+        component: FireFormRealTimeReadonlyComponent
+      },
+      {
+        path: 'admin/fire/report/real-time/form',
         component: FireFormRealTimeReadonlyComponent
       },
       {

@@ -28,30 +28,30 @@
         <button class="item-90 h-30 dark-green1 white ml-10" (click)="findFire()">{{"Найти" }}</button>
       </div>
       <ng-container *ngIf="!listIsEmpty">
-        <table class="stable ver auditinfo_table meetingusers_table">
+        <table class="item-800 center-text mt-20">
           <thead>
           <tr>
             <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">№</a>
+              <div (click)="$event.preventDefault();">№</div>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Наименование" }}</a>
+              <div (click)="$event.preventDefault();">{{"Наименование" }}</div>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Член СК/РК" }}</a>
+              <div (click)="$event.preventDefault();">{{"Член СК/РК" }}</div>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Тип мероприятия" }} </a>
+              <div (click)="$event.preventDefault();">{{"Тип мероприятия" }} </div>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Автор" }}</a>
+              <div (click)="$event.preventDefault();">{{"Автор" }}</div>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Период проведения" }} </a>
+              <div (click)="$event.preventDefault();">{{"Период проведения" }} </div>
             </th>
             <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Дата заседания" }} </a>
+              <div (click)="$event.preventDefault();">{{"Дата заседания" }} </div>
             </th>
           </tr>
           </thead>

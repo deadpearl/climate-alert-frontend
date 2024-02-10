@@ -46,6 +46,7 @@ export class FireRealTimeReportComponent implements OnInit {
   listFires: any = null;
   currentFire: any = false;
   currentUser: any = null;
+  realTimeReportList: any = null;
   ngOnInit() {
     this.authService.getCurrentUser().then(resp => {
       this.currentUser = resp;
@@ -61,6 +62,11 @@ export class FireRealTimeReportComponent implements OnInit {
     });
   }
 
+  getReportsByRTId(id) {
+    this.rtReportService.getRTReportByRTDataId(id).then(resp => {
+      this.realTimeReportList = resp;
+    });
+  }
   async getDocumentPreview() {
     this.reportPdf = await this.rtReportService.getRTReportPdf(this.currentFire.id, 'pdf', 'ru');
   }
