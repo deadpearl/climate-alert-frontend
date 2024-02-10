@@ -1,13 +1,47 @@
-.cont{
-  width: 1100px;
-  height: 650px;
-  margin: 50px 20px 20px 350px;
-}
-.row {
-  display: flex;
-  flex-direction: row;
+
+.object-row {
+  cursor: pointer;
 }
 
-.abitleft {
-  margin-left: 20px;
+.selected-object{
+  background-color: #e5e5e5;
+}
+.dark-gray {
+  height: auto;
+  min-height: 500px; /* или другие значения, которые не ограничивают высоту */
+}
+a.disabled {
+  color: lightgray;
+  &:hover {
+    text-decoration: none;
+    color: lightgray;
+  }
+}
+.body {
+
+}
+.tabs {
+  display: flex;
+
+  .tab {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #e0e0e0;
+    }
+  }
+
+  .tab-content {
+    display: none;
+    border-radius: 5px;
+    width: 800px;
+
+    &.active {
+      display: block;
+    }
+  }
 }

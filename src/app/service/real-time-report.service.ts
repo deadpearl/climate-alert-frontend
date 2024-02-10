@@ -24,6 +24,10 @@ export class RealTimeReportService {
     return this.http.get(`/internal/report/fire-real-time-overall?reportId=${requirementId}&lang=${language}&type=${type}`,
       {responseType: 'blob'}).toPromise();
   }
+  getRTEconomicReportPdf(requirementId, type = 'pdf', language =   'ru') {
+    return this.http.get(`/internal/report/fire-real-time-economic-damage?reportId=${requirementId}&lang=${language}&type=${type}`,
+      {responseType: 'blob'}).toPromise();
+  }
 
   createNewReport(data) {
     return this.http.post(`/internal/report/create/fire-real-time`, data).toPromise();

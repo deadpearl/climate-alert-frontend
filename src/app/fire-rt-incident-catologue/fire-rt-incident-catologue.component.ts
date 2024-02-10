@@ -74,9 +74,6 @@ export class FireRtIncidentCatologueComponent implements OnInit {
     console.log(this.currentFire);
   }
 
-  addFire() {
-  }
-
   changeFire() {
     this.router.navigate(['admin/fire/real-time/catalogue/form'], {
       queryParams: {

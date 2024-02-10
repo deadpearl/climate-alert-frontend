@@ -1,61 +1,127 @@
-<div class="cont">
-  <div class="som">
-    <div class="audit_header auditinfo_header modau_header">
-      <a href="#2" class="mfilter_link" [routerLink]="'/fire/real-time/catalogue'">
-        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10">
-          <g>
+<div class="light-gray center-content">
+  <div class="dark-gray  item-1000 center-content pb-80">
+    <div class="item-800 mt-20 column">
+      <div class="audit_header auditinfo_header modau_header">
+        <a href="#2" class="mfilter_link" [routerLink]="'/fire/real-time/catalogue'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10">
             <g>
-              <path fill="#303030" d="M4.998.007v10.006l-5-5.002z"/>
+              <g>
+                <path fill="#303030" d="M4.998.007v10.006l-5-5.002z"/>
+              </g>
             </g>
-          </g>
-        </svg>
-        {{'Назад'}}
-      </a>
-      <h2 class="audit_hdr">{{'Формирование и просмотр информации'}}</h2>
-    </div>
-
-    <div *ngIf="createButtonTouched===0">
-      <button class="button" (click)="buttonCreateReport()">Создать</button>
-    </div>
-
-    <ng-container *ngIf="createButtonTouched===1">
-      <div class="row">
-        <h3>Добавьте редактирующий персонал для отчетов</h3><br>
-        <select class="selectinput" [(ngModel)]="selectEditorEmail">
-          <option *ngFor="let editor of editors" [value]="editor.employeeEmail">{{editor.firstName }} {{editor.lastName }}</option>
-        </select>
-        <button class="button abitleft" (click)="addEditor()">Добавить редактора</button>
+          </svg>
+          {{'Назад'}}
+        </a>
+        <h2 class="mt-20">{{'Формирование и просмотр информации'}}</h2>
       </div>
-      <div class="">
+
+      <div *ngIf="createButtonTouched===0">
+        <button class="item-120 h-40 dark-green1 white mt-20" (click)="buttonCreateReport()">Создать отчет</button>
+      </div>
+
+      <ng-container *ngIf="createButtonTouched===1">
+        <div class="mt-20">
+          <h3>Добавьте редактирующий персонал для отчетов</h3><br>
+          <div class="row">
+            <select class="selectinput" [(ngModel)]="selectEditorEmail">
+              <option value="defaultEmployeeValue" disabled selected>Select an employee</option>
+              <option *ngFor="let editor of editors" [value]="editor.employeeEmail">{{editor.firstName }} {{editor.lastName }}</option>
+            </select>
+            <button class="ml-10 item-180 h-40 dark-green1 white" (click)="addEditor()">Добавить редактора</button>
+          </div>
+
+        </div>
+        <div class="">
+          <div class="content_tbox auditinfo_tbox stable_box ver">
+            <table class="item-800 center-text mt-20">
+              <thead>
+              <tr>
+                <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
+                <th class="stable_hdr">
+                  <div (click)="$event.preventDefault();">№</div>
+                </th>
+                <th class="stable_hdr">
+                  <div (click)="$event.preventDefault();">{{"Имя" }}</div>
+                </th>
+                <th class="stable_hdr">
+                  <div (click)="$event.preventDefault();">{{"Фамилия" }} </div>
+                </th>
+              </tr>
+              </thead>
+              <tbody *ngIf="editorsForm && editorsForm.length === 0">
+              <tr>
+                <td colspan="7" class="text-center">{{"Вы не добавили редакторов" }}</td>
+              </tr>
+              </tbody>
+              <tbody *ngIf="editorsForm && editorsForm.length">
+              <tr *ngFor="let item of editorsForm; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="editorsForm && editorsForm.id === item.id">
+                <td>{{i + 1}}</td>
+                <td>
+                  {{item.firstName}}
+                </td>
+                <td>
+                  {{item.lastName}}
+                </td>
+                <td>
+                  <button class="red-button h-25 item-80" (click)="deleteEditor(i)">Убрать</button>
+                </td>
+
+              </tr>
+              </tbody>
+
+            </table>
+          </div>
+          <div class="row space-between item-250 mt-20">
+            <button class="item-120 h-40 dark-green1 white " (click)="createReport()">Создать Отчет</button>
+            <button class="item-120 h-40 light-gray " (click)="cancelCreatingReport()">Отмена</button>
+          </div>
+
+        </div>
+      </ng-container>
+      <h2 class="mt-20">{{'Созданные отчеты по текущей дате и региону'}}</h2>
+      <button *ngIf="currentReport && currentReport.status.name === 'на согласовании'" class="ml-10 item-180 h-40 dark-green1 white">Согласовать отчет</button>
+      <ng-container *ngIf="realTimeReportList">
         <div class="content_tbox auditinfo_tbox stable_box ver">
-          <table class="stable ver auditinfo_table meetingusers_table">
+          <table class="item-800 center-text">
             <thead>
             <tr>
               <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
               <th class="stable_hdr">
-                <a href="#" (click)="$event.preventDefault();">№</a>
+                <div (click)="$event.preventDefault();">№</div>
               </th>
               <th class="stable_hdr">
-                <a href="#" (click)="$event.preventDefault();">{{"Имя" }}</a>
+                <div (click)="$event.preventDefault();">{{"Дата" }}</div>
               </th>
               <th class="stable_hdr">
-                <a href="#" (click)="$event.preventDefault();">{{"Фамилия" }} </a>
+                <div (click)="$event.preventDefault();">{{"Ширина" }} </div>
+              </th>
+              <th class="stable_hdr">
+                <div (click)="$event.preventDefault();">{{"Долгота" }}</div>
+              </th>
+              <th class="stable_hdr">
+                <div (click)="$event.preventDefault();">{{"Статус" }}</div>
               </th>
             </tr>
             </thead>
-            <tbody *ngIf="editorsForm && editorsForm.length === 0">
+            <tbody *ngIf="realTimeReportList && realTimeReportList.length === 0">
             <tr>
-              <td colspan="7" class="text-center">{{"Вы не добавили редакторов" }}</td>
+              <td colspan="7" class="text-center">{{"В перечне ещё нет отчетов" }}</td>
             </tr>
             </tbody>
-            <tbody *ngIf="editorsForm && editorsForm.length">
-            <tr *ngFor="let item of editorsForm; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="editorsForm && editorsForm.id === item.id">
+            <tbody *ngIf="realTimeReportList && realTimeReportList.length">
+            <tr *ngFor="let item of realTimeReportList; let i = index;" (click)="selectEvent(item)" class="object-row" [class.selected-object]="currentReport && currentReport.id === item.id">
               <td>{{i + 1}}</td>
               <td>
-                {{item.firstName}}
+                {{formatRegisterDate(item.startDate)}}
               </td>
               <td>
-                {{item.lastName}}
+                {{item.latitude}}
+              </td>
+              <td>
+                {{item.longitude}}
+              </td>
+              <td>
+                {{item.status.name}}
               </td>
 
             </tr>
@@ -63,54 +129,22 @@
 
           </table>
         </div>
-        <button style="margin-top: 40px;" class="button" (click)="createReport()">Создать Отчет</button>
-      </div>
-    </ng-container>
+      </ng-container>
 
-    <ng-container *ngIf="realTimeReportList">
-      <div class="content_tbox auditinfo_tbox stable_box ver">
-        <table class="stable ver auditinfo_table meetingusers_table">
-          <thead>
-          <tr>
-            <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
-            <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">№</a>
-            </th>
-            <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Дата" }}</a>
-            </th>
-            <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Ширина" }} </a>
-            </th>
-            <th class="stable_hdr">
-              <a href="#" (click)="$event.preventDefault();">{{"Долгота" }}</a>
-            </th>
-          </tr>
-          </thead>
-          <tbody *ngIf="realTimeReportList && realTimeReportList.length === 0">
-          <tr>
-            <td colspan="7" class="text-center">{{"В перечне ещё нет отчетов" }}</td>
-          </tr>
-          </tbody>
-          <tbody *ngIf="realTimeReportList && realTimeReportList.length">
-          <tr *ngFor="let item of realTimeReportList; let i = index;" >
-            <td>{{i + 1}}</td>
-            <td>
-              {{formatRegisterDate(item.startDate)}}
-            </td>
-            <td>
-              {{item.latitude}}
-            </td>
-            <td>
-              {{item.longitude}}
-            </td>
+      <ng-container *ngIf="currentReport">
+        <hr class="item-800 mt-40">
+        <h3 class="mt-20">Просмотр отчетов</h3>
+        <div class="tabs item-1000 center-content column mt-20">
+          <div class="row item-330 space-between h-70">
+            <div class="tab item-150" (click)="activateTab(1)" [class.active]="activeTab === 1">В реальном времени</div>
+            <div class="tab item-150" (click)="activateTab(2)" [class.active]="activeTab === 2">Экономический</div>
+          </div>
+          <div class="item-800" [class.active]="activeTab === 1">
+            <ngx-extended-pdf-viewer [src]="reportRTPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+          </div>
+        </div>
+      </ng-container>
 
-          </tr>
-          </tbody>
-
-        </table>
-      </div>
-    </ng-container>
-
+    </div>
   </div>
 </div>

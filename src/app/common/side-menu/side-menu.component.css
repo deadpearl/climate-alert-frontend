@@ -35,7 +35,7 @@ html {
   padding-bottom: 50px;
 }
 
-.body {
+.bodys {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center content */

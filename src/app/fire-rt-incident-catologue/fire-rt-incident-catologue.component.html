@@ -11,7 +11,7 @@
 
         <div class="tab-content" [class.active]="activeTab === 1">
 
-          <div class="dark-gray h-700 item-1000 center-content">
+          <div class="dark-gray h-500 item-1000 center-content">
             <div class="item-800 mt-20">
               <h2 class="">{{"Перечень пожаров в реальном времени" }}</h2>
               <div class="content-body mt-20">
@@ -38,12 +38,9 @@
 
                 <div class="h-70 column space-between mt-20" *ngIf="!listIsEmpty">
                   <h3 class="aisection_hdr">{{"Пожары"  | uppercase}}</h3>
-                  <div class="space-between row item-230 mt-20">
-                    <button class="item-120 h-40 dark-green1 white " (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
-                      {{"Создать отчет" }}
-                    </button>
-                    <button class="item-90 h-40 dark-green1 white" type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
-                      {{"Изменить" }}
+                  <div class="mt-20">
+                    <button class="item-300 h-40 dark-green1-button white " (click)="changeFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
+                      {{"Генерация отчета и настройка параметров" }}
                     </button>
                     <!--        <button class="account_btn mr-1"  type="button" [class.disabled]="!currentFire" [disabled]="!currentFire" (click)="this.modalService.open(removeAuditDia)">-->
                     <!--          {{"Удалить" }}-->
