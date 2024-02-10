@@ -57,7 +57,7 @@ const routes: Routes = [
         component: FireRtIncidentCatologueComponent
       },
       {
-        path: 'fire/real-time/catalogue/form',
+        path: 'admin/fire/real-time/catalogue/form',
         component: FireRtIcFormComponent
       },
       {

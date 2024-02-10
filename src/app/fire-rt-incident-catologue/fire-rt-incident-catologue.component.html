@@ -36,11 +36,11 @@
                 <!--      <div class="text-info">{{"План ещё не создан. Создайте план для работы с мероприятиями"  }}</div>-->
                 <!--    </ng-container>-->
 
-                <div class="search-result d-flex justify-content-between" *ngIf="!listIsEmpty">
+                <div class="h-70 column space-between mt-20" *ngIf="!listIsEmpty">
                   <h3 class="aisection_hdr">{{"Пожары"  | uppercase}}</h3>
-                  <div class="d-flex">
-                    <button class="item-90 h-40 dark-green1 white" (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
-                      {{"Добавить" }}
+                  <div class="space-between row item-230 mt-20">
+                    <button class="item-120 h-40 dark-green1 white " (click)="addFire()" [class.disabled]="!currentFire" [disabled]="!currentFire">
+                      {{"Создать отчет" }}
                     </button>
                     <button class="item-90 h-40 dark-green1 white" type="button" [class.disabled]="!currentFire" [disabled]="!currentFire " (click)="changeFire()">
                       {{"Изменить" }}
@@ -51,8 +51,8 @@
                   </div>
                 </div>
 
-                <div class="" *ngIf="!listIsEmpty">
-                  <table class="item-700 center-text">
+                <div class="mt-20" *ngIf="!listIsEmpty">
+                  <table class="item-800 center-text">
                     <thead>
                     <tr>
                       <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th. , чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
