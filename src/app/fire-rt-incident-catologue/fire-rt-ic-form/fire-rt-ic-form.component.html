@@ -16,7 +16,7 @@
       </div>
 
       <div *ngIf="createButtonTouched===0">
-        <button class="item-120 h-40 dark-green1 white mt-20" (click)="buttonCreateReport()">Создать отчет</button>
+        <button class="item-120 h-40 dark-green1 white mt-20" [disabled]="realTimeReportList && realTimeReportList.length" [ngClass]="{'light-gray': realTimeReportList && realTimeReportList.length}" (click)="buttonCreateReport()">Создать отчет</button>
       </div>
 
       <ng-container *ngIf="createButtonTouched===1">
