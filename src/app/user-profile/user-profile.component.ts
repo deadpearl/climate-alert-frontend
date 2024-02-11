@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthService} from '../service/auth.service';
 
@@ -11,7 +11,7 @@ export class UserProfileComponent implements OnInit {
 
   currentUser: any;
   constructor(public authService: AuthService,
-              private router: Router) {
+              private router: Router,) {
   }
   showOptions: any = false;
   ngOnInit() {

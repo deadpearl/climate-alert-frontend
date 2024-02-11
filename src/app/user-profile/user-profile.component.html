@@ -8,34 +8,25 @@
             <div class="row space-between item-800 h-200 ">
               <div class="column item-200 h-200 space-between">
                 <img class="item-150 br-50" src="https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/03/13/fa/0313fa35-d103-ce87-5ad6-5b56628f2dea/22UM1IM27376.rgb.jpg/1200x1200bf-60.jpg" alt="">
-                <button class="item-150 h-25 light-violet">Upload New Image</button>
+                <button class="item-150 h-25 light-violet">Change Image</button>
               </div>
               <div class="item-600 div h-200 center-content center-item">
                 <div class="h-180 item-500 column space-between ">
-                  <div class="row space-between item-500">
-                    <div class="">
-                      <div class="gray-text">Username</div>
-                      <div class="">settings66</div>
-                    </div>
-                    <div class="">
-                      <button class="light-violet h-25 item-80">Edit</button>
-                    </div>
-                  </div>
 
                   <div class="row space-between item-500">
                     <div class="">
                       <div class="gray-text">Email</div>
-                      <div class="">wilbur@mail.com</div>
+                      <div class="">{{currentUser.__zone_symbol__value.user.email}}</div>
                     </div>
                     <div class="">
-                      <button class="light-violet h-25 item-80">Edit</button>
+                      <button class="light-violet h-25 item-80" (click)="openEditEmailModal()">Edit</button>
                     </div>
                   </div>
 
                   <div class="row space-between item-500">
                     <div class="">
                       <div class="gray-text">Phone Number</div>
-                      <div class="">+91 45977845722</div>
+                      <div class="">{{currentUser.__zone_symbol__value.user.phoneNumber}}</div>
                     </div>
                     <div class="">
                       <button class="light-violet h-25 item-80">Edit</button>
@@ -45,7 +36,7 @@
                   <div class="row space-between item-500">
                     <div class="">
                       <div class="gray-text">Birth Date</div>
-                      <div class="">14/09/1996</div>
+                      <div class="">{{currentUser.__zone_symbol__value.user.birthDate}}</div>
                     </div>
                     <div class="">
                       <button class="light-violet h-25 item-80">Edit</button>
@@ -63,7 +54,7 @@
                   <div class="row space-between">
                     <div class="ml-10">
                       <div class="gray-text">First Name</div>
-                      <div class="">William</div>
+                      <div class="">{{currentUser.__zone_symbol__value.user.firstName}}</div>
                     </div>
                     <div class="">
                       <img class="h-25 item-80" src="assets/img/pen%201.svg">
@@ -72,7 +63,7 @@
                   <div class="row space-between">
                     <div class="ml-10">
                       <div class="gray-text">Last Name</div>
-                      <div class="">Gold</div>
+                      <div class="">{{currentUser.__zone_symbol__value.user.lastName}}</div>
                     </div>
                     <div class="">
                       <img class="h-25 item-80" src="assets/img/pen%201.svg">
@@ -81,7 +72,7 @@
                   <div class="row space-between">
                     <div class="ml-10">
                       <div class="gray-text">Middle Name</div>
-                      <div class="">Patrick Spencer</div>
+                      <div class="">{{currentUser.__zone_symbol__value.user.middleName}}</div>
                     </div>
                     <div class="">
                       <img class="h-25 item-80" src="assets/img/pen%201.svg">
@@ -96,7 +87,7 @@
                     <div class="row space-between item-500">
                       <div class="">
                         <div class="gray-text">Location</div>
-                        <div class="">Almaty, Kazakhstan</div>
+                        <div class="">{{currentUser.__zone_symbol__value.user.city}}</div>
                       </div>
                       <div class="">
                         <button class="light-violet h-25 item-80">Edit</button>
@@ -113,8 +104,11 @@
                       <div class="">
                         <div class="gray-text">Email</div>
                       </div>
-                      <div class="">
+                      <div class="" *ngIf="!currentUser.__zone_symbol__value.user.notifyEmail">
                         <button class="dark-violet h-25 item-80">OFF</button>
+                      </div>
+                      <div class="" *ngIf="currentUser.__zone_symbol__value.user.notifyEmail">
+                        <button class="colorful-green h-25 item-80">ON</button>
                       </div>
                     </div>
 
@@ -122,7 +116,10 @@
                       <div class="">
                         <div class="gray-text">SMS</div>
                       </div>
-                      <div class="">
+                      <div class="" *ngIf="!currentUser.__zone_symbol__value.user.notifySms">
+                        <button class="dark-violet h-25 item-80">OFF</button>
+                      </div>
+                      <div class="" *ngIf="currentUser.__zone_symbol__value.user.notifySms">
                         <button class="colorful-green h-25 item-80">ON</button>
                       </div>
                     </div>
@@ -134,8 +131,8 @@
 
             </div>
             <div class="">
-              <div class="row space-between">
-                <div class="row space-between item-250">
+              <div class="row space-between" [ngClass]="{'flex-end': !getUrlPosition('user/management')}">
+                <div class="row space-between item-250" *ngIf="getUrlPosition('user/management')">
                   <button class="dark-violet h-25 item-80">BLOCK</button>
                   <button class="red-button h-25 item-150">DELETE ACCOUNT</button>
                 </div>
@@ -166,3 +163,4 @@
 
   </div>
 </div>
+
