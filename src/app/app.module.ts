@@ -11,7 +11,7 @@ import {RouterModule} from '@angular/router';
 import { FireRealTimeReportComponent } from './fire-real-time-report/fire-real-time-report.component';
 import { CommonInternalTemplateComponent } from './common-internal-template/common-internal-template.component';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
-import {NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   FireFormRealTimeReadonlyComponent
@@ -25,8 +25,11 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { UserManagementFormComponent } from './user-management/user-management-form/user-management-form.component';
 import { UserProfileFormComponent } from './user-profile/user-profile-form/user-profile-form.component';
+// tslint:disable-next-line:max-line-length
 import { FireRealTimeEconomicDamageReportComponent } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report.component';
+// tslint:disable-next-line:max-line-length
 import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component';
+import { ModalComponentComponent } from './modal-component/modal-component.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-
     UserProfileFormComponent,
     FireRealTimeEconomicDamageReportComponent,
     FireRealTimeEconomicDamageReportFormComponent,
+    ModalComponentComponent,
   ],
     imports: [
         BrowserModule,
@@ -55,7 +59,8 @@ import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-
         NgxExtendedPdfViewerModule,
         NgbTabsetModule,
         FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      NgbModule,
     ],
   providers: [
     {
@@ -64,6 +69,9 @@ import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-
       multi: true,
     },
     ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ModalComponentComponent
+  ],
 })
 export class AppModule { }
