@@ -1,85 +1,79 @@
-<div class="cont">
-  <div class="account_tabs cretabs">
-    <div (click)="goBack()">Назад</div>
-      <ngb-tabset>
-        <ngb-tab >
-          <ng-template ngbTabTitle>
-            <div (click)="switchOnEditTab()">{{"Документ"}}</div>
-          </ng-template>
-          <ng-template ngbTabContent>
-            <form class="form"  *ngIf="editTab">
-                <div class="row">
-                  <label> Дата начала <br>
-                    <input type="text" placeholder="start_date" [(ngModel)]="formData.startDate" name="startDate" [disabled]="readonly">
-                  </label>
+<div class="light-gray center-content row">
+  <div class="dark-gray h-700 item-1000 center-content center-item">
+    <div class="column center-item">
+      <div (click)="goBack()">Назад</div>
 
-                  <label> Дата завершения <br>
-                    <input type="text" placeholder="end_date" [(ngModel)]="formData.endDate" name="endDate" [disabled]="readonly">
-                  </label>
-                </div>
+      <div class="tabs row item-330 space-between h-70">
+        <div class="tab item-150 center-text" [class.active]="editTab" (click)="switchOnEditTab()">Документ</div>
+        <div class="tab item-150 center-text" [class.active]="showPreviewTab" (click)="getReportPdf()">Просмотр</div>
+      </div>
 
-                <div class="row">
-                  <label> Регион <br>
-                    <input type="text" placeholder="region" [(ngModel)]="formData.region" name="region" [disabled]="readonly">
-                  </label>
+      <div class="item-700 center-content" [class.active]="editTab === true">
+        <form class="column h-550 space-between"  *ngIf="editTab">
+          <div class="row item-700 space-between">
+            <label> Дата начала <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="start_date" [(ngModel)]="formData.startDate" name="startDate" [disabled]="readonly">
+            </label>
 
-                  <label> Область пожара <br>
-                    <input type="text" placeholder="fire_area" [(ngModel)]="formData.fireArea" name="fireArea" [disabled]="readonly">
-                  </label>
-                </div>
+            <label> Дата завершения <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="end_date" [(ngModel)]="formData.endDate" name="endDate" [disabled]="readonly">
+            </label>
+          </div>
 
-                <div class="row">
-                  <label> Широта <br>
-                    <input type="text" placeholder="latitude" [(ngModel)]="formData.latitude" name="latitude" [disabled]="readonly">
-                  </label>
+         <div class="row item-700 space-between">
+            <label> Регион <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="region" [(ngModel)]="formData.region" name="region" [disabled]="readonly">
+            </label>
 
-                  <label> Долгота <br>
-                    <input type="text" placeholder="longitude" [(ngModel)]="formData.longitude" name="longitude" [disabled]="readonly">
-                  </label>
-                </div>
+            <label> Область пожара <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="fire_area" [(ngModel)]="formData.fireArea" name="fireArea" [disabled]="readonly">
+            </label>
+          </div>
 
-                <div class="row">
-                  <label> Растительный покров <br>
-                    <input type="text" placeholder="vegetation_area" [(ngModel)]="formData.vegetationArea" name="vegetationAarea" [disabled]="readonly">
-                  </label>
+         <div class="row item-700 space-between">
+            <label> Широта <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="latitude" [(ngModel)]="formData.latitude" name="latitude" [disabled]="readonly">
+            </label>
 
-                  <label> Плотность растительности <br>
-                    <input type="text" placeholder="vegetation_density" [(ngModel)]="formData.vegetationDensity" name="vegetationDensity" [disabled]="readonly">
-                  </label>
-                </div>
+            <label> Долгота <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="longitude" [(ngModel)]="formData.longitude" name="longitude" [disabled]="readonly">
+            </label>
+          </div>
 
-                <div class="row">
-                  <label> Растительная влага <br>
-                    <input type="text" placeholder="vegetation_moisture" [(ngModel)]="formData.vegetationMoisture" name="vegetationMoisture" [disabled]="readonly">
-                  </label>
+         <div class="row item-700 space-between">
+            <label> Растительный покров <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_area" [(ngModel)]="formData.vegetationArea" name="vegetationAarea" [disabled]="readonly">
+            </label>
 
-                  <label> Тип растительности <br>
-                    <input type="text" placeholder="vegetation_type" [(ngModel)]="formData.vegetationType" name="vegetationType" [disabled]="readonly">
-                  </label>
-                </div>
-                <div class="row">
-                  <label> Информация <br>
-                    <input type="text" placeholder="information" [(ngModel)]="formData.information" name="information" [disabled]="readonly">
-                  </label>
-                </div>
-                <button class="button" type="submit" [disabled]="readonly" [class.disabled]="readonly" (click)="saveForm()">Сохранить</button>
-            </form>
-          </ng-template>
+            <label> Плотность растительности <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_density" [(ngModel)]="formData.vegetationDensity" name="vegetationDensity" [disabled]="readonly">
+            </label>
+          </div>
 
+         <div class="row item-700 space-between">
+            <label> Растительная влага <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_moisture" [(ngModel)]="formData.vegetationMoisture" name="vegetationMoisture" [disabled]="readonly">
+            </label>
 
+            <label> Тип растительности <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_type" [(ngModel)]="formData.vegetationType" name="vegetationType" [disabled]="readonly">
+            </label>
+          </div>
+         <div class="row item-700 space-between">
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.information" name="information" [disabled]="readonly">
+            </label>
+          </div>
+          <div class="center-content">
+            <button class="item-120 h-40 dark-green1-button white" type="submit" [disabled]="readonly" [class.disabled]="readonly" (click)="saveForm()">Сохранить</button>
+          </div>
 
+        </form>
+      </div>
+      <div class="item-800" *ngIf="showPreviewTab">
+        <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+      </div>
+    </div>
 
-        </ngb-tab>
-
-
-        <ngb-tab  >
-          <ng-template ngbTabTitle >
-            <div (click)="getReportPdf()">{{"Просмотр"}}</div>
-            <div class="aisection_preview prepadoc" *ngIf="showPreviewTab">
-              <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
-            </div>
-          </ng-template>
-        </ngb-tab>
-      </ngb-tabset>
   </div>
 </div>

@@ -16,7 +16,10 @@ a.disabled {
  }
 }
 
-
+.h-500 {
+  min-height: 500px;
+  height: auto;
+}
 
 .tabs {
   display: flex;

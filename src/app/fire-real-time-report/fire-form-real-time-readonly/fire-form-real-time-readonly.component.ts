@@ -34,7 +34,7 @@ export class FireFormRealTimeReadonlyComponent implements OnInit {
     });
   }
   form(reportId: any) {
-    return this.api.get(`/report/getById/fire-real-time?reportId=${reportId}`).toPromise();
+    return this.api.get(`/internal/report/get-one/fire-real-time?reportId=${reportId}`).toPromise();
   }
 
   saveForm() {
@@ -55,7 +55,7 @@ export class FireFormRealTimeReadonlyComponent implements OnInit {
   }
 
   getPDF(reportId, type = 'pdf', language =   'ru') {
-    return this.api.get(`/report/fire-real-time-overall?reportId=${reportId}&lang=${language}&type=${type}`,
+    return this.api.get(`/internal/report/fire-real-time-overall?reportId=${reportId}&lang=${language}&type=${type}`,
       {responseType: 'blob'}).toPromise();
   }
 
