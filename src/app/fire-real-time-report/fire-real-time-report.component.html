@@ -36,22 +36,16 @@
               <div (click)="$event.preventDefault();">№</div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Наименование" }}</div>
+              <div (click)="$event.preventDefault();">{{"Время" }}</div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Член СК/РК" }}</div>
+              <div (click)="$event.preventDefault();">{{"Ширина" }}</div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Тип мероприятия" }} </div>
+              <div (click)="$event.preventDefault();">{{"Долгота" }} </div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Автор" }}</div>
-            </th>
-            <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Период проведения" }} </div>
-            </th>
-            <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Дата заседания" }} </div>
+              <div (click)="$event.preventDefault();">{{"Редактирующий персонал" }}</div>
             </th>
           </tr>
           </thead>
@@ -63,22 +57,28 @@
           <tbody *ngIf="listFires && listFires.length">
           <tr *ngFor="let item of listFires; let i = index;" (click)="selectEvent(item); getDocumentPreview()" class="object-row" [class.selected-object]="currentFire && currentFire.id === item.id">
             <td>{{i + 1}}</td>
-            <td>
-              {{item.latitude}}
-            </td>
-
+            <td>{{item.startDate}}</td>
+            <td>{{item.latitude}}</td>
+            <td>{{item.longitude}}</td>
+            <td *ngFor="let editor of item.editors; let i = index;">{{editor.email}}</td>
           </tr>
           </tbody>
 
         </table>
       </ng-container>
       <ng-container *ngIf="currentFire">
-        <div class="buttons">
-          <button class="button">Создать</button>
-          <button class="button" (click)="goToReadOnly();">Просмотр</button>
-          <button class="button" (click)="goToEdit();">Изменить</button>
+        <hr class="item-800 mt-40">
+        <div class="mt-40 row space-between item-250">
+          <button class="item-120 h-40 dark-green1 white" (click)="goToReadOnly();">Просмотр</button>
+          <button class="item-120 h-40 dark-green1 white" (click)="goToEdit();">Изменить</button>
         </div>
-        <div class="aisection_preview prepadoc">
+        <div class="item-800 mt-20 h-55 light-gray center-item center-content">
+          <div class="item-500 row space-between ">
+            <h4 class="ml-10 row center-text center-item">Статус : <div class="blue"> {{currentFire.status.name}}</div> </h4>
+            <button class="item-200 h-40 dark-green1-button white"><h4>Отправить на согласование</h4></button>
+          </div>
+        </div>
+        <div class="mt-20">
           <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
         </div>
       </ng-container>

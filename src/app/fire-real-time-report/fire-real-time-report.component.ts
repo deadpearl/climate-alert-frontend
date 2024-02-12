@@ -73,6 +73,7 @@ export class FireRealTimeReportComponent implements OnInit {
   findFire() {
     console.log(this.yearId);
     console.log(this.monthId);
+    this.currentFire = null;
     this.rtReportService.getRTReportSearch(this.yearId, this.monthId, this.employeeId).then((resp: any) => {
         this.listFires = resp;
       }

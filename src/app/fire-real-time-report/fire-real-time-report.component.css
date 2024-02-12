@@ -1,0 +1,11 @@
+.dark-gray {
+  min-height: 500px;
+  height: auto;
+}
+.object-row {
+  cursor: pointer;
+}
+
+.selected-object{
+  background-color: #e5e5e5;
+}
