@@ -19,6 +19,9 @@ export class RealTimeReportService {
   getRTReportSearch(year, month, email) {
     return this.http.get(`/internal/report/search?year=${year}&month=${month}&email=${email}`).toPromise();
   }
+  getRTDataSearch(year, month, email) {
+    return this.http.get(`/internal/api/data/RTData/search?year=${year}&month=${month}&email=${email}`).toPromise();
+  }
 
   getRTReportPdf(requirementId, type = 'pdf', language =   'ru') {
     return this.http.get(`/internal/report/fire-real-time-overall?reportId=${requirementId}&lang=${language}&type=${type}`,
