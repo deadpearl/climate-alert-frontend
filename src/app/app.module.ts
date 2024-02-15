@@ -32,6 +32,7 @@ import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-
 import { ModalComponentComponent } from './modal-component/modal-component.component';
 import { NewsComponent } from './news/news.component';
 import { NewsFormComponent } from './news/news-form/news-form.component';
+import { NewsEditComponent } from './news/news-form/news-edit/news-edit.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { NewsFormComponent } from './news/news-form/news-form.component';
     ModalComponentComponent,
     NewsComponent,
     NewsFormComponent,
+    NewsEditComponent,
   ],
     imports: [
         BrowserModule,

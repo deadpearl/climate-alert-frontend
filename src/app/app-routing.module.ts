@@ -22,6 +22,7 @@ import {
 } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component';
 import {NewsFormComponent} from "./news/news-form/news-form.component";
 import {NewsComponent} from "./news/news.component";
+import {NewsEditComponent} from "./news/news-form/news-edit/news-edit.component";
 
 
 const routes: Routes = [
@@ -97,6 +98,10 @@ const routes: Routes = [
       {
         path: 'admin/news/form',
         component: NewsFormComponent
+      },
+      {
+        path: 'admin/news/form/edit',
+        component: NewsEditComponent
       },
       {
         path: 'news',
