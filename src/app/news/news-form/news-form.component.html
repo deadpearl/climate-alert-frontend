@@ -1,18 +1,35 @@
 <div class="dark-gray center-content minheight">
-  <div class=" ">
+  <div class="mt-40 item-1000">
     <h2 class="">{{"Latest News" }}</h2>
     <div class="content-body mt-20">
-      <div class="">
-        <div class="row item-500">
-          <button class="item-90 h-40 dark-green1 white"  (click)="addNews()">
+      <div class="flex-end">
+        <div class="row item-230 space-between">
+          <button class="item-90 h-40 dark-green1-button white"  (click)="addNews()">
             {{"Добавить" }}
           </button>
-          <button class="item-90 h-40 dark-green1 white"  (click)="deleteNews()">
-            {{"Добавить" }}
-          </button>
-
         </div>
       </div>
+
+      <div class="item-1000 row" style="flex-wrap: wrap;">
+        <div class="mt-20 row" *ngFor="let item of newsList; let i = index;" [ngClass]="{'column': i % 2 === 1}" style="flex-basis: 50%;"> <!-- Adjust flex-basis as needed -->
+          <div class="row">
+            <div class="">
+              <div class="light-gray item-450 h-200 column center-item center-content">
+                <div class="row item-370 space-between">
+                  <img class="item-150 h-150" src="{{item.imageUrl}}" alt="">
+                  <hr class="vertical-line">
+                  <div class="item-150">{{ item.title }}</div>
+                </div>
+                <!-- Перемещаем {{item.publicationDate}} сюда, чтобы оно было в конце блока -->
+              </div>
+              <div class="light-gray item-450 flex-end"> <div class="mr-10 mb-10">{{item.publicationDate}}</div></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
 
     </div>
   </div>

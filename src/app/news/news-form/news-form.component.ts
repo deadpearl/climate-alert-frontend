@@ -7,12 +7,13 @@ import {NewsService} from "../../service/news.service";
   styleUrls: ['./news-form.component.css']
 })
 export class NewsFormComponent implements OnInit {
+  newsList: any = null;
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.newsService.getAll().then(resp => {
-      console.log(resp);
+      this.newsList = resp;
     });
   }
 
