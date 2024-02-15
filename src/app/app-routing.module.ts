@@ -20,6 +20,8 @@ import {
   FireRealTimeEconomicDamageReportFormComponent
 // tslint:disable-next-line:max-line-length
 } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component';
+import {NewsFormComponent} from "./news/news-form/news-form.component";
+import {NewsComponent} from "./news/news.component";
 
 
 const routes: Routes = [
@@ -91,6 +93,14 @@ const routes: Routes = [
       {
         path: 'admin/user/management/form',
         component: UserManagementFormComponent
+      },
+      {
+        path: 'admin/news/form',
+        component: NewsFormComponent
+      },
+      {
+        path: 'news',
+        component: NewsComponent
       },
       {
         path: 'fire/report/real-time-economic-damage',

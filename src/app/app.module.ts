@@ -30,6 +30,8 @@ import { FireRealTimeEconomicDamageReportComponent } from './fire-real-time-econ
 // tslint:disable-next-line:max-line-length
 import { FireRealTimeEconomicDamageReportFormComponent } from './fire-real-time-economic-damage-report/fire-real-time-economic-damage-report-form/fire-real-time-economic-damage-report-form.component';
 import { ModalComponentComponent } from './modal-component/modal-component.component';
+import { NewsComponent } from './news/news.component';
+import { NewsFormComponent } from './news/news-form/news-form.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { ModalComponentComponent } from './modal-component/modal-component.compo
     FireRealTimeEconomicDamageReportComponent,
     FireRealTimeEconomicDamageReportFormComponent,
     ModalComponentComponent,
+    NewsComponent,
+    NewsFormComponent,
   ],
     imports: [
         BrowserModule,
