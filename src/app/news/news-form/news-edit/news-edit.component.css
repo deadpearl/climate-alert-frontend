@@ -1,0 +1,31 @@
+.minheight {
+  min-height: 700px;
+}
+.vertical-line {
+  border: none;
+  height: 150px;
+  border-left: 2px solid #293A23;
+  transform: rotate(180deg);
+}
+img {
+  border-radius: 17px;
+}
+.form {
+  border-radius: 34px;
+  box-shadow: 0 5px 16px 0 rgba(8, 15, 52, 0.06);
+}
+.inputs {
+  padding: 10px 50px 10px 50px;
+  border-radius: 34px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+input {
+  border: 1px solid #e6e9ec;
+}
+textarea {
+  padding: 10px 50px 10px 50px;
+  outline: none;
+  border: 1px solid #e6e9ec;
+  border-radius: 34px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
