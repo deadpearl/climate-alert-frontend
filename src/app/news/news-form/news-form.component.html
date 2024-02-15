@@ -11,10 +11,10 @@
       </div>
 
       <div class="item-1000 row" style="flex-wrap: wrap;">
-        <div class="mt-20 row" *ngFor="let item of newsList; let i = index;" [ngClass]="{'column': i % 2 === 1}" style="flex-basis: 50%;"> <!-- Adjust flex-basis as needed -->
+        <div class="mt-20 row new" *ngFor="let item of newsList; let i = index;" [ngClass]="{'column': i % 2 === 1}" style="flex-basis: 50%;"> <!-- Adjust flex-basis as needed -->
           <div class="row">
             <div class="">
-              <div class="light-gray item-450 h-200 column center-item center-content">
+              <div class="light-gray item-450 h-200 column center-item center-content" (click)="goToEdit(item)">
                 <div class="row item-370 space-between">
                   <img class="item-150 h-150" src="{{item.imageUrl}}" alt="">
                   <hr class="vertical-line">
@@ -22,7 +22,7 @@
                 </div>
                 <!-- Перемещаем {{item.publicationDate}} сюда, чтобы оно было в конце блока -->
               </div>
-              <div class="light-gray item-450 flex-end"> <div class="mr-10 mb-10">{{item.publicationDate}}</div></div>
+              <div class="light-gray item-450 flex-end"> <div class="mr-10 mb-10">{{formatDate(item.publicationDate)}}</div></div>
             </div>
 
           </div>

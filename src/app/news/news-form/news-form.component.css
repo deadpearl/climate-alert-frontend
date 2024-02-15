@@ -10,3 +10,6 @@
 img {
   border-radius: 17px;
 }
+.new {
+  cursor: pointer;
+}
