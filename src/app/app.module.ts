@@ -33,6 +33,7 @@ import { ModalComponentComponent } from './modal-component/modal-component.compo
 import { NewsComponent } from './news/news.component';
 import { NewsFormComponent } from './news/news-form/news-form.component';
 import { NewsEditComponent } from './news/news-form/news-edit/news-edit.component';
+import { IncomingAssignComponent } from './incoming-assign/incoming-assign.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { NewsEditComponent } from './news/news-form/news-edit/news-edit.componen
     NewsComponent,
     NewsFormComponent,
     NewsEditComponent,
+    IncomingAssignComponent,
   ],
     imports: [
         BrowserModule,

@@ -5,7 +5,7 @@
           <div class="tab item-150" (click)="activateTab(1)" [class.active]="activeTab === 1">Dossier</div>
           <div class="tab item-150" (click)="activateTab(2)" [class.active]="activeTab === 2">Real Time</div>
           <div class="tab item-150" (click)="activateTab(3)" [class.active]="activeTab === 3">Forecast</div>
-          <div class="tab item-150" (click)="activateTab(4)" [class.active]="activeTab === 3">Tab 4</div>
+          <div class="tab item-150" (click)="activateTab(4)" [class.active]="activeTab === 4">Incoming</div>
         </div>
 
 
@@ -96,5 +96,8 @@
           <app-fire-real-time-report></app-fire-real-time-report>
         </div>
         <div class="tab-content" [class.active]="activeTab === 3">Content for Tab 3</div>
+        <div class="tab-content" [class.active]="activeTab === 4">
+          <app-incoming-assign></app-incoming-assign>
+        </div>
       </div>
     </div>
