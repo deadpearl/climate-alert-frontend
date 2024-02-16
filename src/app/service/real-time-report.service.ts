@@ -38,5 +38,8 @@ export class RealTimeReportService {
   getListEmployeesByEmployee(email) {
     return this.http.get(`/internal/api/public/user/v1/users/get/admin-employees/by-employee?email=${email}`).toPromise();
   }
+  assign(id, assignment) {
+    return this.http.put(`/internal/report/assign/fire-real-time?id=${id}`, assignment).toPromise();
+  }
 }
 

@@ -26,6 +26,10 @@ export class UserService {
   public getAllUserEmployee() {
     return this.http.get('/internal/api/public/user/v1/users/role-employee').toPromise();
   }
+
+  public getAdmins() {
+    return this.http.get('/internal/api/public/user/v1/users/role-admin').toPromise();
+  }
   public getRegisteredAdminEmployees(email) {
     return this.http.get('/internal/api/public/user/v1/users/get/admin-employees?email=' + email).toPromise();
   }

@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {RealTimeReportService} from '../service/real-time-report.service';
 import {AuthService} from '../service/auth.service';
 import {UserService} from '../service/user.service';
+import {ModalService} from "../service/modal.service";
 
 @Component({
   selector: 'app-fire-real-time-report',
@@ -15,7 +16,8 @@ export class FireRealTimeReportComponent implements OnInit {
               private router: Router,
               private rtReportService: RealTimeReportService,
               private authService: AuthService,
-              private userService: UserService
+              private userService: UserService,
+              private modalService: ModalService
   ) { }
   reportPdf: Blob = null;
   years = [
@@ -47,9 +49,11 @@ export class FireRealTimeReportComponent implements OnInit {
   currentFire: any = false;
   currentUser: any = null;
   realTimeReportList: any = null;
+  assignedValues: any = null;
   ngOnInit() {
     this.authService.getCurrentUser().then(resp => {
       this.currentUser = resp;
+      console.log(this.currentUser);
       if (this.currentUser.user.role === 'ROLE_ADMIN') {
         this.userService.getRegisteredAdminEmployees(this.currentUser.user.email).then(response => {
           this.employeeList = response;
@@ -107,5 +111,34 @@ export class FireRealTimeReportComponent implements OnInit {
   selectEvent(item: any) {
     this.currentFire = item;
     console.log(this.currentFire);
+  }
+
+  assign() {
+    this.modalService.assignModal('Отправка на согласование', 'Заполните данные').then(
+      (result) => {
+        this.assignedValues = result;
+        console.log(this.assignedValues);
+        const assign = {
+          id: this.currentFire.id,
+          name: 'согласование',
+          userIncoming: this.currentUser.user.email,
+          userOutComing: this.assignedValues.admin,
+          entityType: 'FireRealTimeReport',
+          entityId: this.currentFire.id,
+          shortContent: 'assign FireRealTimeReport',
+          sentDateTime: new Date(),
+          comment: this.assignedValues.comment,
+          description: this.assignedValues.description,
+          isSenderAdmin: this.currentUser.user.role === 'ROLE_ADMIN'
+        };
+        console.log(assign);
+        this.rtReportService.assign(this.currentFire.id, assign).then(resp => {
+          console.log(resp);
+        });
+      },
+      (error) => {
+        console.log('Modal dismissed with result:', error);
+      }
+    );
   }
 }
