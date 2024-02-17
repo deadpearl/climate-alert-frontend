@@ -1,0 +1,19 @@
+.object-row {
+  cursor: pointer;
+}
+
+.selected-object{
+  background-color: #e5e5e5;
+}
+
+a.disabled {
+  color: lightgray;
+  &:hover {
+    text-decoration: none;
+    color: lightgray;
+  }
+}
+.dark-gray {
+  min-height: 500px;
+  height: auto;
+}

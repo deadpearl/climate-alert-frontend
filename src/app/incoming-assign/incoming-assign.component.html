@@ -1,1 +1,62 @@
-<p>incoming-assign works!</p>
+<div class="light-gray center-content row">
+  <div class="dark-gray h-500 item-1000 center-content center-item">
+    <div class="column center-item item-800">
+      <h2>Входящие</h2>
+
+      <div class="content-body mt-20">
+        <div class="" *ngIf="!listIsEmpty">
+
+        <div class="mt-20" *ngIf="!listIsEmpty">
+          <table class="item-700 center-text">
+            <thead>
+            <tr class="border">
+              <th class="stable_hdr">
+                №
+              </th>
+              <th class="stable_hdr">
+                {{"Получатель" }}
+              </th>
+              <th class="stable_hdr">
+                {{"Отправитель" }}
+              </th>
+              <th class="stable_hdr">
+                {{"Отправлено" }}
+              </th>
+              <th class="stable_hdr">
+                {{"Описание" }}
+              </th>
+              <th class="stable_hdr">
+                {{"Действие" }}
+              </th>
+            </tr>
+
+            </thead>
+
+            <tbody *ngIf="assignmentList && assignmentList.length === 0">
+            <tr>
+              <td colspan="7" class="text-center">{{"В перечне ещё нет аудиторских мероприятий" }}</td>
+            </tr>
+            </tbody>
+
+            <tbody *ngIf="assignmentList && assignmentList.length">
+
+            <tr *ngFor="let item of assignmentList; let i = index;">
+              <td>{{i + 1}}</td>
+              <td>{{item.userIncoming}}</td>
+              <td>{{item.userOutComing}}</td>
+              <td>{{item.sentDateTime}}</td>
+              <td>{{item.description}}</td>
+              <td><button class="light-violet h-25 item-80">Edit</button></td>
+
+            </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

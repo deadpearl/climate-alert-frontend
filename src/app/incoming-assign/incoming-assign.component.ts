@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../service/user.service';
+import {Router} from '@angular/router';
+import {AuthService} from '../service/auth.service';
+import {RealTimeReportService} from '../service/real-time-report.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-incoming-assign',
@@ -7,9 +12,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncomingAssignComponent implements OnInit {
 
-  constructor() { }
+  assignmentList: any = null;
+  currentUser: any = null;
 
-  ngOnInit() {
+  constructor(private authService: AuthService,  private router: Router,
+              private realTimeReportService: RealTimeReportService, private http: HttpClient) { }
+
+  async ngOnInit() {
+    this.currentUser = await this.authService.getCurrentUser();
+    console.log('thisfdasdf');
+    console.log(this.currentUser.user.email);
+    this.getAllAssignments(this.currentUser.user.email);
+  }
+  getAllAssignments(email) {
+    this.realTimeReportService.getAllAssignments(email).then(resp => {
+      this.assignmentList = resp;
+      console.log(this.assignmentList);
+    });
+  }
+
+  get listIsEmpty() {
+    return this.assignmentList === false || this.assignmentList === null || Object.keys(this.assignmentList).length === 0;
   }
 
 }

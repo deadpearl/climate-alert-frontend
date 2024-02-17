@@ -41,5 +41,8 @@ export class RealTimeReportService {
   assign(id, assignment) {
     return this.http.put(`/internal/report/assign/fire-real-time?id=${id}`, assignment).toPromise();
   }
+  getAllAssignments(email) {
+    return this.http.get(`/internal/report/assign/get-all/assignments?incomingEmail=${email}`).toPromise();
+  }
 }
 
