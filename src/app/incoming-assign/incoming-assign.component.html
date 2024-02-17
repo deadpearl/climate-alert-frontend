@@ -1,6 +1,6 @@
 <div class="light-gray center-content row">
   <div class="dark-gray h-500 item-1000 center-content center-item">
-    <div class="column center-item item-800">
+    <div class="column center-item item-800 mt-40">
       <h2>Входящие</h2>
 
       <div class="content-body mt-20">
@@ -40,7 +40,7 @@
 
             <tbody *ngIf="assignmentList && assignmentList.length">
 
-            <tr *ngFor="let item of assignmentList; let i = index;">
+            <tr *ngFor="let item of assignmentList; let i = index;" (click)="selectEvent(item); getDocumentPreview()" class="object-row" [class.selected-object]="currentAssignment && currentAssignment.id === item.id">
               <td>{{i + 1}}</td>
               <td>{{item.userIncoming}}</td>
               <td>{{item.userOutComing}}</td>
@@ -58,5 +58,13 @@
 
 
     </div>
+
+      <ng-container *ngIf="currentAssignment">
+        <hr class="item-800 mt-40">
+        <div class="item-800 mt-20">
+          <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+        </div>
+      </ng-container>
   </div>
+</div>
 </div>

@@ -14,6 +14,8 @@ export class IncomingAssignComponent implements OnInit {
 
   assignmentList: any = null;
   currentUser: any = null;
+  currentAssignment: any = false;
+  reportPdf: Blob = null;
 
   constructor(private authService: AuthService,  private router: Router,
               private realTimeReportService: RealTimeReportService, private http: HttpClient) { }
@@ -35,4 +37,11 @@ export class IncomingAssignComponent implements OnInit {
     return this.assignmentList === false || this.assignmentList === null || Object.keys(this.assignmentList).length === 0;
   }
 
+  selectEvent(item: any) {
+    this.currentAssignment = item;
+    console.log(this.currentAssignment);
+  }
+  async getDocumentPreview() {
+    this.reportPdf = await this.realTimeReportService.getRTReportPdf(this.currentAssignment.entityId, 'pdf', 'ru');
+  }
 }

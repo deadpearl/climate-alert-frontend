@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 import {RealTimeReportService} from '../service/real-time-report.service';
 import {AuthService} from '../service/auth.service';
 import {UserService} from '../service/user.service';
-import {ModalService} from "../service/modal.service";
+import {ModalService} from '../service/modal.service';
 
 @Component({
   selector: 'app-fire-real-time-report',
