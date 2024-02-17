@@ -8,6 +8,7 @@ import {ModalComponentComponent} from '../modal-component/modal-component.compon
 export class ModalService {
   constructor(private modalService: NgbModal) {}
   assign = false;
+  approve = false;
 
   openModal(title: string, content: string) {
     const modalRef = this.modalService.open(ModalComponentComponent);
@@ -24,7 +25,17 @@ export class ModalService {
     modalRef.componentInstance.content = content;
     return modalRef.result;
   }
+  approveModal(title: string, content: string): Promise<any> {
+    this.approve = true;
+    const modalRef = this.modalService.open(ModalComponentComponent);
+    modalRef.componentInstance.title = title;
+    modalRef.componentInstance.content = content;
+    return modalRef.result;
+  }
   isAssigned() {
     return this.assign;
+  }
+  isApproving() {
+    return this.approve;
   }
 }
