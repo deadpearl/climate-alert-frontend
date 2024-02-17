@@ -44,5 +44,9 @@ export class RealTimeReportService {
   getAllAssignments(email) {
     return this.http.get(`/internal/report/assign/get-all/assignments?incomingEmail=${email}`).toPromise();
   }
+  approve(assignment, comment) {
+    const approvalRequest = { assignment, comment };
+    return this.http.put(`/internal/report/assign/fire-real-time/approve`, approvalRequest).toPromise();
+  }
 }
 

@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {AuthService} from '../service/auth.service';
 import {RealTimeReportService} from '../service/real-time-report.service';
 import {HttpClient} from '@angular/common/http';
+import {ModalService} from '../service/modal.service';
 
 @Component({
   selector: 'app-incoming-assign',
@@ -16,9 +17,11 @@ export class IncomingAssignComponent implements OnInit {
   currentUser: any = null;
   currentAssignment: any = false;
   reportPdf: Blob = null;
+  comment: any = null;
 
   constructor(private authService: AuthService,  private router: Router,
-              private realTimeReportService: RealTimeReportService, private http: HttpClient) { }
+              private realTimeReportService: RealTimeReportService, private http: HttpClient,
+              private modalService: ModalService) { }
 
   async ngOnInit() {
     this.currentUser = await this.authService.getCurrentUser();
@@ -43,5 +46,20 @@ export class IncomingAssignComponent implements OnInit {
   }
   async getDocumentPreview() {
     this.reportPdf = await this.realTimeReportService.getRTReportPdf(this.currentAssignment.entityId, 'pdf', 'ru');
+  }
+
+  editAssignment(item) {
+    this.modalService.approveModal('Согласование', 'Заполните данные').then(
+      (result) => {
+        this.comment = result.comment;
+        item.name = result.action;
+        this.realTimeReportService.approve(item, this.comment).then(resp => {
+          console.log(resp);
+        });
+      },
+      (error) => {
+        console.log('Modal dismissed with result:', error);
+      }
+    );
   }
 }
