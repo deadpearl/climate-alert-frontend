@@ -23,12 +23,13 @@ import {
 import {NewsFormComponent} from './news/news-form/news-form.component';
 import {NewsComponent} from './news/news.component';
 import {NewsEditComponent} from './news/news-form/news-edit/news-edit.component';
+import {AuthGuard} from './service/auth.guard';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent
+    component: MainComponent, canActivate: [AuthGuard], data: { requiresAuth: false }
   },
   {
     path: 'map',
