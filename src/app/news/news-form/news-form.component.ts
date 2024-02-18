@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NewsService} from "../../service/news.service";
-import {Router} from "@angular/router";
+import {NewsService} from '../../service/news.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-news-form',
@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 export class NewsFormComponent implements OnInit {
   newsList: any = null;
 
-  constructor(private newsService: NewsService, private router: Router,) { }
+  constructor(private newsService: NewsService, private router: Router) { }
 
   ngOnInit() {
     this.newsService.getAll().then(resp => {

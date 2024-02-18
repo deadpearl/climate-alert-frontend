@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ParamMap, Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
-import {NewsService} from "../../../service/news.service";
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {NewsService} from '../../../service/news.service';
 
 @Component({
   selector: 'app-news-edit',
@@ -34,23 +34,22 @@ export class NewsEditComponent implements OnInit {
   }
   saveForm() {
 
-    console.log(this.formData)
+    console.log(this.formData);
     if (this.createAction === true) {
         this.newsService.createNews(this.formData).then(resp => {
           console.log('Success create', resp);
           this.router.navigate(['admin/news/form']);
-        })
-    }
-    else {
+        });
+    } else {
         this.newsService.updateNews(this.newsId, this.formData).then(resp => {
           console.log('Success update', resp);
           this.router.navigate(['admin/news/form']);
-        })
+        });
     }
 
   }
 
-  back(){
+  back() {
     this.router.navigate(['admin/news/form']);
   }
 
