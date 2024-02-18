@@ -1,45 +1,30 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
-    HttpRequest,
-    HttpHandler,
-    HttpEvent,
-    HttpInterceptor,
-    HttpResponse
+  HttpInterceptor,
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpResponse,
+  HttpErrorResponse,
 } from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {NgxSpinnerService} from 'ngx-spinner';
-import {finalize} from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { finalize, catchError } from 'rxjs/operators';
+import {LoadingService} from '../service/loading.service';
 
 @Injectable()
 export class LoaderInterceptor implements HttpInterceptor {
+  constructor(private loadingService: LoadingService) {}
 
-    private requests: HttpRequest<any>[] = [];
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    this.loadingService.setLoading(true);
 
-    constructor(private spinnerService: NgxSpinnerService) {
-    }
-
-    // removeRequest(req: HttpRequest<any>) {
-    //     const i = this.requests.indexOf(req);
-    //     if (i >= 0) {
-    //         this.requests.splice(i, 1);
-    //     }
-    //     if (this.requests.length === 0) {
-    //         this.spinnerService.hide();
-    //     }
-    // }
-
-    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        let finished = false;
-
-        setTimeout(() => {
-            if (!finished) {
-                this.spinnerService.show().then();
-            }
-        }, 180);
-
-        return next.handle(req).pipe(finalize(() => {
-            finished = true;
-            this.spinnerService.hide().then();
-        }));
-    }
+    return next.handle(req).pipe(
+      catchError((error: HttpErrorResponse) => {
+        return throwError(error);
+      }),
+      finalize(() => {
+        this.loadingService.setLoading(false);
+      })
+    );
+  }
 }

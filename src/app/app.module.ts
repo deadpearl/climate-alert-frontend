@@ -34,6 +34,7 @@ import { NewsComponent } from './news/news.component';
 import { NewsFormComponent } from './news/news-form/news-form.component';
 import { NewsEditComponent } from './news/news-form/news-edit/news-edit.component';
 import { IncomingAssignComponent } from './incoming-assign/incoming-assign.component';
+import {LoaderInterceptor} from './http-interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,11 @@ import { IncomingAssignComponent } from './incoming-assign/incoming-assign.compo
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
       multi: true,
     },
     ],
