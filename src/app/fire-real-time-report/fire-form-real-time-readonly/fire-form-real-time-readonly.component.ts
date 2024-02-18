@@ -39,7 +39,7 @@ export class FireFormRealTimeReadonlyComponent implements OnInit {
 
   saveForm() {
     console.log(this.formData);
-    this.api.put('/report/edit-f1/fire-real-time', this.formData).subscribe(response => {
+    this.api.put('/internal/report/edit-f1/fire-real-time', this.formData).subscribe(response => {
       // Обработка успешного ответа от сервера
       console.log('Success', response);
     }, error => {

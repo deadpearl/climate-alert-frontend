@@ -1,1 +1,106 @@
-<p>fire-real-time-economic-damage-report-form works!</p>
+<div class="light-gray center-content row">
+  <div class="dark-gray h-1000 item-1000 center-content center-item">
+    <div class="column center-item space-between">
+      <div (click)="goBack()">Назад</div>
+
+      <div class="tabs row item-330 space-between h-70">
+        <div class="tab item-150 center-text" [class.active]="editTab" (click)="switchOnEditTab()">Документ</div>
+        <div class="tab item-150 center-text" [class.active]="showPreviewTab" (click)="getReportPdf()">Просмотр</div>
+      </div>
+
+      <div class="item-700 center-content" [class.active]="editTab === true">
+        <form class="column h-550 space-between h-800 space-between"  *ngIf="editTab">
+          <div class="row item-700 space-between">
+            <label> Дата начала <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="start_date" [(ngModel)]="formData.agricultureDamage" name="agricultureDamage" [disabled]="readonly">
+            </label>
+
+            <label> Дата завершения <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="end_date" [(ngModel)]="formData.forestryDamage" name="forestryDamage" [disabled]="readonly">
+            </label>
+          </div>
+
+          <div class="row item-700 space-between">
+            <label> Регион <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="region" [(ngModel)]="formData.infrastructureDamage" name="infrastructureDamage" [disabled]="readonly">
+            </label>
+
+            <label> Область пожара <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="fire_area" [(ngModel)]="formData.totalEconomicDamage" name="totalEconomicDamage" [disabled]="readonly">
+            </label>
+          </div>
+
+          <div class="row item-700 space-between">
+            <label> Широта <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="latitude" [(ngModel)]="formData.firefightingCosts" name="firefightingCosts" [disabled]="readonly">
+            </label>
+
+            <label> Долгота <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="longitude" [(ngModel)]="formData.analysis" name="analysis" [disabled]="readonly">
+            </label>
+          </div>
+
+          <div class="row item-700 space-between">
+            <label> Растительный покров <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_area" [(ngModel)]="formData.conclusions" name="conclusions" [disabled]="readonly">
+            </label>
+
+            <label> Плотность растительности <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_density" [(ngModel)]="formData.harmfulSubstancesEmissions" name="harmfulSubstancesEmissions" [disabled]="readonly">
+            </label>
+          </div>
+
+          <div class="row item-700 space-between">
+            <label> Растительная влага <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_moisture" [(ngModel)]="formData.impactOnLocalClimateAndEcosystem" name="impactOnLocalClimateAndEcosystem" [disabled]="readonly">
+            </label>
+
+            <label> Тип растительности <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="vegetation_type" [(ngModel)]="formData.damageToFloraAndFauna" name="damageToFloraAndFauna" [disabled]="readonly">
+            </label>
+          </div>
+          <div class="row item-700 space-between">
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.lossesForLocalCommunitiesAndEconomy" name="lossesForLocalCommunitiesAndEconomy" [disabled]="readonly">
+            </label>
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.aidToAffected" name="aidToAffected" [disabled]="readonly">
+            </label>
+          </div>
+          <div class="row item-700 space-between">
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.restorationAndRehabilitationCosts" name="restorationAndRehabilitationCosts" [disabled]="readonly">
+            </label>
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.elevationAboveSeaLevel" name="elevationAboveSeaLevel" [disabled]="readonly">
+            </label>
+          </div>
+          <div class="row item-700 space-between">
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.adjacentAffectedObjectsInfo" name="adjacentAffectedObjectsInfo" [disabled]="readonly">
+            </label>
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.fireIncidenceTrends" name="fireIncidenceTrends" [disabled]="readonly">
+            </label>
+          </div>
+          <div class="row item-700 space-between">
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.comparisonWithPriorFires" name="comparisonWithPriorFires" [disabled]="readonly">
+            </label>
+            <label> Информация <br>
+              <input class="item-230 h-25 pl-20" type="text" placeholder="information" [(ngModel)]="formData.evaluationOfFirefightingAndPreventionMeasures" name="evaluationOfFirefightingAndPreventionMeasures" [disabled]="readonly">
+            </label>
+          </div>
+          <div class="center-content">
+            <button class="item-120 h-40 dark-green1-button white" type="submit" [disabled]="readonly" [class.disabled]="readonly" (click)="saveForm()">Сохранить</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="item-800" *ngIf="showPreviewTab">
+        <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+      </div>
+    </div>
+
+  </div>
+</div>
