@@ -17,8 +17,7 @@ export class AuthService {
   logined$ = this.logined.asObservable();
   loguoted$ = this.logouted.asObservable();
   responsse: any = null;
-
-  get loggedIn() {
+  loggedIn() {
     return sessionStorage.getItem(this.loggedInKey) !== null;
   }
 
@@ -32,7 +31,6 @@ export class AuthService {
   getCurrentUser() {
     return this.http.get('/internal/api/public/user/v1/token/' + this.currentToken).toPromise();
   }
-
   public loginData(data) {
     return this.http.post('/internal/api/public/user/v1/login', data).subscribe(response => {
         this.responsse = response;
@@ -55,6 +53,7 @@ export class AuthService {
     this.usersService.reloadUser();
     // Дёргаешь собитие
     this.logouted.next('disconnect');
+    this.router.navigate(['/auth/login']);
   }
 
 }

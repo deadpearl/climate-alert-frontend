@@ -12,11 +12,13 @@ export class AuthGuard implements CanActivate {
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const requiresAuth = next.data.requiresAuth !== false; // Check if authentication is explicitly disabled for this route
 
-    if (requiresAuth && !this.authService.getCurrentUser()) {
-      this.router.navigate(['/auth/login']); // Redirect to the login page if authentication is required but not authenticated
+    if (requiresAuth && !this.authService.loggedIn()) {
+      console.log('AuthGuard - Redirecting to /auth/login');
+      this.router.navigate(['/auth/login']);
       return false;
     }
 
-    return true; // Allow access to the route
+    console.log('AuthGuard - Allowing access');
+    return true;
   }
 }

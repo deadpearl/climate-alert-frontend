@@ -33,7 +33,7 @@ const routes: Routes = [
   },
   {
     path: 'map',
-    component: MapVisualComponent
+    component: MapVisualComponent, canActivate: [AuthGuard], data: { requiresAuth: false }
   },
   {
     path: 'auth',
@@ -46,75 +46,75 @@ const routes: Routes = [
     children: [
       {
         path: 'fire/report/real-time',
-        component: FireRealTimeReportComponent
+        component: FireRealTimeReportComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/fire/report/real-time',
-        component: FireRealTimeReportComponent
+        component: FireRealTimeReportComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'fire/report/real-time/form',
-        component: FireFormRealTimeReadonlyComponent
+        component: FireFormRealTimeReadonlyComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/fire/report/real-time/form',
-        component: FireFormRealTimeReadonlyComponent
+        component: FireFormRealTimeReadonlyComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'fire/real-time/catalogue',
-        component: FireRtIncidentCatologueComponent
+        component: FireRtIncidentCatologueComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/fire/real-time/catalogue',
-        component: FireRtIncidentCatologueComponent
+        component: FireRtIncidentCatologueComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/fire/real-time/catalogue/form',
-        component: FireRtIcFormComponent
+        component: FireRtIcFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'user/profile',
-        component: UserProfileComponent
+        component: UserProfileComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/user/profile',
-        component: UserProfileComponent
+        component: UserProfileComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'employee/user/profile',
-        component: UserProfileComponent
+        component: UserProfileComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'user/profile/form',
-        component: UserProfileFormComponent
+        component: UserProfileFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/user/management',
-        component: UserManagementComponent
+        component: UserManagementComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/user/management/form',
-        component: UserManagementFormComponent
+        component: UserManagementFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/news/form',
-        component: NewsFormComponent
+        component: NewsFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'admin/news/form/edit',
-        component: NewsEditComponent
+        component: NewsEditComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'news',
-        component: NewsComponent
+        component: NewsComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'fire/report/real-time-economic-damage',
-        component: FireRealTimeEconomicDamageReportComponent
+        component: FireRealTimeEconomicDamageReportComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'fire/report/real-time-economic-damage/form',
-        component: FireRealTimeEconomicDamageReportFormComponent
+        component: FireRealTimeEconomicDamageReportFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
     ]
   }
