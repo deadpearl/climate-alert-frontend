@@ -50,6 +50,7 @@ export class FireRealTimeReportComponent implements OnInit {
   currentUser: any = null;
   realTimeReportList: any = null;
   assignedValues: any = null;
+  activeTab: any = 1;
   ngOnInit() {
     this.authService.getCurrentUser().then(resp => {
       this.currentUser = resp;
@@ -86,31 +87,47 @@ export class FireRealTimeReportComponent implements OnInit {
   }
   goToReadOnly() {
     console.log('gotoreadonly');
-    this.router.navigate(['fire/report/real-time/form'], {
-      queryParams: {
-        reportId: 2,
-        readonly: true,
-      },
-      queryParamsHandling: 'merge'
-    });
+    if (this.activeTab === 1) {
+      this.router.navigate(['fire/report/real-time/form'], {
+        queryParams: {
+          reportId: 2,
+          readonly: true,
+        },
+        queryParamsHandling: 'merge'
+      });
+    }
   }
   get listIsEmpty() {
     return this.listFires === false || this.listFires === null || Object.keys(this.listFires).length === 0;
   }
   goToEdit() {
     console.log('gotoreadonly');
-    this.router.navigate(['fire/report/real-time/form'], {
-      queryParams: {
-        reportId: 2,
-        readonly: false,
-      },
-      queryParamsHandling: 'merge'
-    });
+    if (this.activeTab === 1) {
+      this.router.navigate(['fire/report/real-time/form'], {
+        queryParams: {
+          reportId: 2,
+          readonly: false,
+        },
+        queryParamsHandling: 'merge'
+      });
+    }
   }
 
   selectEvent(item: any) {
     this.currentFire = item;
     console.log(this.currentFire);
+  }
+  activateTab(tabNumber: number): void {
+    this.activeTab = tabNumber;
+    if (this.activeTab === 2) {
+      this.getRealTimeEconomicDocumentPreview();
+    } else {
+      this.getDocumentPreview();
+    }
+  }
+  async getRealTimeEconomicDocumentPreview() {
+    this.reportPdf = null;
+    this.reportPdf = await this.rtReportService.getRTEconomicReportPdf(this.currentFire.id, 'pdf', 'ru');
   }
 
   assign() {

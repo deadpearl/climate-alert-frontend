@@ -68,18 +68,26 @@
       </ng-container>
       <ng-container *ngIf="currentFire">
         <hr class="item-800 mt-40">
-        <div class="mt-40 row space-between item-250">
-          <button class="item-120 h-40 dark-green1 white" (click)="goToReadOnly();">Просмотр</button>
-          <button class="item-120 h-40 dark-green1 white" (click)="goToEdit();">Изменить</button>
-        </div>
+
         <div class="item-800 mt-20 h-55 light-gray center-item center-content">
           <div class="item-500 row space-between ">
             <h4 class="ml-10 row center-text center-item">Статус : <div class="blue"> {{currentFire.status.name}}</div> </h4>
             <button class="item-200 h-40 dark-green1-button white" (click)="assign()"><h4>Отправить на согласование</h4></button>
           </div>
         </div>
-        <div class="mt-20">
-          <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+        <hr class="item-800 mt-40">
+        <div class="tabs item-1000 center-content column mt-40">
+          <div class="row item-330 space-between h-70 center-item center-content">
+            <div class="tab item-150" (click)="activateTab(1)" [class.active]="activeTab === 1">В реальном времени</div>
+            <div class="tab item-150" (click)="activateTab(2)" [class.active]="activeTab === 2">Экономический</div>
+          </div>
+          <div class="item-800" [class.active]="activeTab === 1">
+            <div class="mb-10 mt-20 row space-between item-250">
+              <button class="item-120 h-40 dark-green1 white" (click)="goToReadOnly();">Просмотр</button>
+              <button class="item-120 h-40 dark-green1 white" (click)="goToEdit();">Изменить</button>
+            </div>
+            <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+          </div>
         </div>
       </ng-container>
     </div>

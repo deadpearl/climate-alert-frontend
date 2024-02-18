@@ -18,6 +18,7 @@ export class IncomingAssignComponent implements OnInit {
   currentAssignment: any = false;
   reportPdf: Blob = null;
   comment: any = null;
+  activeTab: any = 1;
 
   constructor(private authService: AuthService,  private router: Router,
               private realTimeReportService: RealTimeReportService, private http: HttpClient,
@@ -47,7 +48,18 @@ export class IncomingAssignComponent implements OnInit {
   async getDocumentPreview() {
     this.reportPdf = await this.realTimeReportService.getRTReportPdf(this.currentAssignment.entityId, 'pdf', 'ru');
   }
-
+  activateTab(tabNumber: number): void {
+    this.activeTab = tabNumber;
+    if (this.activeTab === 2) {
+      this.getRealTimeEconomicDocumentPreview();
+    } else {
+      this.getDocumentPreview();
+    }
+  }
+  async getRealTimeEconomicDocumentPreview() {
+    this.reportPdf = null;
+    this.reportPdf = await this.realTimeReportService.getRTEconomicReportPdf(this.currentAssignment.entityId, 'pdf', 'ru');
+  }
   editAssignment(item) {
     this.modalService.approveModal('Согласование', 'Заполните данные').then(
       (result) => {

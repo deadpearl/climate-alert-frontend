@@ -1,6 +1,6 @@
 <div class="light-gray center-content row">
   <div class="dark-gray h-500 item-1000 center-content center-item">
-    <div class="column center-item item-800 mt-40">
+    <div class="column center-item item-800 mt-40 center-content">
       <h2>Входящие</h2>
 
       <div class="content-body mt-20">
@@ -45,7 +45,7 @@
               <td>{{item.userIncoming}}</td>
               <td>{{item.userOutComing}}</td>
               <td>{{item.sentDateTime}}</td>
-              <td>{{item.description}}</td>
+              <td>{{item.name}}</td>
               <td><button class="light-violet h-25 item-80" (click)="editAssignment(item)">Edit</button></td>
 
             </tr>
@@ -61,8 +61,15 @@
 
       <ng-container *ngIf="currentAssignment">
         <hr class="item-800 mt-40">
-        <div class="item-800 mt-20">
-          <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+        <div class="tabs item-800 column mt-40">
+          <div class="row item-330 space-between h-70">
+            <div class="tab item-150" (click)="activateTab(1)" [class.active]="activeTab === 1">В реальном времени</div>
+            <div class="tab item-150" (click)="activateTab(2)" [class.active]="activeTab === 2">Экономический</div>
+          </div>
+          <div class="item-800" [class.active]="activeTab === 1">
+            <hr class="item-800 mt-40">
+            <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
+          </div>
         </div>
       </ng-container>
   </div>

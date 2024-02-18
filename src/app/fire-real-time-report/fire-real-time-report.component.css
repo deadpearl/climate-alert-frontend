@@ -9,3 +9,28 @@
 .selected-object{
   background-color: #e5e5e5;
 }
+.tabs {
+  display: flex;
+
+  .tab {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #e0e0e0;
+    }
+  }
+
+  .tab-content {
+    display: none;
+    border-radius: 5px;
+    width: 800px;
+
+    &.active {
+      display: block;
+    }
+  }
+}
