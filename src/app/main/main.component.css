@@ -1,0 +1,21 @@
+.font {
+  font-size: 22px;
+}
+.font2 {
+  font-size: 41px;
+}
+.circle {
+  border-radius: 50%;
+}
+.vertical-line {
+  border: none;
+  height: 120px;
+  border-left: 2px solid #293A23;
+  transform: rotate(180deg);
+}
+img {
+  border-radius: 17px;
+}
+.new {
+  cursor: pointer;
+}

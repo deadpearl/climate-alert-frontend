@@ -1,4 +1,92 @@
 <app-header></app-header>
 <!--<app-login></app-login>-->
-<div>adfadf</div>
+<div class="light-gray center-content">
+  <div class="h-800 item-1200 row">
+
+      <div class="dark-gray item-600 h-800 center-item">
+
+        <div class="column h-700 space-between">
+
+
+          <div class="dark-green2-text h-220 item-450 center-content center-item font">
+            <div class="">
+              <h1 class="">Be prepared.</h1>
+              <h1 class="">Be informed.</h1>
+              <h1 class="">Be safe.</h1>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="dark-green2 h-40">
+              <div class="pl-20 pt-10">
+                <div class="row white item-250 space-between center-item">
+                  <h3 class="">Fires reported in 2024: </h3>
+                  <div class=""><b>196</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="light-green2 h-150 item-600 center-item center-content">
+              <div class="row item-500 space-between center-text">
+                <div class="dark-gray item-100 h-100 circle">
+                  <h1 class="font2">25</h1>
+                  <div class="">fatalities</div>
+                </div>
+                <div class="dark-gray item-100 h-100 circle">
+                  <h1 class="font2">78</h1>
+                  <div class="">injured</div>
+                </div>
+                <div class="dark-gray item-100 h-100 circle">
+                  <h1 class="font2">5</h1>
+                  <div class="">regions</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="dark-green2-text center-content center-item ">
+            <div class="item-450 h-180 space-between column">
+              <h4 class="">Plan ahead to save lives</h4>
+              <div class="">Explore essential fire safety tips and information to protect yourself, your loved ones, and your property. Learn about preventive measures, emergency response strategies, and the importance of fire awareness.</div>
+              <h3 class=" font">See our fire safety guide</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <div class="dark-gray2 item-600 h-800 center-content center-item column">
+      <div class="item-400 flex-start">
+        <h2 class=" dark-green2-text">{{"Latest News" }}</h2>
+      </div>
+
+      <div class="item-600 column center-content center-item">
+        <div class="mt-20 new" *ngFor="let item of newsList.slice(0, 3); let i = index;" style="flex-basis: 50%;"> <!-- Adjust flex-basis as needed -->
+          <div class="row">
+            <div class="">
+              <div class="light-gray item-450 h-150 column center-item center-content" (click)="goToNewItem(item)">
+                <div class="row item-370 space-between">
+                  <img class="item-120 h-120" src="{{item.imageUrl}}" alt="">
+                  <hr class="vertical-line">
+                  <div class="item-150">{{ item.title }}</div>
+                </div>
+                <!-- Перемещаем {{item.publicationDate}} сюда, чтобы оно было в конце блока -->
+              </div>
+              <div class="light-gray item-450 flex-end">
+                <div class="mr-10 mb-10">{{formatDate(item.publicationDate)}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-end item-400">
+        <h3 class="dark-green2-text">{{"See more..." }}</h3>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
 <app-footer></app-footer>
