@@ -116,6 +116,14 @@ const routes: Routes = [
         path: 'fire/report/real-time-economic-damage/form',
         component: FireRealTimeEconomicDamageReportFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
+      {
+        path: 'admin/fire/report/real-time-economic-damage',
+        component: FireRealTimeEconomicDamageReportComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
+      },
+      {
+        path: 'admin/fire/report/real-time-economic-damage/form',
+        component: FireRealTimeEconomicDamageReportFormComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
+      },
     ]
   }
 ];

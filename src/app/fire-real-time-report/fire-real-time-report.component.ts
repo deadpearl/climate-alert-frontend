@@ -90,7 +90,15 @@ export class FireRealTimeReportComponent implements OnInit {
     if (this.activeTab === 1) {
       this.router.navigate(['fire/report/real-time/form'], {
         queryParams: {
-          reportId: 2,
+          reportId: this.currentFire.id,
+          readonly: true,
+        },
+        queryParamsHandling: 'merge'
+      });
+    } else {
+      this.router.navigate(['admin/fire/report/real-time-economic-damage/form'], {
+        queryParams: {
+          reportId: this.currentFire.economicDamageReport.id,
           readonly: true,
         },
         queryParamsHandling: 'merge'
@@ -105,7 +113,15 @@ export class FireRealTimeReportComponent implements OnInit {
     if (this.activeTab === 1) {
       this.router.navigate(['fire/report/real-time/form'], {
         queryParams: {
-          reportId: 2,
+          reportId: this.currentFire.id,
+          readonly: false,
+        },
+        queryParamsHandling: 'merge'
+      });
+    } else {
+      this.router.navigate(['admin/fire/report/real-time-economic-damage/form'], {
+        queryParams: {
+          reportId: this.currentFire.economicDamageReport.id,
           readonly: false,
         },
         queryParamsHandling: 'merge'
