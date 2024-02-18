@@ -42,4 +42,8 @@ export class UserProfileComponent implements OnInit {
 
     return `${year}-${month}-${day}`;
   }
+
+  logout() {
+    this.authService.logout();
+  }
 }
