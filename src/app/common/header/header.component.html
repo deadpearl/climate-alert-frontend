@@ -18,8 +18,8 @@
         </div>
 
         <div class="language row item-200 center mt-20">
-          <img class="item-40"  src="assets/img/notification-bell-svgrepo-com.svg" *ngIf="currentUser && !isSeen()" (click)="getNotifications(currentUser.user.email); visible()" alt="">
-          <img class="item-40" src="assets/img/notification-circle-left-svgrepo-com.svg" *ngIf="currentUser && isSeen()" (click)="getNotifications(currentUser.user.email); visible()" alt="">
+          <img class="item-40"  src="assets/img/notification-bell-svgrepo-com.svg" *ngIf="currentUser && !isSeen()" (click)="visible()" alt="">
+          <img class="item-40" src="assets/img/notification-circle-left-svgrepo-com.svg" *ngIf="currentUser && isSeen()" (click)="visible()" alt="">
           <div class="item-90"><img class="item-30" src="assets/img/lang.svg" alt="lang"></div>
           <div class="item-30">
             <h4 class="ml-5">ENG</h4>
@@ -31,14 +31,14 @@
       </div>
     </div>
     <div class="notification-div" *ngIf="isNotificationDivVisible">
-      <div class="" *ngFor="let item of notificationList">
+      <div class="pl-20 pr-20 mb-10">Уведомления</div>
+      <hr class="pl-20 pr-20">
+      <div class="mt-20 notification" *ngFor="let item of notificationList">
         <div class="pl-20 pr-20">
           <div class="mt-10">
-            <h3 class="ml-20">Отправитель</h3>
-            <div class="">{{item.senderEmail}}</div>
+            <div class=""><b>{{item.senderEmail}} : </b></div>
           </div>
           <div class="mb-10">
-            <h3 class="ml-20">Сообщение</h3>
             <div class="">{{item.text}}</div>
           </div>
           <hr>
@@ -97,6 +97,22 @@
             </svg>
           </div>
         </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="notification-div" *ngIf="isNotificationDivVisible">
+    <div class="pl-20 pr-20 mb-10">Уведомления</div>
+    <hr class="pl-20 pr-20">
+    <div class="mt-20 notification" *ngFor="let item of notificationList">
+      <div class="pl-20 pr-20">
+        <div class="mt-10">
+          <div class=""><b>{{item.senderEmail}} : </b></div>
+        </div>
+        <div class="mb-10">
+          <div class="">{{item.text}}</div>
+        </div>
+        <hr>
       </div>
     </div>
   </div>

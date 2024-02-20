@@ -46,11 +46,6 @@ export class HeaderComponent implements OnInit {
   isSeen(): boolean {
     return this.notificationList.some(notification => !notification.seen);
   }
-  hideNotificationDiv(): void {
-    // Set isNotificationDivVisible to false when the div should be hidden
-    this.isNotificationDivVisible = false;
-  }
-
   visible() {
     this.isNotificationDivVisible = !this.isNotificationDivVisible;
   }
