@@ -28,7 +28,4 @@ export class MainComponent implements OnInit {
 
     return `${year}-${month}-${day} ${hours}:${minutes}`;
   }
-
-  goToNewItem(item: any) {
-  }
 }

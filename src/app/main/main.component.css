@@ -19,3 +19,7 @@ img {
 .new {
   cursor: pointer;
 }
+.title:hover {
+  color: #C9D5C8;
+  cursor: pointer;
+}

@@ -35,6 +35,7 @@ import { NewsFormComponent } from './news/news-form/news-form.component';
 import { NewsEditComponent } from './news/news-form/news-edit/news-edit.component';
 import { IncomingAssignComponent } from './incoming-assign/incoming-assign.component';
 import {LoaderInterceptor} from './http-interceptors/loader.interceptor';
+import { NewsItemComponent } from './news/news-item/news-item.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import {LoaderInterceptor} from './http-interceptors/loader.interceptor';
     NewsFormComponent,
     NewsEditComponent,
     IncomingAssignComponent,
+    NewsItemComponent,
   ],
     imports: [
         BrowserModule,

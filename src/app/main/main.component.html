@@ -69,7 +69,7 @@
                 <div class="row item-370 space-between">
                   <img class="item-120 h-120" src="{{item.imageUrl}}" alt="">
                   <hr class="vertical-line">
-                  <div class="item-150">{{ item.title }}</div>
+                  <div class="item-150 title" [routerLink]="['/news/item']" [queryParams]="{id:item.id}">{{ item.title }}</div>
                 </div>
                 <!-- Перемещаем {{item.publicationDate}} сюда, чтобы оно было в конце блока -->
               </div>
@@ -80,8 +80,8 @@
           </div>
         </div>
       </div>
-      <div class="flex-end item-400">
-        <h3 class="dark-green2-text">{{"See more..." }}</h3>
+      <div class="flex-end item-400 mt-20">
+        <h3 class="dark-green2-text title" [routerLink]="['/news']">{{"See more..." }}</h3>
       </div>
 
     </div>
