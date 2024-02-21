@@ -69,13 +69,58 @@
 <!--    <div><strong>Date:</strong> <span id='date'></span></div>-->
 <!--  </div>-->
 <!--  <div id='map' style='width: 800px; height: 600px; margin-left: 350px'></div>-->
+  <div class="light-gray center-content">
 
-  <div #mapContainer style='position: relative;'>
-<!--    <div class='fire'>-->
-<!--      <div><strong>Date:</strong> <span id='acqDate'></span></div>-->
-<!--      <div><strong>Time:</strong> <span id='acqTime'></span></div>-->
-<!--    </div>-->
-    <div id='map' style='width: 800px; height: 600px;'></div>
+      <div class="dark-gray item-1200 h-1000 center-content center-item">
+
+        <div class="column item-1000 h-900 space-between ">
+
+          <div class="">
+            <h2>Fire Live Map</h2>
+          </div>
+          <div class="">Explore real-time fire incidents with our Fire Live Map, providing a dynamic overview of occurrences from the past 24 hours. Harnessing data from NASA satellite sources, this interactive map allows you to pinpoint specific locations and gather crucial information about each incident.
+            Click on the points on the map to view more information.</div>
+
+          <div class="form background-white item-1000 h-500 form center-item">
+            <div class="row">
+              <div class="item-600 ml-5 ">
+                <div #mapContainer style='position: relative;'>
+                  <!--    <div class='fire'>-->
+                  <!--      <div><strong>Date:</strong> <span id='acqDate'></span></div>-->
+                  <!--      <div><strong>Time:</strong> <span id='acqTime'></span></div>-->
+                  <!--    </div>-->
+                  <div id='map' style='width: 600px; height: 495px; border-radius: 34px 0 0 34px;'></div>
+                </div>
+              </div>
+              <div class="item-400 h-500 center-content center-item">
+                <div class="column item-330  h-400 space-between">
+                  <div class="">Time Period</div>
+                  <input type="date" class="">
+                  <div class="">to</div>
+                  <input type="date" class="">
+                  <div class="">Region</div>
+                  <input type="date" class="">
+                  <div class="">Confidence*</div>
+                  <input type="date" class="">
+                  <div class="row item-230 space-between mt-20">
+                    <button class="item-90 h-30 dark-green1-button white">Apply</button>
+                    <button class="item-90 h-30 dark-gray white">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="mt-20">
+            <h4 class="">What is a confidence?</h4>
+            <div class="mt-20">For MODIS, the confidence value ranges from 0% to 100% and can be used to assign one of the three fire classes (low-confidence fire, nominal-confidence fire, or high-confidence fire) to all fire pixels. For VIIRS, the confidence values are set to low, nominal, and high; they are based on a collection of intermediate algorithm quantities used in the detection process and are intended to help users gauge the quality of individual hotspot/fire pixels. View more information on FIRMS Website.</div>
+          </div>
+
+        </div>
+      </div>
   </div>
 
 </main>
