@@ -31,12 +31,12 @@
       </div>
     </div>
     <div class="notification-div" *ngIf="isNotificationDivVisible">
-      <div class="pl-20 pr-20 mb-10">Уведомления</div>
+      <h2 class="pl-20 pr-20 mb-10">Уведомления</h2>
       <hr class="pl-20 pr-20">
-      <div class="mt-20 notification" *ngFor="let item of notificationList">
+      <div class="mt-20 notification" *ngFor="let item of notificationList" >
         <div class="pl-20 pr-20">
           <div class="mt-10">
-            <div class=""><b>{{item.senderEmail}} : </b></div>
+            <div class="" [ngClass]="{'light-green2-text': !item.seen}"><b>{{item.senderEmail}} : </b></div>
           </div>
           <div class="mb-10">
             <div class="">{{item.text}}</div>
@@ -102,12 +102,12 @@
     </div>
   </div>
   <div class="notification-div" *ngIf="isNotificationDivVisible">
-    <div class="pl-20 pr-20 mb-10">Уведомления</div>
+    <h2 class="pl-20 pr-20 mb-10">Уведомления</h2>
     <hr class="pl-20 pr-20">
     <div class="mt-20 notification" *ngFor="let item of notificationList">
       <div class="pl-20 pr-20">
         <div class="mt-10">
-          <div class=""><b>{{item.senderEmail}} : </b></div>
+          <div class="" [ngClass]="{'light-green2-text': !item.seen}"><b>{{item.senderEmail}} : </b></div>
         </div>
         <div class="mb-10">
           <div class="">{{item.text}}</div>
