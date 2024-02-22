@@ -1,9 +1,28 @@
 <div class="light-gray center-content">
 
-  <div class="dark-gray item-1200 h-800 center-content center-item">
+  <div class="dark-gray item-1200 h-600 center-content center-item column space-between">
+    <h2>Уведомление</h2>
+    <div class="mt-40 light-gray item-1000 h-500 center-content center-item ">
+    <div class="column item-900 h-400 space-between ">
 
-    <div class="column item-1000 h-700 space-between ">
-
+      <div class="column space-between h-300">
+        <div class="flex-end">
+          <button class="item-120 h-40 dark-green1-button white ">Согласовать</button>
+        </div>
+        <div class="row center-text center-item item-450 space-between">
+          <h2 class="">Отправитель:</h2>
+          <div class="">{{notification.senderEmail}}</div>
+        </div>
+        <div class="row center-text center-item item-450 space-between">
+          <h2 class="">Получатель:</h2>
+          <div class="">{{notification.receiverEmail}}</div>
+        </div>
+        <div class="row center-text center-item item-900 space-between">
+          <h2 class="item-230 flex-start">Сообщение:</h2>
+          <div class="">{{notification.text}}</div>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </div>

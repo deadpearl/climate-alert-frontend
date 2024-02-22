@@ -3,6 +3,7 @@ import {AuthService} from '../../service/auth.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NotificationService} from '../../service/notification.service';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
   constructor(public authService: AuthService,
               private router: Router,
               private notificationService: NotificationService,
-              private route: ActivatedRoute) {
+             ) {
   }
   showOptions: any = false;
   isNotificationPage: any = false;
@@ -26,21 +27,11 @@ export class HeaderComponent implements OnInit {
        console.log(resp);
        this.getNotifications(this.currentUser.user.email);
     });
-     this.route.url.subscribe(segments => {
-      this.isNotificationPage = this.getUrlPosition('notification');
-    });
-     console.log('isNotificationPage', this.isNotificationPage);
   }
-  redirectToNotification(notificationId) {
-    if (this.isNotificationPage) {
-      this.router.navigate([], {
-        relativeTo: this.route,
-        queryParams: {id: notificationId},
-        queryParamsHandling: 'merge',
-      });
-    }
+  redirectToNotification(notificationId, notificationType) {
     console.log(notificationId);
-    this.router.navigate(['/notification'], { queryParams: { id: notificationId } });
+    this.router.navigate(['/notification'], { queryParams: { id: notificationId, type: notificationType } });
+    window.location.reload();
   }
   async getNotifications(userEmail: string): Promise<void> {
     try {
