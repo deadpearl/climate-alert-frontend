@@ -25,6 +25,7 @@ import {NewsComponent} from './news/news.component';
 import {NewsEditComponent} from './news/news-form/news-edit/news-edit.component';
 import {AuthGuard} from './service/auth.guard';
 import {NewsItemComponent} from "./news/news-item/news-item.component";
+import {NotificationComponent} from "./notification/notification.component";
 
 
 const routes: Routes = [
@@ -112,6 +113,10 @@ const routes: Routes = [
       {
         path: 'news/item',
         component: NewsItemComponent, canActivate: [AuthGuard], data: { requiresAuth: false }
+      },
+      {
+        path: 'notification',
+        component: NotificationComponent, canActivate: [AuthGuard], data: { requiresAuth: true }
       },
       {
         path: 'fire/report/real-time-economic-damage',

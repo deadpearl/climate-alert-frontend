@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../../service/auth.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {NotificationService} from '../../service/notification.service';
 
 @Component({
@@ -15,17 +15,33 @@ export class HeaderComponent implements OnInit {
   isNotificationDivVisible = false;
   constructor(public authService: AuthService,
               private router: Router,
-              private notificationService: NotificationService) {
+              private notificationService: NotificationService,
+              private route: ActivatedRoute) {
   }
   showOptions: any = false;
+  isNotificationPage: any = false;
   ngOnInit() {
      this.authService.getCurrentUser().then(resp => {
        this.currentUser = resp;
        console.log(resp);
        this.getNotifications(this.currentUser.user.email);
     });
+     this.route.url.subscribe(segments => {
+      this.isNotificationPage = this.getUrlPosition('notification');
+    });
+     console.log('isNotificationPage', this.isNotificationPage);
   }
-
+  redirectToNotification(notificationId) {
+    if (this.isNotificationPage) {
+      this.router.navigate([], {
+        relativeTo: this.route,
+        queryParams: {id: notificationId},
+        queryParamsHandling: 'merge',
+      });
+    }
+    console.log(notificationId);
+    this.router.navigate(['/notification'], { queryParams: { id: notificationId } });
+  }
   async getNotifications(userEmail: string): Promise<void> {
     try {
       this.notificationList = await this.notificationService.getAllNotification(userEmail);

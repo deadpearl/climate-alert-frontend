@@ -33,7 +33,7 @@
     <div class="notification-div" *ngIf="isNotificationDivVisible">
       <h2 class="pl-20 pr-20 mb-10">Уведомления</h2>
       <hr class="pl-20 pr-20">
-      <div class="mt-20 notification" *ngFor="let item of notificationList" >
+      <div class="mt-20 notification" *ngFor="let item of notificationList" (click)="redirectToNotification(item.id)" >
         <div class="pl-20 pr-20">
           <div class="mt-10">
             <div class="" [ngClass]="{'light-green2-text': !item.seen}"><b>{{item.senderEmail}} : </b></div>
@@ -104,7 +104,7 @@
   <div class="notification-div" *ngIf="isNotificationDivVisible">
     <h2 class="pl-20 pr-20 mb-10">Уведомления</h2>
     <hr class="pl-20 pr-20">
-    <div class="mt-20 notification" *ngFor="let item of notificationList">
+    <div class="mt-20 notification" *ngFor="let item of notificationList" (click)="redirectToNotification(item.id)">
       <div class="pl-20 pr-20">
         <div class="mt-10">
           <div class="" [ngClass]="{'light-green2-text': !item.seen}"><b>{{item.senderEmail}} : </b></div>
