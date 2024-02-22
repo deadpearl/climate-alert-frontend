@@ -13,7 +13,7 @@ export class NewsService {
   }
 
   public getOne(id) {
-    return this.http.get('/internal/api/news/'+id).toPromise();
+    return this.http.get('/internal/api/news/' + id).toPromise();
   }
 
   public createNews(news) {

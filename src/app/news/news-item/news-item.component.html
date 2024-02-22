@@ -1,1 +1,50 @@
-<p>news-item works!</p>
+<div class="light-gray center-content">
+
+  <div class="dark-gray item-1200 h-800 center-content center-item column space-between">
+
+    <div class="light-gray item-1100 h-700 center-content center-item ">
+      <div class="column item-1000 h-600 space-between ">
+
+        <div class="row space-between">
+
+          <div class="h-250 column space-between">
+            <h1 class="">{{newItem.title}}</h1>
+            <div class="">{{newItem.publicationDate}}</div>
+            <div class="item-600">{{newItem.subtitle}}</div>
+            <hr class="item-600">
+          </div>
+
+          <div class="">
+            <img class="item-250 h-250" src="{{newItem.imageUrl}}" alt="">
+          </div>
+
+        </div>
+
+        <div class="h-400 align-start mt-20">
+          {{newItem.text}}
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div class="item-900 mt-40 center-item pointer" [routerLink]="['/news']">
+      <div class="row space-between item-80 center-item">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect x="14.1177" width="15" height="14.1176" transform="rotate(90 14.1177 0)" fill="url(#pattern0)"/>
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_451_5961" transform="matrix(0.015625 0 0 0.0166016 0 -0.03125)"/>
+            </pattern>
+            <image id="image0_451_5961" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHLSURBVHic7ZW7SgNBGEbPPwna2AVSWYhYBEXR0gewstFCEUQfQnwlicTG2iIPIawmaGFhpWAjViaOjUIIuexlLrn8p9xmv3N2mAVFURRFURRFURRl/hCArdO15W7HHP9YqrEHhcAIb6XyT+P+6vlVakdru8bIHbAUe1hgPhH2StXNyg2wGntNBBYtsm6AndhLYiHYbQO0Yg+JSNuIMRdAJ/aSCHTEmEuT1NtNsZwA37EXhUKgK5bzpN5ulgDek4/H6kblAeEQKEXe5xWBLpazpPFUhx7ZeYjQLw99orMcYZA8DJCcxQjD5GGI4CxFGCUPI+RmIcI4eRgjNs0R0shDCqlpjJBWHlIKTVOELPKQQWYaImSVh4wikxwhjzzkkJjECHnlIafAJEUoIg8Fxk9ChKLyUHB4zAgu5MHB6BgRXMmDo8EhI7iUB4djQ0RwLQ+Oh/qM4EMePHwpHxF8yYOno+oygk958HhhuYjgWx4839hFIoSQhwD/7TwRQsmTdlBRskQIKc+4MS5JEyG0PMOG+GJUhBjy9I8IQU+EfWDh7/GXWE6TxlMj9B4J/cJ/aie1FbGdAwAr5dvWdesl1hZFURRFURRFURRl3vgFZcdLzcSeLlEAAAAASUVORK5CYII="/>
+          </defs>
+        </svg>
+
+        <h4 class="center-item">Back</h4>
+      </div>
+    </div>
+
+
+  </div>
+</div>
