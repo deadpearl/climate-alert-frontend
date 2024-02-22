@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
   redirectToNotification(notificationId, notificationType) {
     console.log(notificationId);
     this.router.navigate(['/notification'], { queryParams: { id: notificationId, type: notificationType } });
-    window.location.reload();
+    // window.location.reload();
   }
   async getNotifications(userEmail: string): Promise<void> {
     try {
