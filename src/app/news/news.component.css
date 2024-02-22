@@ -1,0 +1,19 @@
+.minheight {
+  min-height: 700px;
+}
+.vertical-line {
+  border: none;
+  height: 150px;
+  border-left: 2px solid #293A23;
+  transform: rotate(180deg);
+}
+img {
+  border-radius: 17px;
+}
+.new {
+  cursor: pointer;
+}
+.title:hover {
+  color: #C9D5C8;
+  cursor: pointer;
+}

@@ -1,1 +1,30 @@
-<p>news works!</p>
+<div class="dark-gray center-content minheight">
+  <div class="mt-40 item-1000">
+    <h2 class="">{{"Latest News" }}</h2>
+    <div class="content-body mt-20">
+
+      <div class="item-1000 row" style="flex-wrap: wrap;">
+        <div class="mt-20 row new" *ngFor="let item of newsList; let i = index;" [ngClass]="{'column': i % 2 === 1}" style="flex-basis: 50%;"> <!-- Adjust flex-basis as needed -->
+          <div class="row">
+            <div class="">
+              <div class="light-gray item-450 h-200 column center-item center-content" (click)="goToEdit(item)">
+                <div class="row item-370 space-between">
+                  <img class="item-150 h-150" src="{{item.imageUrl}}" alt="">
+                  <hr class="vertical-line">
+                  <div class="item-150 title">{{ item.title }}</div>
+                </div>
+                <!-- Перемещаем {{item.publicationDate}} сюда, чтобы оно было в конце блока -->
+              </div>
+              <div class="light-gray item-450 flex-end"> <div class="mr-10 mb-10">{{formatDate(item.publicationDate)}}</div></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</div>
