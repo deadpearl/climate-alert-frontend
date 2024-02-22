@@ -51,7 +51,7 @@
         <div [routerLink]="'/map'" class="item-100 link">LIVE MAP</div>
         <div [routerLink]="'/map'" class="item-150 link">FORECAST MAP</div>
         <div [routerLink]="'/fire/real-time/catalogue'" class="item-200 link">REPORTS & STATISTICS</div>
-        <div [routerLink]="'/signup'" *ngIf="!currentUser" class="item-100 link">SIGN UP</div>
+        <div [routerLink]="'/login'" *ngIf="!currentUser" class="item-100 link">SIGN UP</div>
         <div [routerLink]="'/user/profile'" *ngIf="currentUser" class="item-250 link">WELCOME BACK, {{currentUser.user.firstName.toUpperCase()}}!</div>
       </div>
       <svg width="1100" height="1" viewBox="0 0 1100 1" fill="none" xmlns="http://www.w3.org/2000/svg">
