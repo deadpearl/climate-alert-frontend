@@ -73,6 +73,7 @@ export class UserManagementFormComponent implements OnInit {
   }
 
   goBack() {
+    this.router.navigate(['/admin/user/management']);
   }
   getUser(id) {
     this.userService.getUserById(id).then(resp => {
@@ -96,9 +97,16 @@ export class UserManagementFormComponent implements OnInit {
     });
   }
 
-  addAdminEmployee() {
-    this.adminEmployeeList.push(this.currentEmployee);
-    this.userEmployeeRoleList = this.userEmployeeRoleList.filter(employee => employee !== this.currentEmployee);
+  addAdminEmployee(item) {
+    const existingEmployee = this.adminEmployeeList.find(employee => employee.employeeEmail === item.email);
+
+    if (!existingEmployee) {
+      this.adminEmployeeList.push(item);
+    } else {
+      console.log(`Employee with email ${item.employeeEmail} already exists in adminEmployeeList.`);
+    }
+
+    // this.userEmployeeRoleList = this.userEmployeeRoleList.filter(employee => employee !== item);
     console.log(this.adminEmployeeList);
   }
 
@@ -124,5 +132,22 @@ export class UserManagementFormComponent implements OnInit {
     this.userService.registerEmployees(obj).then(resp => {
       console.log(resp);
     });
+  }
+
+  removeEmployee(item: any) {
+    // if (this.userEmployeeRoleList !== null) {
+    //   const indexInUserList = this.userEmployeeRoleList.indexOf(item);
+    //   if (indexInUserList !== -1) {
+    //     this.userEmployeeRoleList.splice(indexInUserList, 1);
+    //   }
+    // }
+
+    // Remove from adminEmployeeList
+    const indexInAdminList = this.adminEmployeeList.indexOf(item);
+    if (indexInAdminList !== -1) {
+      this.adminEmployeeList.splice(indexInAdminList, 1);
+    }
+    console.log(this.adminEmployeeList);
+    console.log(this.userEmployeeRoleList);
   }
 }

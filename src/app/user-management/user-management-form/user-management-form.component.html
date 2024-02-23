@@ -1,49 +1,63 @@
-<div class="cont">
+<div class="dark-gray center-content h-800 height-auto">
+
+  <div class="dark-gray item-1200 h-700 center-content center-item column space-between height-auto">
   <ng-container *ngIf="action==='update'">
-    <div class="account_tabs cretabs">
-      <div (click)="goBack()">Назад</div>
-      <form class="form">
-        <div class="row">
+    <div class="account_tabs cretabs mt-40">
+      <div class="row space-between item-80 center-item pointer" (click)="goBack()">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect x="14.1177" width="15" height="14.1176" transform="rotate(90 14.1177 0)" fill="url(#pattern0)"/>
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_451_5961" transform="matrix(0.015625 0 0 0.0166016 0 -0.03125)"/>
+            </pattern>
+            <image id="image0_451_5961" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHLSURBVHic7ZW7SgNBGEbPPwna2AVSWYhYBEXR0gewstFCEUQfQnwlicTG2iIPIawmaGFhpWAjViaOjUIIuexlLrn8p9xmv3N2mAVFURRFURRFURRl/hCArdO15W7HHP9YqrEHhcAIb6XyT+P+6vlVakdru8bIHbAUe1hgPhH2StXNyg2wGntNBBYtsm6AndhLYiHYbQO0Yg+JSNuIMRdAJ/aSCHTEmEuT1NtNsZwA37EXhUKgK5bzpN5ulgDek4/H6kblAeEQKEXe5xWBLpazpPFUhx7ZeYjQLw99orMcYZA8DJCcxQjD5GGI4CxFGCUPI+RmIcI4eRgjNs0R0shDCqlpjJBWHlIKTVOELPKQQWYaImSVh4wikxwhjzzkkJjECHnlIafAJEUoIg8Fxk9ChKLyUHB4zAgu5MHB6BgRXMmDo8EhI7iUB4djQ0RwLQ+Oh/qM4EMePHwpHxF8yYOno+oygk958HhhuYjgWx4839hFIoSQhwD/7TwRQsmTdlBRskQIKc+4MS5JEyG0PMOG+GJUhBjy9I8IQU+EfWDh7/GXWE6TxlMj9B4J/cJ/aie1FbGdAwAr5dvWdesl1hZFURRFURRFURRl3vgFZcdLzcSeLlEAAAAASUVORK5CYII="/>
+          </defs>
+        </svg>
+
+        <h4 class="">Back</h4>
+      </div>
+      <form class="column h-450 space-between mt-40 ">
+        <div class="row item-700 space-between">
           <label> Имя <br>
-            <input type="text" placeholder="Имя" [(ngModel)]="updateFormData.firstName" name="firstName">
+            <input type="text" class="item-230 h-25 pl-20" placeholder="Имя" [(ngModel)]="updateFormData.firstName" name="firstName">
           </label>
 
           <label> Фамилия <br>
-            <input type="text" placeholder="Фамилия" [(ngModel)]="updateFormData.lastName" name="lastName">
+            <input type="text" class="item-230 h-25 pl-20" placeholder="Фамилия" [(ngModel)]="updateFormData.lastName" name="lastName">
           </label>
         </div>
 
-        <div class="row">
+        <div class="row item-700 space-between">
           <label> Отчество <br>
-            <input type="text" placeholder="Отчество" [(ngModel)]="updateFormData.middleName" name="middleName">
+            <input type="text" class="item-230 h-25 pl-20" placeholder="Отчество" [(ngModel)]="updateFormData.middleName" name="middleName">
           </label>
 
           <label> Е-мэйл <br>
-            <input type="text" placeholder="Е-мэйл" [(ngModel)]="updateFormData.email" name="email">
+            <input type="text" class="item-230 h-25 pl-20" placeholder="Е-мэйл" [(ngModel)]="updateFormData.email" name="email">
           </label>
         </div>
 
-        <div class="row">
+        <div class="row item-700 space-between">
           <label> Роль <br>
-            <select class="selectinput" [(ngModel)]="updateFormData.role" name="role">
+            <select class="selectinput" class="item-250 h-40 pl-20" [(ngModel)]="updateFormData.role" name="role">
               <option *ngFor="let role of roles" [value]="role.name">{{role.nameRu}}</option>
             </select>
           </label>
 
           <label> День Рождения <br>
-            <input type="date" placeholder="День Рождения" [(ngModel)]="updateFormData.birthDate" name="birthDate">
+            <input type="date" class="item-230 h-25 pl-20" placeholder="День Рождения" [(ngModel)]="updateFormData.birthDate" name="birthDate">
           </label>
         </div>
 
-        <div class="row">
+        <div class="row item-700 space-between">
           <label> Номер Телефона <br>
-            <input type="text" placeholder="Номер Телефона" [(ngModel)]="updateFormData.phoneNumber" name="phoneNumber">
+            <input type="text" class="item-230 h-25 pl-20" placeholder="Номер Телефона" [(ngModel)]="updateFormData.phoneNumber" name="phoneNumber">
           </label>
           <label> Город <br>
-            <input type="text" placeholder="Город" [(ngModel)]="updateFormData.city" name="city">
+            <input type="text" class="item-230 h-25 pl-20" placeholder="Город" [(ngModel)]="updateFormData.city" name="city">
           </label>
         </div>
-        <button class="button" type="submit" (click)="updateUser()">Сохранить</button>
+        <button class="item-120 h-40 dark-green1-button white" type="submit" (click)="updateUser()">Сохранить</button>
       </form>
     </div>
   </ng-container>
@@ -51,79 +65,93 @@
     <div class="account_tabs cretabs">
       <div (click)="goBack()">Назад</div>
             <form class="form">
-              <div class="row">
+              <div class="row item-700 space-between">
                 <label> Имя <br>
-                  <input type="text" placeholder="Имя" [(ngModel)]="createFormData.firstName" name="firstName">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Имя" [(ngModel)]="createFormData.firstName" name="firstName">
                 </label>
 
                 <label> Фамилия <br>
-                  <input type="text" placeholder="Фамилия" [(ngModel)]="createFormData.lastName" name="lastName">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Фамилия" [(ngModel)]="createFormData.lastName" name="lastName">
                 </label>
               </div>
 
-              <div class="row">
+              <div class="row item-700 space-between">
                 <label> Отчество <br>
-                  <input type="text" placeholder="Отчество" [(ngModel)]="createFormData.middleName" name="middleName">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Отчество" [(ngModel)]="createFormData.middleName" name="middleName">
                 </label>
 
                 <label> Е-мэйл <br>
-                  <input type="text" placeholder="Е-мэйл" [(ngModel)]="createFormData.email" name="email">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Е-мэйл" [(ngModel)]="createFormData.email" name="email">
                 </label>
               </div>
 
-              <div class="row">
+              <div class="row item-700 space-between">
                 <label> Роль <br>
-                  <select class="selectinput" [(ngModel)]="createFormData.role" name="role">
+                  <select class="selectinput" class="item-250 h-40 pl-20" [(ngModel)]="createFormData.role" name="role" class="item-230 h-25 pl-20">
                     <option *ngFor="let role of roles" [value]="role.name">{{role.nameRu}}</option>
                   </select>
                 </label>
 
                 <label> День Рождения <br>
-                  <input type="date" placeholder="День Рождения" [(ngModel)]="createFormData.birthDate" name="birthDate">
+                  <input type="date" class="item-230 h-25 pl-20" placeholder="День Рождения" [(ngModel)]="createFormData.birthDate" name="birthDate">
                 </label>
               </div>
 
-              <div class="row">
+              <div class="row item-700 space-between">
                 <label> Номер Телефона <br>
-                  <input type="text" placeholder="Номер Телефона" [(ngModel)]="createFormData.phoneNumber" name="phoneNumber">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Номер Телефона" [(ngModel)]="createFormData.phoneNumber" name="phoneNumber">
                 </label>
 
                 <label> Пароль <br>
-                  <input type="text" placeholder="Пароль" [(ngModel)]="createFormData.password" name="password">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Пароль" [(ngModel)]="createFormData.password" name="password">
                 </label>
               </div>
-              <div class="row">
+              <div class="row item-700 space-between">
                 <label> Город <br>
-                  <input type="text" placeholder="Город" [(ngModel)]="createFormData.city" name="city">
+                  <input type="text" class="item-230 h-25 pl-20" placeholder="Город" [(ngModel)]="createFormData.city" name="city">
                 </label>
               </div>
 
-              <button class="button" type="submit" (click)="createUser()">Сохранить</button>
+              <button class="item-120 h-40 dark-green1-button white" type="submit" (click)="createUser()">Сохранить</button>
             </form>
     </div>
   </ng-container>
   <ng-container *ngIf="action==='addEmployee'">
-    <div class="content_tbox auditinfo_tbox stable_box ver" *ngIf="userEmployeeRoleList">
+    <div class="flex-start item-800">
+      <div class="mt-40 row space-between item-80 center-item pointer " (click)="goBack()">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect x="14.1177" width="15" height="14.1176" transform="rotate(90 14.1177 0)" fill="url(#pattern0)"/>
+          <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_451_5961" transform="matrix(0.015625 0 0 0.0166016 0 -0.03125)"/>
+            </pattern>
+            <image id="image0_451_5961" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHLSURBVHic7ZW7SgNBGEbPPwna2AVSWYhYBEXR0gewstFCEUQfQnwlicTG2iIPIawmaGFhpWAjViaOjUIIuexlLrn8p9xmv3N2mAVFURRFURRFURRl/hCArdO15W7HHP9YqrEHhcAIb6XyT+P+6vlVakdru8bIHbAUe1hgPhH2StXNyg2wGntNBBYtsm6AndhLYiHYbQO0Yg+JSNuIMRdAJ/aSCHTEmEuT1NtNsZwA37EXhUKgK5bzpN5ulgDek4/H6kblAeEQKEXe5xWBLpazpPFUhx7ZeYjQLw99orMcYZA8DJCcxQjD5GGI4CxFGCUPI+RmIcI4eRgjNs0R0shDCqlpjJBWHlIKTVOELPKQQWYaImSVh4wikxwhjzzkkJjECHnlIafAJEUoIg8Fxk9ChKLyUHB4zAgu5MHB6BgRXMmDo8EhI7iUB4djQ0RwLQ+Oh/qM4EMePHwpHxF8yYOno+oygk958HhhuYjgWx4839hFIoSQhwD/7TwRQsmTdlBRskQIKc+4MS5JEyG0PMOG+GJUhBjy9I8IQU+EfWDh7/GXWE6TxlMj9B4J/cJ/aie1FbGdAwAr5dvWdesl1hZFURRFURRFURRl3vgFZcdLzcSeLlEAAAAASUVORK5CYII="/>
+          </defs>
+        </svg>
+
+        <h4 class="">Back</h4>
+      </div>
+    </div>
+
+    <div class="h-700 height-auto" *ngIf="userEmployeeRoleList">
       <div class="search-result d-flex justify-content-between">
-        <div class="row">
-          <button class="button" (click)="addAdminEmployee()" [class.disabled]="!currentEmployee" [disabled]="!currentEmployee">
-            {{"Добавить" }}
-          </button>
-        </div>
       </div>
 
-      <table class="stable ver auditinfo_table meetingusers_table">
+      <table class="item-800 center-text mt-20">
         <thead>
         <tr>
           <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">№</a>
+            <div  (click)="$event.preventDefault();">№</div>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Имя" }}</a>
+            <div  (click)="$event.preventDefault();">{{"Имя" }}</div>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Фамилия" }}</a>
+            <div  (click)="$event.preventDefault();">{{"Фамилия" }}</div>
+          </th>
+          <th class="stable_hdr">
+            <div  (click)="$event.preventDefault();">{{"Действие" }}</div>
           </th>
         </tr>
         </thead>
@@ -137,23 +165,29 @@
           <td>{{i + 1}}</td>
           <td>{{item.firstName}}</td>
           <td>{{item.lastName}}</td>
+          <td><button class="item-50 h-30 dark-green1-button white" (click)="addAdminEmployee(item)">
+            {{"+" }}
+          </button></td>
         </tr>
         </tbody>
 
       </table>
-      <h2 class="audit_header">Прикрепленные сотрудники</h2>
-      <table class="stable ver auditinfo_table meetingusers_table">
+      <h2 class="audit_header mt-40">Прикрепленные сотрудники</h2>
+      <table class="item-800 center-text mt-20">
         <thead>
         <tr>
           <!-- Чтобы добавить треугольник добавьте класс .sort к блоку th.stable_hdr, чтобы перевернуть треугольник добавьте ещё и класс .up к тому же блоку -->
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">№</a>
+            <div  (click)="$event.preventDefault();">№</div>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Имя" }}</a>
+            <div  (click)="$event.preventDefault();">{{"Имя" }}</div>
           </th>
           <th class="stable_hdr">
-            <a href="#" (click)="$event.preventDefault();">{{"Фамилия" }}</a>
+            <div  (click)="$event.preventDefault();">{{"Фамилия" }}</div>
+          </th>
+          <th class="stable_hdr">
+            <div  (click)="$event.preventDefault();">{{"Действие" }}</div>
           </th>
         </tr>
         </thead>
@@ -167,14 +201,18 @@
           <td>{{i + 1}}</td>
           <td>{{item.firstName}}</td>
           <td>{{item.lastName}}</td>
+          <td><button class="item-50 h-30 red-button white" (click)="removeEmployee(item)">
+            {{"-" }}
+          </button></td>
         </tr>
         </tbody>
 
       </table>
 
-      <button class="button" (click)="saveAdminEmployee()">
+      <button class="item-120 h-40 dark-green1-button white mt-40" (click)="saveAdminEmployee()">
         {{"Сохранить" }}
       </button>
     </div>
   </ng-container>
+</div>
 </div>
