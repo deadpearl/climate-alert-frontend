@@ -42,13 +42,32 @@ export class FireRtIncidentCatologueComponent implements OnInit {
   listFires: any = null;
   currentFire: any = false;
   currentUser: any;
-  activeTab: any = 1;
-
+  activeTab: any = null;
+  isAdmin: any = false;
+  isEmployee: any = false;
+  isUser: any = false;
   activateTab(tabNumber: number): void {
     this.activeTab = tabNumber;
   }
-  ngOnInit() {
-    this.currentUser = this.authService.getCurrentUser();
+  async ngOnInit() {
+    this.authService.getCurrentUser().then(resp => {
+      this.currentUser = resp;
+      console.log(resp);
+      console.log(this.currentUser);
+      if (this.currentUser.user.role === 'ROLE_ADMIN') {
+        console.log('ROLE_ADMIN');
+        this.isAdmin = true;
+        this.activeTab = 1;
+      } else if (this.currentUser.user.role === 'ROLE_EMPLOYEE') {
+        console.log('ROLE_EMPLOYEE');
+        this.isEmployee = true;
+        this.activeTab = 2;
+      } else {
+        console.log('ROLE_user');
+        this.activeTab = 5;
+        this.isUser = true;
+      }
+    });
   }
 
   findFire() {
