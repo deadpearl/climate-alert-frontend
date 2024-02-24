@@ -95,16 +95,19 @@
               <div class="item-400 h-500 center-content center-item">
                 <div class="column item-330  h-400 space-between">
                   <div class="">Time Period</div>
-                  <input type="date" class="">
+                  <input [(ngModel)]="dateFrom" type="date" class="">
                   <div class="">to</div>
-                  <input type="date" class="">
+                  <input [(ngModel)]="dateTo" type="date" class="">
                   <div class="">Region</div>
-                  <input type="date" class="">
+                  <div class="">
+                    <button class="item-330 h-30 dark-gray-button black" *ngIf="!region" (click)="changeRegion()">Select</button>
+                    <button class="item-330 h-30 dark-gray-button black" *ngIf="region" (click)="changeRegion()">{{region}}</button>
+                  </div>
                   <div class="">Confidence*</div>
                   <input type="date" class="">
                   <div class="row item-230 space-between mt-20">
-                    <button class="item-90 h-30 dark-green1-button white">Apply</button>
-                    <button class="item-90 h-30 dark-gray white">Reset</button>
+                    <button class="item-90 h-30 dark-green1-button white" (click)="search()">Apply</button>
+                    <button class="item-90 h-30 dark-gray-button black" (click)="reset()">Reset</button>
                   </div>
                 </div>
               </div>
