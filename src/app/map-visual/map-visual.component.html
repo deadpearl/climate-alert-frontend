@@ -104,7 +104,9 @@
                     <button class="item-330 h-30 dark-gray-button black" *ngIf="region" (click)="changeRegion()">{{region}}</button>
                   </div>
                   <div class="">Confidence*</div>
-                  <input type="date" class="">
+                  <select class="" [(ngModel)]="confidence">
+                    <option *ngFor="let month of confidenceList" [value]="month.value">{{month.title}}</option>
+                  </select>
                   <div class="row item-230 space-between mt-20">
                     <button class="item-90 h-30 dark-green1-button white" (click)="search()">Apply</button>
                     <button class="item-90 h-30 dark-gray-button black" (click)="reset()">Reset</button>

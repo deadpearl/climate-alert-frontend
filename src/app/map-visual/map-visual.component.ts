@@ -19,6 +19,12 @@ export class MapVisualComponent implements OnInit {
   regionObject: any = null;
   dateFrom: any = null;
   dateTo: any = null;
+  confidenceList: any = [
+    { title: 'High',  value: 'h' },
+    { title: 'Nominal',  value: 'n' },
+    { title: 'Low',  value: 'l' },
+  ];
+  confidence: any = null;
 
   constructor(private api: HttpClient, private modalService: ModalService) {
   }
@@ -77,18 +83,19 @@ export class MapVisualComponent implements OnInit {
   }
 
   search() {
-    this.markersData = null;
+    this.initializeMap();
     const fireDataDTO = {
       latitude: this.regionObject === null ? null : this.regionObject.latitude,
       longitude: this.regionObject === null ? null : this.regionObject.longitude, // Fix typo in longitude
       dateFrom: this.dateFrom,
-      dateTo: this.dateTo
+      dateTo: this.dateTo,
+      confidence: this.confidence
     };
 
     this.api.post(`/internal/api/data/RTData/getByFilter`, fireDataDTO).toPromise().then(resp => {
       this.markersData = resp;
 
-      // // Clear existing markers
+      // Clear existing markers
       // this.map.remove();
 
       // Add new markers
@@ -117,14 +124,6 @@ export class MapVisualComponent implements OnInit {
           markerElement.style.backgroundColor = '#FAC213'; // Set background color
         }
         markerElement.style.borderRadius = '50%'; // Make it round (for circular shape)
-
-        markerElement.addEventListener('mouseenter', () => {
-          markerElement.classList.add('hovered-marker'); // Apply hover effect class
-        });
-
-        markerElement.addEventListener('mouseleave', () => {
-          markerElement.classList.remove('hovered-marker'); // Remove hover effect class
-        });
         new mapboxgl.Marker(markerElement)
           .setLngLat([longitude, latitude])
           .setPopup(popup)
@@ -135,50 +134,11 @@ export class MapVisualComponent implements OnInit {
     });
   }
 
-
-  // search() {
-  //   const fireDataDTO = {
-  //     latitude: this.regionObject === null ? null : this.regionObject.latitude,
-  //     longitude: this.regionObject === null ? null : this.regionObject.latitude,
-  //     dateFrom: this.dateFrom,
-  //     dateTo: this.dateTo
-  //   };
-  //   console.log(fireDataDTO);
-  //   this.api.post(`/internal/api/data/RTData/getByFilter`, fireDataDTO).toPromise().then(resp => {
-  //     this.markersData = resp;
-  //     console.log(this.markersData[0].latitude);
-  //     const markers = []; // массив для хранения маркеров
-  //     // tslint:disable-next-line:prefer-for-of
-  //     for (let i = 0; i < this.markersData.length; i++) {
-  //       const marker = this.markersData[i];
-  //       const latitude = parseFloat(marker.latitude);
-  //       const longitude = parseFloat(marker.longitude);
-  //
-  //       const popup = new mapboxgl.Popup()
-  //         .setHTML(`
-  //       <div class='fire-info' >
-  //         <div style='color: red;'><strong>Date:</strong> ${marker.acqDate}</div>
-  //         <div><strong>Time:</strong> ${marker.acqTime}</div>
-  //       </div>
-  //     `);
-  //       new mapboxgl.Marker()
-  //         .setLngLat([longitude, latitude])
-  //         .setPopup(popup)
-  //         .addTo(this.map);
-  //       markers.push(marker);
-  //       console.log(markers);
-  //     }
-  //   }).catch(error => {
-  //     console.error('Error fetching markers:', error);
-  //   });
-  // }
-
   reset() {
     this.dateFrom = null;
     this.dateTo = null;
     this.regionObject = null;
     this.region = null;
-    this.markersData = null;
   }
 
   initializeMap() {
@@ -188,11 +148,10 @@ export class MapVisualComponent implements OnInit {
     this.map = new mapboxgl.Map({
       container: 'map', // Specify your container ID
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [0, 0], // Initial center of the map
+      center: [66.9237, 48.0196], // Initial center of the map
       zoom: 2 // Initial zoom level
     });
 
-    // mapboxgl.accessToken = 'pk.eyJ1IjoiZGVhZHBlYXJsIiwiYSI6ImNscGlibTE5eDBhZTgycXQ3c2Voa3lubjIifQ.P2SFPkK1FaRDrzfwcDGNAA';
     // this.map = new mapboxgl.Map({
     //   container: 'map', // container ID
     //   style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
