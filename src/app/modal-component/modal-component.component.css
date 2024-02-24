@@ -1,0 +1,11 @@
+.regions {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.region-item {
+  padding: 5px;
+  cursor: pointer;
+}
+.region-item:hover {
+  background: #EAEAEA;
+}

@@ -1,4 +1,4 @@
-<div class="" *ngIf="!assigned && !approving">
+<div class="" *ngIf="!assigned && !approving && !isRegion">
   <div class="modal-header" >
     <h4 class="modal-title">{{ title }}</h4>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
@@ -66,3 +66,55 @@
 </div>
 
 
+<div class="" *ngIf="isRegion">
+  <div class="modal-header">
+    <h3 class="modal-title">{{ title }}</h3>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body h-250 center-content center-item pb-10 align-start height-auto2">
+    <div class="column space-between item-450 h-220 height-auto2">
+      <h3>Choose region</h3>
+        <div class="row item-400 h-100 center-content center-item space-between align-start">
+          <input class="item-150" [(ngModel)]="region" placeholder="Region" />
+          <button type="button" class="ml-20 dark-gray-button h-25 item-90" (click)="searchRegion()">Search</button>
+        </div>
+        <div class="item-300 center-content center-item mt-5" *ngIf="regionsVisible">
+          <div class="item-180 h-100 regions dark-gray ">
+            <div class="region-item" *ngFor="let reg of regionList.data" (click)="chooseRegion(reg)">
+              <div class="">{{reg.name}}</div>
+            </div>
+          </div>
+        </div>
+      <div class="mt-20 row item-400 h-100 center-content center-item space-between align-start height-auto2">
+        <select class="item-150" [(ngModel)]="placeSelect">
+          <option value="defaultEmployeeValue" disabled selected>Choose</option>
+          <option *ngFor="let item of placeSelectList" [ngValue]="item">{{item}}</option>
+        </select>
+        <button type="button" class="ml-20 dark-gray-button h-25 item-90" [ngClass]="{'disabled':!placeButton}" [disabled]="!placeButton" (click)="searchPlace()">Search</button>
+      </div>
+      <div class="item-300 center-content center-item mt-5" *ngIf="placesVisible">
+        <div class="item-180 h-100 regions dark-gray ">
+          <div class="region-item" *ngFor="let reg of placeList.data" (click)="choosePlace(reg)">
+            <div class="">{{reg.name}}</div>
+          </div>
+        </div>
+      </div>
+      <h4 class="" *ngIf="place">Your choice: {{place}}</h4>
+
+
+<!--      <div class="column center h-150">-->
+<!--        <span class="">{{"Выберите действие" }}:</span><br>-->
+<!--        <select class="" [(ngModel)]="action">-->
+<!--          <option value="defaultEmployeeValue" disabled selected>Не выбрано</option>-->
+<!--          <option *ngFor="let item of actionList" [ngValue]="item">{{item}}</option>-->
+<!--        </select>-->
+<!--      </div>-->
+    </div>
+
+  </div>
+  <div class="modal-footer pb-10">
+    <button type="button" class="dark-green1-button h-25 item-120 white" (click)="saveRegion()">Save</button>
+  </div>
+</div>
