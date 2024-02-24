@@ -73,14 +73,14 @@ export class FireRtIncidentCatologueComponent implements OnInit {
   findFire() {
     console.log(this.yearId);
     console.log(this.monthId);
-    if (this.currentUser.__zone_symbol__value.user.role === 'ROLE_ADMIN') {
+    if (this.currentUser.user.role === 'ROLE_ADMIN') {
       this.rtReportService.getRTDataSearch(this.yearId, this.monthId, null).
       then((resp: any) => {
           this.listFires = resp;
         }
       );
     } else {
-      this.rtReportService.getRTDataSearch(this.yearId, this.monthId, this.currentUser.__zone_symbol__value.user.email).
+      this.rtReportService.getRTDataSearch(this.yearId, this.monthId, this.currentUser.user.email).
       then((resp: any) => {
           this.listFires = resp;
         }
