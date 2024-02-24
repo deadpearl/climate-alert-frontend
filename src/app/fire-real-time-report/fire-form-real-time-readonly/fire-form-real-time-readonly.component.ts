@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
+import {AuthService} from '../../service/auth.service';
 
 @Component({
   selector: 'app-fire-form-real-time-readonly',
@@ -8,7 +9,8 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./fire-form-real-time-readonly.component.css']
 })
 export class FireFormRealTimeReadonlyComponent implements OnInit {
-  constructor( private activatedRoute: ActivatedRoute, private api: HttpClient, private router: Router) { }
+  constructor( private activatedRoute: ActivatedRoute, private api: HttpClient, private router: Router,
+               private authService: AuthService) { }
   reportId: any;
   readonly = false;
   formData: any = null;
@@ -25,6 +27,9 @@ export class FireFormRealTimeReadonlyComponent implements OnInit {
     });
     console.log(this.reportId + ' ' + this.readonly);
     this.getFormData(this.reportId);
+  }
+  getUrlPosition(url) {
+    return this.router.url.includes(url);
   }
 
   getFormData(reportId: any) {
@@ -65,6 +70,10 @@ export class FireFormRealTimeReadonlyComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['fire/report/real-time']);
+    if (this.getUrlPosition('admin')) {
+      this.router.navigate(['admin/fire/real-time/catalogue']);
+    } else {
+      this.router.navigate(['fire/real-time/catalogue']);
+    }
   }
 }
