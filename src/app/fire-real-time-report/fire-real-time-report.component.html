@@ -51,7 +51,7 @@
           </thead>
           <tbody *ngIf="listFires && listFires.length === 0">
           <tr>
-            <td colspan="7" class="text-center">{{"В перечне ещё нет аудиторских мероприятий" }}</td>
+            <td colspan="7" class="text-center">{{"В перечне ещё нет отчетов" }}</td>
           </tr>
           </tbody>
           <tbody *ngIf="listFires && listFires.length">
@@ -72,7 +72,7 @@
         <div class="item-800 mt-20 h-55 light-gray center-item center-content">
           <div class="item-500 row space-between ">
             <h4 class="ml-10 row center-text center-item">Статус : <div class="blue"> {{currentFire.status.name}}</div> </h4>
-            <button class="item-200 h-40 dark-green1-button white" (click)="assign()"><h4>Отправить на согласование</h4></button>
+            <button class="item-200 h-40 dark-green1-button white" (click)="assign()" [disabled]="!isEditor()" [ngClass]="{'disabled':!isEditor()}"><h4>Отправить на согласование</h4></button>
           </div>
         </div>
         <hr class="item-800 mt-40">
@@ -83,8 +83,8 @@
           </div>
           <div class="item-800" [class.active]="activeTab === 1">
             <div class="mb-10 mt-20 row space-between item-250">
-              <button class="item-120 h-40 dark-green1 white" (click)="goToReadOnly();">Просмотр</button>
-              <button class="item-120 h-40 dark-green1 white" (click)="goToEdit();">Изменить</button>
+              <button class="item-120 h-40 dark-green1-button white" (click)="goToReadOnly();">Просмотр</button>
+              <button class="item-120 h-40 dark-green1-button white" (click)="goToEdit();" [disabled]="!isEditor()" [ngClass]="{'disabled':!isEditor()}">Изменить</button>
             </div>
             <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
           </div>

@@ -61,6 +61,10 @@
 .disabled {
   background: #EAEAEA;
 }
+.disabled:hover {
+  cursor: default;
+  background: #EAEAEA;
+}
 .blue {
   color: #1C229F;
 }

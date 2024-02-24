@@ -66,6 +66,9 @@ export class FireRealTimeReportComponent implements OnInit {
       }
     });
   }
+  isEditor() {
+    return this.employeeId === this.currentUser.user.email;
+  }
 
   getReportsByRTId(id) {
     this.rtReportService.getRTReportByRTDataId(id).then(resp => {
@@ -88,21 +91,41 @@ export class FireRealTimeReportComponent implements OnInit {
   goToReadOnly() {
     console.log('gotoreadonly');
     if (this.activeTab === 1) {
-      this.router.navigate(['fire/report/real-time/form'], {
-        queryParams: {
-          reportId: this.currentFire.id,
-          readonly: true,
-        },
-        queryParamsHandling: 'merge'
-      });
+      if (this.currentUser.user.role === 'ROLE_ADMIN') {
+        this.router.navigate(['admin/fire/report/real-time/form'], {
+          queryParams: {
+            reportId: this.currentFire.id,
+            readonly: true,
+          },
+          queryParamsHandling: 'merge'
+        });
+      } else {
+        this.router.navigate(['fire/report/real-time/form'], {
+          queryParams: {
+            reportId: this.currentFire.id,
+            readonly: true,
+          },
+          queryParamsHandling: 'merge'
+        });
+      }
     } else {
-      this.router.navigate(['admin/fire/report/real-time-economic-damage/form'], {
-        queryParams: {
-          reportId: this.currentFire.economicDamageReport.id,
-          readonly: true,
-        },
-        queryParamsHandling: 'merge'
-      });
+      if (this.currentUser.user.role === 'ROLE_ADMIN') {
+        this.router.navigate(['admin/fire/report/real-time-economic-damage/form'], {
+          queryParams: {
+            reportId: this.currentFire.economicDamageReport.id,
+            readonly: true,
+          },
+          queryParamsHandling: 'merge'
+        });
+      } else {
+        this.router.navigate(['fire/report/real-time-economic-damage/form'], {
+          queryParams: {
+            reportId: this.currentFire.economicDamageReport.id,
+            readonly: true,
+          },
+          queryParamsHandling: 'merge'
+        });
+      }
     }
   }
   get listIsEmpty() {
