@@ -40,8 +40,17 @@
 .dark-gray {
   background: #D0D0D0;
 }
+.dark-gray-button {
+  background: #D0D0D0;
+}
+.dark-gray-button:hover {
+  background: #adacac;
+}
 .white {
   color: white;
+}
+.black {
+  color: #000000;
 }
 .gray-text {
   color: #565555;
