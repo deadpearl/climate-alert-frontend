@@ -36,3 +36,6 @@ img {
   cursor: pointer;
   color: #95989b;
 }
+.active {
+  font-weight: bold;
+}
