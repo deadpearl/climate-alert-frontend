@@ -37,6 +37,7 @@ import { IncomingAssignComponent } from './incoming-assign/incoming-assign.compo
 import {LoaderInterceptor} from './http-interceptors/loader.interceptor';
 import { NewsItemComponent } from './news/news-item/news-item.component';
 import { NotificationComponent } from './notification/notification.component';
+import { MapForecastComponent } from './map-visual/map-forecast/map-forecast.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { NotificationComponent } from './notification/notification.component';
     IncomingAssignComponent,
     NewsItemComponent,
     NotificationComponent,
+    MapForecastComponent,
   ],
     imports: [
         BrowserModule,

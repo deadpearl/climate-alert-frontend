@@ -26,6 +26,7 @@ import {NewsEditComponent} from './news/news-form/news-edit/news-edit.component'
 import {AuthGuard} from './service/auth.guard';
 import {NewsItemComponent} from "./news/news-item/news-item.component";
 import {NotificationComponent} from "./notification/notification.component";
+import {MapForecastComponent} from "./map-visual/map-forecast/map-forecast.component";
 
 
 const routes: Routes = [
@@ -34,8 +35,12 @@ const routes: Routes = [
     component: MainComponent, canActivate: [AuthGuard], data: { requiresAuth: false }
   },
   {
-    path: 'map',
+    path: 'map/real-time',
     component: MapVisualComponent, canActivate: [AuthGuard], data: { requiresAuth: false }
+  },
+  {
+    path: 'map/forecast',
+    component: MapForecastComponent, canActivate: [AuthGuard], data: { requiresAuth: false }
   },
   {
     path: 'auth',

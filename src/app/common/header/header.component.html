@@ -51,8 +51,8 @@
     <div class="menu pb-80">
       <div class="items row space-between ml-20">
         <div class="item-100">ABOUT US</div>
-        <div [routerLink]="'/map'" class="item-100 link">LIVE MAP</div>
-        <div [routerLink]="'/map'" class="item-150 link">FORECAST MAP</div>
+        <div [routerLink]="'/map/real-time'" class="item-100 link">LIVE MAP</div>
+        <div [routerLink]="'/map/forecast'" class="item-150 link">FORECAST MAP</div>
         <div [routerLink]="'/fire/real-time/catalogue'" class="item-200 link">REPORTS & STATISTICS</div>
         <div [routerLink]="'/login'" *ngIf="!currentUser" class="item-100 link">SIGN UP</div>
         <div [routerLink]="'/user/profile'" *ngIf="currentUser" class="item-250 link">WELCOME BACK, {{currentUser.user.firstName.toUpperCase()}}!</div>
