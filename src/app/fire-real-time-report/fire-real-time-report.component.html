@@ -36,16 +36,13 @@
               <div (click)="$event.preventDefault();">№</div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Время" }}</div>
+              <div (click)="$event.preventDefault();">{{"Time" }}</div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Ширина" }}</div>
+              <div (click)="$event.preventDefault();">{{"Region" }}</div>
             </th>
             <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Долгота" }} </div>
-            </th>
-            <th class="stable_hdr">
-              <div (click)="$event.preventDefault();">{{"Редактирующий персонал" }}</div>
+              <div (click)="$event.preventDefault();">{{"Editor" }}</div>
             </th>
           </tr>
           </thead>
@@ -57,9 +54,8 @@
           <tbody *ngIf="listFires && listFires.length">
           <tr *ngFor="let item of listFires; let i = index;" (click)="selectEvent(item); getDocumentPreview()" class="object-row" [class.selected-object]="currentFire && currentFire.id === item.id">
             <td>{{i + 1}}</td>
-            <td>{{item.startDate}}</td>
-            <td>{{item.latitude}}</td>
-            <td>{{item.longitude}}</td>
+            <td>{{formatDate(item.startDate)}}</td>
+            <td>{{item.region}}</td>
             <td *ngFor="let editor of item.editors; let i = index;">{{editor.email}}</td>
           </tr>
           </tbody>
@@ -84,7 +80,7 @@
           <div class="item-800" [class.active]="activeTab === 1">
             <div class="mb-10 mt-20 row space-between item-250">
               <button class="item-120 h-40 dark-green1-button white" (click)="goToReadOnly();">Просмотр</button>
-              <button class="item-120 h-40 dark-green1-button white" (click)="goToEdit();" [disabled]="!isEditor()" [ngClass]="{'disabled':!isEditor()}">Изменить</button>
+              <button class="item-120 h-40 dark-green1-button white" (click)="goToEdit();" [disabled]="!isEditor() || currentFire.status.name==='согласовано'|| currentFire.status.name==='на согласовании'" [ngClass]="{'disabled':!isEditor()}">Изменить</button>
             </div>
             <ngx-extended-pdf-viewer [src]="reportPdf" [useBrowserLocale]="true" [height]="'552px'"></ngx-extended-pdf-viewer>
           </div>

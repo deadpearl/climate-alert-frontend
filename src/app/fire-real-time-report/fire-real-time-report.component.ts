@@ -164,6 +164,17 @@ export class FireRealTimeReportComponent implements OnInit {
       this.getDocumentPreview();
     }
   }
+  formatDate(inputDate) {
+    const date = new Date(inputDate);
+
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');  // Добавляем 1, так как месяцы в JavaScript начинаются с 0
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
+  }
   async getRealTimeEconomicDocumentPreview() {
     this.reportPdf = null;
     this.reportPdf = await this.rtReportService.getRTEconomicReportPdf(this.currentFire.id, 'pdf', 'ru');
