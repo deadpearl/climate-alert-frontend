@@ -14,9 +14,6 @@
                 №
               </th>
               <th class="stable_hdr">
-                {{"Получатель" }}
-              </th>
-              <th class="stable_hdr">
                 {{"Отправитель" }}
               </th>
               <th class="stable_hdr">
@@ -42,9 +39,8 @@
 
             <tr *ngFor="let item of assignmentList; let i = index;" (click)="selectEvent(item); getDocumentPreview()" class="object-row" [class.selected-object]="currentAssignment && currentAssignment.id === item.id">
               <td>{{i + 1}}</td>
-              <td>{{item.userIncoming}}</td>
               <td>{{item.userOutComing}}</td>
-              <td>{{item.sentDateTime}}</td>
+              <td>{{formatDate(item.sentDateTime)}}</td>
               <td>{{item.name}}</td>
               <td><button class="light-violet h-25 item-80" (click)="editAssignment(item)">Edit</button></td>
 

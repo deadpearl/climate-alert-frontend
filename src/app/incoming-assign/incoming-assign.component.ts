@@ -40,7 +40,17 @@ export class IncomingAssignComponent implements OnInit {
   get listIsEmpty() {
     return this.assignmentList === false || this.assignmentList === null || Object.keys(this.assignmentList).length === 0;
   }
+  formatDate(inputDate) {
+    const date = new Date(inputDate);
 
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');  // Добавляем 1, так как месяцы в JavaScript начинаются с 0
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
+  }
   selectEvent(item: any) {
     this.currentAssignment = item;
     console.log(this.currentAssignment);
