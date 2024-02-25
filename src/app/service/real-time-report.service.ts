@@ -35,6 +35,9 @@ export class RealTimeReportService {
   createNewReport(data) {
     return this.http.post(`/internal/report/create/fire-real-time`, data).toPromise();
   }
+  getRegion(id) {
+    return this.http.get(`/internal/api/data/Regions/get-by-id?id=${id}`).toPromise();
+  }
   getListEmployeesByEmployee(email) {
     return this.http.get(`/internal/api/public/user/v1/users/get/admin-employees/by-employee?email=${email}`).toPromise();
   }

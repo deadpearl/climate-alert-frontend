@@ -63,8 +63,8 @@
                       <th class="">№</th>
                       <th class="">Дата</th>
                       <th class=" ">Время</th>
-                      <th class=" ">Ширина</th>
-                      <th class=" ">Долгота</th>
+                      <th class=" ">Код Региона</th>
+                      <th class=" ">Сила Огня</th>
                     </tr>
                     </thead>
                     <tbody *ngIf="listFires && listFires.length === 0">
@@ -82,10 +82,10 @@
                         {{item.acqTime}}
                       </td>
                       <td>
-                        {{item.latitude}}
+                        {{item.regionId}}
                       </td>
                       <td>
-                        {{item.longitude}}
+                        {{item.confidence==='n' ? 'Номинальная' : item.confidence ==='l' ? 'Низкая' : item.confidence === 'h' ? 'Высокая' : null}}
                       </td>
 
                     </tr>
