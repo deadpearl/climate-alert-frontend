@@ -103,10 +103,10 @@
                   <button class="item-330 h-30 dark-gray-button black" *ngIf="!region" (click)="changeRegion()">Select</button>
                   <button class="item-330 h-30 dark-gray-button black" *ngIf="region" (click)="changeRegion()">{{region}}</button>
                 </div>
-                <div class="">Confidence*</div>
-                <select class="" [(ngModel)]="confidence">
-                  <option *ngFor="let month of confidenceList" [value]="month.value">{{month.title}}</option>
-                </select>
+                <div class="">Danger Level*</div>
+                <input [(ngModel)]="dangerLevelFrom" type="number" class="">
+                <div class="">to</div>
+                <input [(ngModel)]="dangerLevelTo" type="number" class="">
                 <div class="row item-230 space-between mt-20">
                   <button class="item-90 h-30 dark-green1-button white" (click)="search()">Apply</button>
                   <button class="item-90 h-30 dark-gray-button black" (click)="reset()">Reset</button>

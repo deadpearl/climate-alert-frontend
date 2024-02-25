@@ -19,12 +19,8 @@ export class MapForecastComponent implements OnInit {
   regionObject: any = null;
   dateFrom: any = null;
   dateTo: any = null;
-  confidenceList: any = [
-    { title: 'High',  value: 'h' },
-    { title: 'Nominal',  value: 'n' },
-    { title: 'Low',  value: 'l' },
-  ];
-  confidence: any = null;
+  dangerLevelFrom: any = null;
+  dangerLevelTo: any = null;
 
   constructor(private api: HttpClient, private modalService: ModalService) {
   }
@@ -89,10 +85,11 @@ export class MapForecastComponent implements OnInit {
       longitude: this.regionObject === null ? null : this.regionObject.longitude, // Fix typo in longitude
       dateFrom: this.dateFrom,
       dateTo: this.dateTo,
-      confidence: this.confidence
+      dangerLevelFrom: this.dangerLevelFrom,
+      dangerLevelTo: this.dangerLevelTo
     };
 
-    this.api.post(`/internal/api/data/RTData/getByFilter`, fireDataDTO).toPromise().then(resp => {
+    this.api.post(`/internal/api/data/ForecastData/getByFilter`, fireDataDTO).toPromise().then(resp => {
       this.markersData = resp;
 
       // Clear existing markers
