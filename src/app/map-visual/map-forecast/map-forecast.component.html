@@ -81,7 +81,7 @@
         <div class="">Discover potential fire risks across Kazakhstan with our innovative Fire Forecast Map. This dynamic map categorizes regions into three main danger levels – low, medium, and high – offering a comprehensive overview of vulnerability and probability of fire occurrence.
           Data is updated every hour.</div>
 
-        <div class="form background-white item-1000 h-500 form center-item">
+        <div class="form background-white item-1000 h-600 form center-item">
           <div class="row">
             <div class="item-600 ml-5 ">
               <div #mapContainer style='position: relative;'>
@@ -89,15 +89,15 @@
                 <!--      <div><strong>Date:</strong> <span id='acqDate'></span></div>-->
                 <!--      <div><strong>Time:</strong> <span id='acqTime'></span></div>-->
                 <!--    </div>-->
-                <div id='map' style='width: 600px; height: 495px; border-radius: 34px 0 0 34px;'></div>
+                <div id='map' style='width: 600px; height: 595px; border-radius: 34px 0 0 34px;'></div>
               </div>
             </div>
-            <div class="item-400 h-500 center-content center-item">
+            <div class="item-400 h-600 center-content center-item">
               <div class="column item-330  h-400 space-between">
-                <div class="">Time Period</div>
-                <input [(ngModel)]="dateFrom" type="date" class="">
+                <div class="">Date-Time Period</div>
+                <input [(ngModel)]="dateFrom" type="datetime-local" class="">
                 <div class="">to</div>
-                <input [(ngModel)]="dateTo" type="date" class="">
+                <input [(ngModel)]="dateTo" type="datetime-local" class="">
                 <div class="">Region</div>
                 <div class="">
                   <button class="item-330 h-30 dark-gray-button black" *ngIf="!region" (click)="changeRegion()">Select</button>
@@ -107,6 +107,7 @@
                 <input [(ngModel)]="dangerLevelFrom" type="number" class="">
                 <div class="">to</div>
                 <input [(ngModel)]="dangerLevelTo" type="number" class="">
+
                 <div class="row item-230 space-between mt-20">
                   <button class="item-90 h-30 dark-green1-button white" (click)="search()">Apply</button>
                   <button class="item-90 h-30 dark-gray-button black" (click)="reset()">Reset</button>

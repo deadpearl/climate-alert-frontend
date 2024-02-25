@@ -125,7 +125,7 @@ export class MapForecastComponent implements OnInit {
         markerElement.className = 'custom-marker'; // Apply custom CSS class
         markerElement.style.width = '12px'; // Set width
         markerElement.style.height = '12px'; // Set height
-          markerElement.style.backgroundColor = '#F77E21'; // Set background color
+        markerElement.style.backgroundColor = '#F77E21'; // Set background color
 
         markerElement.style.borderRadius = '50%'; // Make it round (for circular shape)
         new mapboxgl.Marker(markerElement)
