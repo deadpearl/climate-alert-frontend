@@ -1,1 +1,133 @@
-<p>map-forecast works!</p>
+<app-header></app-header> <head>
+  <title>Create interactive hover effects with Mapbox GL JS</title>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    /*body {*/
+    /*  margin: 0;*/
+    /*  padding: 0;*/
+    /*}*/
+
+    /*#map {*/
+    /*  !*position: absolute;*!*/
+    /*  !*top: 0;*!*/
+    /*  !*bottom: 0;*!*/
+    /*  width: 100%;*/
+    /*}*/
+    /*.quake-info {*/
+    /*  !*position: absolute;*!*/
+    /*  font-family: sans-serif;*/
+    /*  margin-top: 5px;*/
+    /*  margin-left: 5px;*/
+    /*  padding: 5px;*/
+    /*  width: 30%;*/
+    /*  border: 2px solid black;*/
+    /*  font-size: 14px;*/
+    /*  color: #222;*/
+    /*  background-color: #fff;*/
+    /*  border-radius: 3px;*/
+    /*}*/
+
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map-container {
+      position: relative;
+      margin-left: 350px;
+    }
+
+    #map {
+      width: 100%;
+    }
+
+    .fire {
+      position: absolute;
+      top: 10px; /* расположение от верхнего края */
+      left: 10px; /* расположение от левого края */
+      font-family: sans-serif;
+      padding: 5px;
+      width: 20%;
+      border: 2px solid black;
+      font-size: 14px;
+      color: #222;
+      background-color: #fff;
+      border-radius: 3px;
+      z-index: 2000;
+    }
+
+  </style>
+</head>
+<main>
+
+
+  <!--  <div class='quake-info'>-->
+  <!--    <div><strong>Magnitude:</strong> <span id='mag'></span></div>-->
+  <!--    <div><strong>Location:</strong> <span id='loc'></span></div>-->
+  <!--    <div><strong>Date:</strong> <span id='date'></span></div>-->
+  <!--  </div>-->
+  <!--  <div id='map' style='width: 800px; height: 600px; margin-left: 350px'></div>-->
+  <div class="light-gray center-content">
+
+    <div class="dark-gray item-1200 h-1000 center-content center-item">
+
+      <div class="column item-1000 h-900 space-between ">
+
+        <div class="dark-green2-text">
+          <h2 style="text-decoration: underline;">Fire Forecast Map</h2>
+        </div>
+        <div class="">Discover potential fire risks across Kazakhstan with our innovative Fire Forecast Map. This dynamic map categorizes regions into three main danger levels – low, medium, and high – offering a comprehensive overview of vulnerability and probability of fire occurrence.
+          Data is updated every hour.</div>
+
+        <div class="form background-white item-1000 h-500 form center-item">
+          <div class="row">
+            <div class="item-600 ml-5 ">
+              <div #mapContainer style='position: relative;'>
+                <!--    <div class='fire'>-->
+                <!--      <div><strong>Date:</strong> <span id='acqDate'></span></div>-->
+                <!--      <div><strong>Time:</strong> <span id='acqTime'></span></div>-->
+                <!--    </div>-->
+                <div id='map' style='width: 600px; height: 495px; border-radius: 34px 0 0 34px;'></div>
+              </div>
+            </div>
+            <div class="item-400 h-500 center-content center-item">
+              <div class="column item-330  h-400 space-between">
+                <div class="">Time Period</div>
+                <input [(ngModel)]="dateFrom" type="date" class="">
+                <div class="">to</div>
+                <input [(ngModel)]="dateTo" type="date" class="">
+                <div class="">Region</div>
+                <div class="">
+                  <button class="item-330 h-30 dark-gray-button black" *ngIf="!region" (click)="changeRegion()">Select</button>
+                  <button class="item-330 h-30 dark-gray-button black" *ngIf="region" (click)="changeRegion()">{{region}}</button>
+                </div>
+                <div class="">Confidence*</div>
+                <select class="" [(ngModel)]="confidence">
+                  <option *ngFor="let month of confidenceList" [value]="month.value">{{month.title}}</option>
+                </select>
+                <div class="row item-230 space-between mt-20">
+                  <button class="item-90 h-30 dark-green1-button white" (click)="search()">Apply</button>
+                  <button class="item-90 h-30 dark-gray-button black" (click)="reset()">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="mt-20 ">
+          <h4 class="dark-green2-text" style="text-decoration: underline;">What are the danger levels?</h4>
+          <div class="mt-20">The danger levels are derived from machine learning algorithms that analyze a multitude of factors contributing to the likelihood of fire occurrence in different regions of Kazakhstan. The algorithm calculates a coefficient for each area, synthesizing variables such as weather conditions, and historical fire incidents.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+<app-footer></app-footer>

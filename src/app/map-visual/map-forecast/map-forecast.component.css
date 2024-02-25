@@ -1,0 +1,35 @@
+.fire-info {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*.fire-info div {*/
+/*  margin-bottom: 5px;*/
+/*}*/
+
+/*.fire-info strong {*/
+/*  font-weight: bold;*/
+/*}*/
+.form {
+  border-radius: 34px;
+  border: 6px solid #EFF0F6;
+  box-shadow: 0 5px 16px 0 rgba(8, 15, 52, 0.06);
+}
+.custom-marker {
+  width: 12px;
+  height: 12px;
+  background-color: #000000;
+  border-radius: 50%;
+  /* Add any other styles you need */
+}
+
+.hovered-marker {
+  transform: scale(1.5); /* Example: Increase size on hover */
+  transition: transform 0.2s ease; /* Add a smooth transition effect */
+  /* Add any other hover styles you need */
+  background-color: #e3dbdb;
+}
