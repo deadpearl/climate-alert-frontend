@@ -27,6 +27,7 @@ export class FireRtIcFormComponent implements OnInit {
   currentUser: any = null;
   currentReport: any = false;
   activeTab: any = 1;
+  regionObject: any = null;
   activateTab(tabNumber: number): void {
     this.activeTab = tabNumber;
     if (this.activeTab === 2) {
@@ -94,18 +95,28 @@ export class FireRtIcFormComponent implements OnInit {
   }
 
   createReport() {
-    const data = {
-      startDate: this.catalogueData.acqDate,
-      latitude: this.catalogueData.latitude,
-      longitude: this.catalogueData.longitude,
-      editors: this.editorsPostData,
-      fireRTDataId: this.fireId
-    };
-    this.rtReportService.createNewReport(data).then(resp => {});
+    console.log(this.catalogueData.regionId);
+    this.rtReportService.getRegion(this.catalogueData.regionId).then(resps => {
+      this.regionObject = resps;
+
+      const data = {
+        startDate: this.catalogueData.acqDate,
+        latitude: this.catalogueData.latitude,
+        longitude: this.catalogueData.longitude,
+        editors: this.editorsPostData,
+        fireRTDataId: this.fireId,
+        region: this.regionObject.name_eng
+      };
+
+      this.rtReportService.createNewReport(data).then(resp => {});
+    });
+
     this.createButtonTouched = 0;
     this.getCatalogueRTFire(this.fireId);
     this.getReportsByRTId(this.fireId);
+    this.router.navigate(['/admin/fire/real-time/catalogue']);
   }
+
   formatRegisterDate(inputDate) {
     const date = new Date(inputDate);
 

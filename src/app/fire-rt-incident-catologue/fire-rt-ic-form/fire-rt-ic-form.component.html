@@ -93,10 +93,7 @@
                 <div (click)="$event.preventDefault();">{{"Дата" }}</div>
               </th>
               <th class="stable_hdr">
-                <div (click)="$event.preventDefault();">{{"Ширина" }} </div>
-              </th>
-              <th class="stable_hdr">
-                <div (click)="$event.preventDefault();">{{"Долгота" }}</div>
+                <div (click)="$event.preventDefault();">{{"Регион" }} </div>
               </th>
               <th class="stable_hdr">
                 <div (click)="$event.preventDefault();">{{"Статус" }}</div>
@@ -115,10 +112,7 @@
                 {{formatRegisterDate(item.startDate)}}
               </td>
               <td>
-                {{item.latitude}}
-              </td>
-              <td>
-                {{item.longitude}}
+                {{item.regionId}}
               </td>
               <td>
                 {{item.status.name}}
