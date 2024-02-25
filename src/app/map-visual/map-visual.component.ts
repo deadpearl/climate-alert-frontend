@@ -139,6 +139,7 @@ export class MapVisualComponent implements OnInit {
     this.dateTo = null;
     this.regionObject = null;
     this.region = null;
+    this.initializeMap();
   }
 
   initializeMap() {

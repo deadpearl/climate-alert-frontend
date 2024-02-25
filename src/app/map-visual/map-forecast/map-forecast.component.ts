@@ -77,7 +77,17 @@ export class MapForecastComponent implements OnInit {
         console.log('Modal dismissed with result:', error);
       });
   }
+  formatDate(inputDate) {
+    const date = new Date(inputDate);
 
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');  // Добавляем 1, так как месяцы в JavaScript начинаются с 0
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
+  }
   search() {
     this.initializeMap();
     const fireDataDTO = {
@@ -97,15 +107,17 @@ export class MapForecastComponent implements OnInit {
 
       // Add new markers
       this.markersData.forEach(marker => {
-        const latitude = parseFloat(marker.latitude);
-        const longitude = parseFloat(marker.longitude);
 
+        const latitude = parseFloat(marker.stationId.latitude);
+        const longitude = parseFloat(marker.stationId.longitude);
+        console.log(latitude);
+        console.log(longitude);
         const popup = new mapboxgl.Popup()
           .setHTML(`
             <div class='fire-info' style='padding: 10px'>
-              <div><strong>Date:</strong> ${marker.acqDate}</div>
-              <div><strong>Time:</strong> ${marker.acqTime}</div>
-              <div><strong>Confidence:</strong> ${marker.confidence}</div>
+              <div><strong>Date:</strong> ${this.formatDate(marker.time)}</div>
+              <div><strong>DangerLevel:</strong> ${marker.dangerLevel}</div>
+              <div><strong>Weather:</strong> ${marker.weatherId.temp} C</div>
             </div>
           `);
 
@@ -113,13 +125,8 @@ export class MapForecastComponent implements OnInit {
         markerElement.className = 'custom-marker'; // Apply custom CSS class
         markerElement.style.width = '12px'; // Set width
         markerElement.style.height = '12px'; // Set height
-        if (marker.confidence === 'n') {
           markerElement.style.backgroundColor = '#F77E21'; // Set background color
-        } else if (marker.confidence === 'h') {
-          markerElement.style.backgroundColor = '#D61C4E'; // Set background color
-        } else if (marker.confidence === 'l') {
-          markerElement.style.backgroundColor = '#FAC213'; // Set background color
-        }
+
         markerElement.style.borderRadius = '50%'; // Make it round (for circular shape)
         new mapboxgl.Marker(markerElement)
           .setLngLat([longitude, latitude])
@@ -136,6 +143,7 @@ export class MapForecastComponent implements OnInit {
     this.dateTo = null;
     this.regionObject = null;
     this.region = null;
+    this.initializeMap();
   }
 
   initializeMap() {
